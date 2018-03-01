@@ -76,7 +76,7 @@ public class AccountActivity extends AppCompatActivity {
 
     /**
      * Sets fragments as tabs.
-     * @param viewPager
+     * @param viewPager view, to which tabs adapter is assigned
      */
     private void setUpViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
