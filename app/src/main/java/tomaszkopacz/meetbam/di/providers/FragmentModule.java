@@ -9,6 +9,7 @@ import tomaszkopacz.meetbam.activities.AccountInfoFragment;
 import tomaszkopacz.meetbam.activities.AccountPhotosFragment;
 import tomaszkopacz.meetbam.activities.StatsGlobalFragment;
 import tomaszkopacz.meetbam.activities.StatsLocalFragment;
+import tomaszkopacz.meetbam.presenters.AccountFriendsFragmentPresenter;
 
 /**
  * Created by tomas on 19.02.2018.
@@ -18,6 +19,7 @@ import tomaszkopacz.meetbam.activities.StatsLocalFragment;
 @Module
 public class FragmentModule {
 
+    /*
     @Provides
     @Singleton
     static AccountInfoFragment getAccountInfoFragment(){
@@ -47,4 +49,5 @@ public class FragmentModule {
     static StatsGlobalFragment getStatsGlobalFragment(){
         return new StatsGlobalFragment();
     }
+    */
 }
