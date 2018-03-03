@@ -5,20 +5,31 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import tomaszkopacz.meetbam.R;
+import tomaszkopacz.meetbam.model.Post;
+import tomaszkopacz.meetbam.tabs_service.PostAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar_main)
     Toolbar toolbar;
+
+    @BindView(R.id.postsRecView)
+    RecyclerView postsRecView;
 
     @BindView(R.id.fab_main)
     FloatingActionButton fab;
@@ -27,9 +38,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //bind views
         ButterKnife.bind(this);
 
+        //action bar
         setSupportActionBar(toolbar);
+
+        //recycler view
+        setUpList();
     }
 
     @Override
@@ -66,5 +83,26 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.fab_main)
     public void onFabClick(View view){
         Snackbar.make(view, "My text", Snackbar.LENGTH_LONG).show();
+    }
+
+    /**
+     * Sets the recycler view properties.
+     */
+    private void setUpList() {
+        postsRecView.setHasFixedSize(true);
+        postsRecView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        postsRecView.setItemAnimator(new DefaultItemAnimator());
+        postsRecView.setAdapter(new PostAdapter(createSampleList(), postsRecView));
+    }
+
+    /**
+     * Creates test list of posts.
+     */
+    private List<Post> createSampleList(){
+        List<Post> posts = new ArrayList<>();
+        for (int i = 0; i <= 20; i++)
+            posts.add(new Post());
+
+        return posts;
     }
 }
