@@ -19,9 +19,6 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.post_surname)
     TextView surname;
 
-    @BindView(R.id.post_text)
-    TextView text;
-
     public PostViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);

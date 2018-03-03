@@ -56,7 +56,6 @@ public class PostAdapter extends RecyclerView.Adapter {
         Post post = posts.get(position);
         ((PostViewHolder)holder).name.setText(post.getName());
         ((PostViewHolder)holder).surname.setText(post.getSurname());
-        ((PostViewHolder)holder).text.setText(post.getText());
     }
 
     @Override

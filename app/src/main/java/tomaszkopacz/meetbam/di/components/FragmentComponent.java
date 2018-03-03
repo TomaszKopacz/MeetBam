@@ -7,6 +7,7 @@ import tomaszkopacz.meetbam.activities.AccountActivity;
 import tomaszkopacz.meetbam.activities.AccountFriendsFragment;
 import tomaszkopacz.meetbam.activities.AccountInfoFragment;
 import tomaszkopacz.meetbam.activities.AccountPhotosFragment;
+import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.activities.StatsActivity;
 import tomaszkopacz.meetbam.activities.StatsGlobalFragment;
 import tomaszkopacz.meetbam.activities.StatsLocalFragment;
@@ -14,6 +15,7 @@ import tomaszkopacz.meetbam.di.providers.FragmentModule;
 import tomaszkopacz.meetbam.presenters.AccountFriendsFragmentPresenter;
 import tomaszkopacz.meetbam.presenters.AccountInfoFragmentPresenter;
 import tomaszkopacz.meetbam.presenters.AccountPhotosFragmentPresenter;
+import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
 import tomaszkopacz.meetbam.presenters.StatsGlobalFragmentPresenter;
 import tomaszkopacz.meetbam.presenters.StatsLocalFragmentPresenter;
 
@@ -31,12 +33,14 @@ public interface FragmentComponent {
     StatsGlobalFragment mStatsGlobalFragment();
     StatsLocalFragment mStatsLocalFragment();
 
+    MainActivityPresenter mainActivityPresenter();
     AccountInfoFragmentPresenter mAccountInfoFragmentPresenter();
     AccountPhotosFragmentPresenter mAccountPhotosFragmentPresenter();
     AccountFriendsFragmentPresenter mAccountFriendsFragmentPresenter();
     StatsLocalFragmentPresenter mStatsLocalFragmentPresenter();
     StatsGlobalFragmentPresenter mStatsGlobalFragmentPresenter();
 
+    void inject(MainActivity mMainActivity);
     void inject(AccountActivity mAccountActivity);
     void inject(StatsActivity mStatsActivity);
 

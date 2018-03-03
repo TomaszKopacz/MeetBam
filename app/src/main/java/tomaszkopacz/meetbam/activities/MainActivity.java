@@ -9,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,14 +17,27 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.model.Post;
+import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
 import tomaszkopacz.meetbam.tabs_service.PostAdapter;
+import tomaszkopacz.meetbam.web_service.WebService;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Inject
+    MainActivityPresenter presenter;
 
     @BindView(R.id.toolbar_main)
     Toolbar toolbar;
@@ -45,8 +59,15 @@ public class MainActivity extends AppCompatActivity {
         //action bar
         setSupportActionBar(toolbar);
 
-        //recycler view
-        setUpList();
+        //get dependencies
+        ((MainApp)getApplication()).getFragmentComponent().inject(this);
+
+        //set up presenter
+        presenter.setActivity(this);
+
+        //when activity created, set up web service communication and download posts
+        presenter.setUpWebService();
+        presenter.getPostsList();
     }
 
     @Override
@@ -86,23 +107,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Sets the recycler view properties.
+     * Sets elements (posts) to recycler view list.
      */
-    private void setUpList() {
+    public void setUpList(List<Post> posts) {
         postsRecView.setHasFixedSize(true);
         postsRecView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         postsRecView.setItemAnimator(new DefaultItemAnimator());
-        postsRecView.setAdapter(new PostAdapter(createSampleList(), postsRecView));
-    }
-
-    /**
-     * Creates test list of posts.
-     */
-    private List<Post> createSampleList(){
-        List<Post> posts = new ArrayList<>();
-        for (int i = 0; i <= 20; i++)
-            posts.add(new Post());
-
-        return posts;
+        postsRecView.setAdapter(new PostAdapter(posts, postsRecView));
     }
 }
