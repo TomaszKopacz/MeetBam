@@ -11,7 +11,7 @@ import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.activities.StatsActivity;
 import tomaszkopacz.meetbam.activities.StatsGlobalFragment;
 import tomaszkopacz.meetbam.activities.StatsLocalFragment;
-import tomaszkopacz.meetbam.di.providers.FragmentModule;
+import tomaszkopacz.meetbam.di.providers.WebServiceModule;
 import tomaszkopacz.meetbam.presenters.AccountFriendsFragmentPresenter;
 import tomaszkopacz.meetbam.presenters.AccountInfoFragmentPresenter;
 import tomaszkopacz.meetbam.presenters.AccountPhotosFragmentPresenter;
@@ -24,7 +24,7 @@ import tomaszkopacz.meetbam.presenters.StatsLocalFragmentPresenter;
  */
 
 @Singleton
-@Component (modules = FragmentModule.class)
+@Component (modules = WebServiceModule.class)
 public interface FragmentComponent {
 
     AccountFriendsFragment mAccountFriendsFragment();

@@ -7,12 +7,10 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.web_service.WebService;
@@ -24,14 +22,15 @@ import tomaszkopacz.meetbam.web_service.WebService;
 public class MainActivityPresenter {
 
     private MainActivity activity;
-    private Retrofit retrofit;
     private WebService service;
+
+    @Inject
+    Retrofit retrofit;
 
     private List<Post> posts = new ArrayList<>();
 
     private static final String TAG = "MEETBAM";
     private static final String TAG_FAIL = "FAIL";
-    private static final String BASE_URL = "http://meetbam.cba.pl";
 
     /**
      * Constructor.
@@ -53,15 +52,6 @@ public class MainActivityPresenter {
      * Sets up web components.
      */
     public void setUpWebService(){
-
-        OkHttpClient.Builder client = new OkHttpClient.Builder();
-
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .client(client.build())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
         service = retrofit.create(WebService.class);
     }
 
