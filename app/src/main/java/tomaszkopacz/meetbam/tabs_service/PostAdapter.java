@@ -54,8 +54,10 @@ public class PostAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Post post = posts.get(position);
-        ((PostViewHolder)holder).name.setText(post.getName());
-        ((PostViewHolder)holder).surname.setText(post.getSurname());
+        ((PostViewHolder)holder).id.setText(post.getId());
+        ((PostViewHolder)holder).mail.setText(post.getMail());
+        ((PostViewHolder)holder).photoDir.setText(post.getPhotoDir());
+        ((PostViewHolder)holder).time.setText(post.getTime());
     }
 
     @Override

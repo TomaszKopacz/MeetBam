@@ -9,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,11 +25,14 @@ import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
 import tomaszkopacz.meetbam.tabs_service.PostAdapter;
+import tomaszkopacz.meetbam.web_service.WebService;
 
 public class MainActivity extends AppCompatActivity {
 
+    private MainActivityPresenter presenter;
+
     @Inject
-    MainActivityPresenter presenter;
+    WebService service;
 
     @BindView(R.id.toolbar_main)
     Toolbar toolbar;
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.fab_main)
     FloatingActionButton fab;
+
+    private PostAdapter postAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +57,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //get dependencies
-        ((MainApp)getApplication()).getFragmentComponent().inject(this);
         ((MainApp)getApplication()).getWebServiceComponent().inject(this);
 
         //set up presenter
-        presenter.setActivity(this);
+        presenter = new MainActivityPresenter(this, service);
 
-        //when activity created, set up web service communication and download posts
-        presenter.setUpWebService();
-        presenter.getPostsList();
+        //when activity created download posts
+        presenter.createPostsList();
     }
 
     @Override
@@ -105,6 +109,15 @@ public class MainActivity extends AppCompatActivity {
         postsRecView.setHasFixedSize(true);
         postsRecView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         postsRecView.setItemAnimator(new DefaultItemAnimator());
-        postsRecView.setAdapter(new PostAdapter(posts, postsRecView));
+        postAdapter = new PostAdapter(posts, postsRecView);
+        postsRecView.setAdapter(postAdapter);
+    }
+
+    /**
+     * Returns adapter of posts.
+     * @return PostAdapter
+     */
+    public PostAdapter getAdapter(){
+        return postAdapter;
     }
 }

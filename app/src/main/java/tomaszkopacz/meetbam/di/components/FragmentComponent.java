@@ -33,14 +33,12 @@ public interface FragmentComponent {
     StatsGlobalFragment mStatsGlobalFragment();
     StatsLocalFragment mStatsLocalFragment();
 
-    MainActivityPresenter mainActivityPresenter();
     AccountInfoFragmentPresenter mAccountInfoFragmentPresenter();
     AccountPhotosFragmentPresenter mAccountPhotosFragmentPresenter();
     AccountFriendsFragmentPresenter mAccountFriendsFragmentPresenter();
     StatsLocalFragmentPresenter mStatsLocalFragmentPresenter();
     StatsGlobalFragmentPresenter mStatsGlobalFragmentPresenter();
 
-    void inject(MainActivity mMainActivity);
     void inject(AccountActivity mAccountActivity);
     void inject(StatsActivity mStatsActivity);
 

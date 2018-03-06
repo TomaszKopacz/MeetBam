@@ -14,19 +14,33 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/post_name"
+            android:id="@+id/post_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
             android:textColor="#333"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/post_surname"
+            android:id="@+id/post_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Subtitle"
+            android:textColor="#888"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/post_photodir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#888"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:textColor="#888"
             android:textSize="14sp" />
 

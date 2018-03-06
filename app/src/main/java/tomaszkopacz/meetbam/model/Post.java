@@ -7,27 +7,44 @@ package tomaszkopacz.meetbam.model;
 
 public class Post {
 
-    private String name;
-    private String surname;
+    private String id = "1";
+    private String mail = "my.mail@onet.pl";
+    private String photo_dir = "uploads/1";
+    private String time = "today";
 
     public Post (){
-        this.name = "Tomasz";
-        this.surname = "Kopacz";
+
     }
 
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getMail() {
+        return mail;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getPhotoDir() {
+        return photo_dir;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public String getTime() {
+        return time;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public void setPhoto_dir(String photo_dir) {
+        this.photo_dir = photo_dir;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
