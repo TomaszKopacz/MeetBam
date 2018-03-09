@@ -1,4 +1,4 @@
-package tomaszkopacz.meetbam.views_service.views_service;
+package tomaszkopacz.meetbam.views_service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,7 +53,13 @@ public class PostTimeProvider {
     /**
      * Returns text according to a given time. If time is less than 1h, returns
      * result in minutes. If time is less than a day, returns result in hours. Otherwise,
-     * returns result in days. If given time is less than zero, returns "TIME ERROR" message.
+     * returns result in days.
+     * For example:<br/>
+     * If parameter is 1 minute returns "1 minute ago".<br/>
+     * If parameter is 45 minutes returns "45 minutes ago".<br/>
+     * If parameter is 130 minutes returns "2 hours ago".<br/>
+     * If parameter is 1450 minutes returns "1 day ago". <br/>
+     * If given time is less than zero, returns "TIME ERROR" message.
      * @param timeAgo time given in minutes
      * @return text about how many time went off approximately
      */

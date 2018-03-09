@@ -24,7 +24,7 @@ import butterknife.OnClick;
 import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
-import tomaszkopacz.meetbam.views_service.views_service.PostAdapter;
+import tomaszkopacz.meetbam.views_service.PostAdapter;
 import tomaszkopacz.meetbam.web_service.WebService;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
 
     private PostAdapter postAdapter;
+
+    public static final int CAMERA_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab_main)
     public void onFabClick(View view){
-        Snackbar.make(view, "My text", Snackbar.LENGTH_LONG).show();
+        presenter.makePhoto();
     }
 
     /**
@@ -123,6 +125,19 @@ public class MainActivity extends AppCompatActivity {
 
         postAdapter = new PostAdapter(this, posts, postsRecView);
         postsRecView.setAdapter(postAdapter);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == CAMERA_CODE && resultCode == RESULT_OK){
+            showPhoto();
+        }
+    }
+
+    public void showPhoto(){
+        Snackbar.make(fab.getRootView(), "text", Snackbar.LENGTH_LONG).show();
     }
 
     /**

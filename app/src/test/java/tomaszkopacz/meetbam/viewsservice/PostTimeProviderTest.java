@@ -2,7 +2,7 @@ package tomaszkopacz.meetbam.viewsservice;
 
 import org.junit.Test;
 
-import tomaszkopacz.meetbam.views_service.views_service.PostTimeProvider;
+import tomaszkopacz.meetbam.views_service.PostTimeProvider;
 
 import static org.junit.Assert.assertTrue;
 
