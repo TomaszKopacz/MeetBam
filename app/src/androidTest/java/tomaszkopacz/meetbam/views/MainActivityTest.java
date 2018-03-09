@@ -39,8 +39,6 @@ public class MainActivityTest {
      * When floating action button is clicked, snack bar should be displayed.
      */
     public void testFabBtnClicked(){
-        //check if fab is displayed
-        onView(withId(R.id.fab_main)).check(matches(isDisplayed()));
 
         //perform click
         onView(withId(R.id.fab_main)).perform(click());

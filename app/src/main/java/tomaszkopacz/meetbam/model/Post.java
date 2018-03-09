@@ -7,10 +7,12 @@ package tomaszkopacz.meetbam.model;
 
 public class Post {
 
-    private String id = "1";
-    private String mail = "my.mail@onet.pl";
-    private String photo_dir = "uploads/1";
-    private String time = "today";
+    private String id;
+    private String user_id;
+    private String photo_dir;
+    private String time;
+    private String name;
+    private String surname;
 
     public Post (){
 
@@ -20,8 +22,8 @@ public class Post {
         return id;
     }
 
-    public String getMail() {
-        return mail;
+    public String getUserId() {
+        return user_id;
     }
 
     public String getPhotoDir() {
@@ -32,19 +34,37 @@ public class Post {
         return time;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setUserId(String user_id) {
+        this.user_id = user_id;
     }
 
-    public void setPhoto_dir(String photo_dir) {
+    public void setPhotoDir(String photo_dir) {
         this.photo_dir = photo_dir;
     }
 
     public void setTime(String time) {
         this.time = time;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
 }

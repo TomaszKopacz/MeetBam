@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +15,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -62,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         //set up presenter
         presenter = new MainActivityPresenter(this, service);
 
-        //when activity created download posts
+        //prepare recycler view and download posts
+        prepareRecView();
         presenter.createPostsList();
     }
 
@@ -103,21 +108,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Sets elements (posts) to recycler view list.
+     * Configures recycler view. Recycler has fixed size, two spans oriented vertically
+     * and default item animator.
+     */
+    private void prepareRecView(){
+        postsRecView.setHasFixedSize(true);
+        postsRecView.setLayoutManager(new StaggeredGridLayoutManager(2,
+                StaggeredGridLayoutManager.VERTICAL));
+        postsRecView.setItemAnimator(new DefaultItemAnimator());
+    }
+
+    /**
+     * Sets list of posts to recycler view.
      */
     public void setUpList(List<Post> posts) {
-        postsRecView.setHasFixedSize(true);
-        postsRecView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        postsRecView.setItemAnimator(new DefaultItemAnimator());
-        postAdapter = new PostAdapter(posts, postsRecView);
+        if (posts == null)
+            posts = new ArrayList<>();
+
+        postAdapter = new PostAdapter(this, posts, postsRecView);
         postsRecView.setAdapter(postAdapter);
     }
 
     /**
-     * Returns adapter of posts.
-     * @return PostAdapter
+     * @return recycler view for post items
      */
-    public PostAdapter getAdapter(){
-        return postAdapter;
+    public RecyclerView getPostsRecView(){
+        return postsRecView;
     }
 }
