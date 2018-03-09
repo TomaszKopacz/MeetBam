@@ -1,4 +1,4 @@
-package tomaszkopacz.meetbam.tabs_service;
+package tomaszkopacz.meetbam.views_service;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

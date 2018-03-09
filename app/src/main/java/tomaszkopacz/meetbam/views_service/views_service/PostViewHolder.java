@@ -1,4 +1,4 @@
-package tomaszkopacz.meetbam.tabs_service;
+package tomaszkopacz.meetbam.views_service.views_service;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
