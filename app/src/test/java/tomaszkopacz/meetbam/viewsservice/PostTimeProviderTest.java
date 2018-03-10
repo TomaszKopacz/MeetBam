@@ -2,8 +2,12 @@ package tomaszkopacz.meetbam.viewsservice;
 
 import org.junit.Test;
 
+import java.util.Date;
+
 import tomaszkopacz.meetbam.views_service.PostTimeProvider;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -28,7 +32,7 @@ public class PostTimeProviderTest {
      * Test countTimeAgo(). When incorrect argument should return -1.
      */
     public void testCountTimeAgoWhenIncorrectArgumentPattern(){
-        String pattern1 = "30/01/2010 12:00:00";
+        String pattern1 = "2018.03.08 23:30:58";
         String pattern2 = "2010/01/30 12:00:00";
         String pattern3 = "30 Jun 2010 12/00/00";
 

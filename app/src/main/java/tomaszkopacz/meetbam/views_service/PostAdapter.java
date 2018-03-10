@@ -1,6 +1,7 @@
 package tomaszkopacz.meetbam.views_service;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,12 +77,8 @@ public class PostAdapter extends RecyclerView.Adapter {
                 .load(BASE_URL + post.getPhotoDir())
                 .into(((PostViewHolder) holder).photo);
 
-        // count time since post was uploaded:
-        // original timestamp from server is "yyyy-MM-dd hh:mm:ss.xxxxxx",
-        // need to be converted to "yyyy-MM-dd hh:mm:ss" pattern,
-        // so it can be used in countTimeAgo(String timestamp) method
-        String timestamp = post.getTime().substring(0, 19);
-        float timeAgo = PostTimeProvider.countTimeAgo(timestamp);
+        // count time since post was uploaded
+        float timeAgo = PostTimeProvider.countTimeAgo(post.getTime());
 
         // get appropriate info about how long ago post was uploaded
         String timeAgoText = PostTimeProvider.getTimeAgoText(timeAgo);

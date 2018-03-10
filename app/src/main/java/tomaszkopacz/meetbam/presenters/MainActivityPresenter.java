@@ -16,6 +16,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import tomaszkopacz.meetbam.activities.AcceptPhotoDialog;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.web_service.WebService;
@@ -24,7 +25,7 @@ import tomaszkopacz.meetbam.web_service.WebService;
  * Created by tomas on 03.03.2018.
  */
 
-public class MainActivityPresenter {
+public class MainActivityPresenter implements Presenter{
 
     private MainActivity activity;
     private WebService service;
@@ -35,6 +36,8 @@ public class MainActivityPresenter {
     private static final String PHOTO_DIRECTORY
             = Environment.getExternalStoragePublicDirectory(
                     Environment.DIRECTORY_PICTURES) + "/Meetbam/";
+
+    private AcceptPhotoDialog dialog;
 
     /**
      * Constructor.
@@ -94,6 +97,21 @@ public class MainActivityPresenter {
             Intent cameraIntent = getCameraIntent(photoFile);
             activity.startActivityForResult(cameraIntent, activity.CAMERA_CODE);
         }
+    }
+
+    /**
+     * Show dialog (to accept picture and pair with new person).
+     */
+    public void showAcceptPhotoDialog(){
+        dialog = new AcceptPhotoDialog(activity, this);
+        dialog.show();
+    }
+
+    /**
+     * Pair with a new person.
+     */
+    public void pair(){
+        dialog.getPersonTextView().setText("ZBYSZEK");
     }
 
     /**

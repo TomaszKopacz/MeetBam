@@ -1,5 +1,7 @@
 package tomaszkopacz.meetbam.views_service;
 
+import android.util.Log;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,14 +14,15 @@ public class PostTimeProvider {
 
     /**
      * Counts time interval between now and given timestamp in past. The timestamp
-     * should be given in "yyyy-MM-dd hh:mm:ss" pattern. The result is time in minutes.
+     * should be given in "yyyy-MM-dd HH:mm:ss.SSSSSS" pattern. The result is time in minutes.
      * @param timestamp
      * @return time interval started from timestamp and ending now. If error occurs, returns -1.
      */
     public static float countTimeAgo(String timestamp){
 
         // date pattern
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat simpleDateFormat
+                = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS");
         simpleDateFormat.setLenient(false);
 
         // time interval

@@ -131,13 +131,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        // when picture is taken
         if (requestCode == CAMERA_CODE && resultCode == RESULT_OK){
-            showPhoto();
+            presenter.showAcceptPhotoDialog();
         }
-    }
-
-    public void showPhoto(){
-        Snackbar.make(fab.getRootView(), "text", Snackbar.LENGTH_LONG).show();
     }
 
     /**
