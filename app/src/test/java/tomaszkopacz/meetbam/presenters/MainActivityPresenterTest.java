@@ -18,7 +18,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.Post;
-import tomaszkopacz.meetbam.web_service.WebService;
+import tomaszkopacz.meetbam.service.WebService;
 
 /**
  * Created by tomas on 04.03.2018.

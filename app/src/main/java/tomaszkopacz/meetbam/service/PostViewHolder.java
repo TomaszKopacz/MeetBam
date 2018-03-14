@@ -1,10 +1,9 @@
-package tomaszkopacz.meetbam.views_service;
+package tomaszkopacz.meetbam.service;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import tomaszkopacz.meetbam.R;

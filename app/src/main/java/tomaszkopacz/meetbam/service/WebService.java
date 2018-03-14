@@ -1,4 +1,4 @@
-package tomaszkopacz.meetbam.web_service;
+package tomaszkopacz.meetbam.service;
 
 import java.util.List;
 

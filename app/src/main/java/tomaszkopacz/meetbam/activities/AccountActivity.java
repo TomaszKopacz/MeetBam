@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import tomaszkopacz.meetbam.R;
-import tomaszkopacz.meetbam.views_service.ViewPagerAdapter;
+import tomaszkopacz.meetbam.service.ViewPagerAdapter;
 
 public class AccountActivity extends AppCompatActivity {
 

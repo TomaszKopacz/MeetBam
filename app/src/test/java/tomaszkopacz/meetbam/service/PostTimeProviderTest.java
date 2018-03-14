@@ -1,10 +1,6 @@
-package tomaszkopacz.meetbam.viewsservice;
+package tomaszkopacz.meetbam.service;
 
 import org.junit.Test;
-
-import java.util.Date;
-
-import tomaszkopacz.meetbam.views_service.PostTimeProvider;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotSame;
@@ -15,6 +11,15 @@ import static org.junit.Assert.assertTrue;
  */
 
 public class PostTimeProviderTest {
+
+    @Test
+    /**
+     * Test countTimeAgo(). Should return value greater than 0.
+     */
+    public void testCountTimeAgo(){
+        String date = "2018-03-08 23:28:07.001234";
+        assertTrue(PostTimeProvider.countTimeAgo(date) > 0);
+    }
 
     @Test
     /**

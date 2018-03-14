@@ -23,6 +23,7 @@ import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.Intents.intending;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withChild;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.allOf;
@@ -49,15 +50,15 @@ public class MainActivityAndroidTest {
 
     @Test
     /**
-     * When floating action button is clicked, camera activity should be opened.
+     * When floating action button is clicked, camera activity should be opened. Assume that user
+     * took a photo properly - then AcceptPhotoDialog should be displayed.
      */
     public void testFabBtnClicked(){
 
-        // perform click
+        // perform click and result is RESULT_OK
         onView(withId(R.id.fab_main)).perform(click());
 
-        // is snack bar good
-        onView(allOf(withText("text"))).check(matches(isDisplayed()));
-
+        // is dialog displayed (dialog contains ImageView with id 'photo')
+        onView(withChild(withId(R.id.photo))).check(matches(isDisplayed()));
     }
 }

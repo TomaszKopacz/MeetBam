@@ -2,9 +2,12 @@ package tomaszkopacz.meetbam.activities;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.net.Uri;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,6 +47,15 @@ public class AcceptPhotoDialog extends Dialog{
     @OnClick(R.id.pair_btn)
     public void onPairBtnClick(){
         presenter.pair();
+    }
+
+    /**
+     * Loads photo from uri into the image view.
+     * @param uri uri of image to load
+     */
+    public void loadPhoto(Uri uri){
+        if (uri != null)
+            Glide.with(getContext()).load(uri).into(photoImageView);
     }
 
     public ImageView getPhotoImageView() {

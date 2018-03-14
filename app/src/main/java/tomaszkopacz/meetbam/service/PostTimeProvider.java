@@ -1,6 +1,4 @@
-package tomaszkopacz.meetbam.views_service;
-
-import android.util.Log;
+package tomaszkopacz.meetbam.service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,26 +26,29 @@ public class PostTimeProvider {
         // time interval
         float diff;
 
+        Date timestampDate;
+
         try {
             // convert timestamp to given pattern
-            Date timestampDate = simpleDateFormat.parse(timestamp);
-
-            // get actual date and convert to pattern
-            Date date = new Date();
-            simpleDateFormat.format(date);
-
-            // count difference in millis
-            diff = date.getTime() - timestampDate.getTime();
-
-            // convert millis to minutes
-            diff = diff/(1000*60);
+            timestampDate = simpleDateFormat.parse(timestamp);
 
         } catch (ParseException e) {
+            e.printStackTrace();
             return -1;
         }
 
+        // get actual date and convert to pattern
+        Date date = new Date();
+        simpleDateFormat.format(date);
+
+        // count difference in millis
+        diff = date.getTime() - timestampDate.getTime();
+
+        // convert millis to minutes
+        diff = diff/(1000*60);
+
         if (diff < 0)
-            return -1;
+            return -2;
 
         else
             return diff;

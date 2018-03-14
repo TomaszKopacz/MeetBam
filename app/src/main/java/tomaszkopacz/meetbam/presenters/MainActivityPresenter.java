@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,13 +21,14 @@ import retrofit2.Response;
 import tomaszkopacz.meetbam.activities.AcceptPhotoDialog;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.Post;
-import tomaszkopacz.meetbam.web_service.WebService;
+import tomaszkopacz.meetbam.service.CameraService;
+import tomaszkopacz.meetbam.service.WebService;
 
 /**
  * Created by tomas on 03.03.2018.
  */
 
-public class MainActivityPresenter implements Presenter{
+public class MainActivityPresenter {
 
     private MainActivity activity;
     private WebService service;
@@ -38,6 +41,7 @@ public class MainActivityPresenter implements Presenter{
                     Environment.DIRECTORY_PICTURES) + "/Meetbam/";
 
     private AcceptPhotoDialog dialog;
+    private Uri photoUri;
 
     /**
      * Constructor.
@@ -45,35 +49,26 @@ public class MainActivityPresenter implements Presenter{
     public MainActivityPresenter(MainActivity activity, WebService service){
         this.activity = activity;
         this.service = service;
-
-        //prepare directory to store photos
-        preparePhotosDirectory();
-    }
-
-    /**
-     * Sets the directory and creates file for photos taken by user.
-     */
-    private void preparePhotosDirectory(){
-        File photosFile = new File(PHOTO_DIRECTORY);
-        photosFile.mkdirs();
     }
 
     /**
      * Downloads posts and send them to activity.
      */
     public void createPostsList(){
-        //get new elements
+
+        // remove previous elements
         posts.clear();
 
+        // when new elements downloaded
         service.getPosts().enqueue(new Callback<List<Post>>() {
 
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
 
-                //assign response objects to list
+                // assign response objects to list
                 posts = response.body();
 
-                //send posts to activity
+                // send posts to activity
                 activity.setUpList(posts);
             }
 
@@ -90,11 +85,16 @@ public class MainActivityPresenter implements Presenter{
     public void makePhoto(){
 
         // create file to store photo
-        File photoFile = getPhotoFile();
+        String photoFileName
+                = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()) + ".jpg";
+        File photoFile = CameraService.getFileForDirectory(PHOTO_DIRECTORY, photoFileName);
+
+        // set uri of file created
+        photoUri = Uri.fromFile(photoFile);
 
         // open camera activity
         if (photoFile != null){
-            Intent cameraIntent = getCameraIntent(photoFile);
+            Intent cameraIntent = CameraService.getCameraIntent(photoFile);
             activity.startActivityForResult(cameraIntent, activity.CAMERA_CODE);
         }
     }
@@ -103,7 +103,14 @@ public class MainActivityPresenter implements Presenter{
      * Show dialog (to accept picture and pair with new person).
      */
     public void showAcceptPhotoDialog(){
+
+        // new dialog
         dialog = new AcceptPhotoDialog(activity, this);
+
+        // load photo
+        dialog.loadPhoto(photoUri);
+
+        // show dialog
         dialog.show();
     }
 
@@ -112,49 +119,6 @@ public class MainActivityPresenter implements Presenter{
      */
     public void pair(){
         dialog.getPersonTextView().setText("ZBYSZEK");
-    }
-
-    /**
-     * Return new photo file in default pictures directory. File name is 'currenttimestamp.jpg'.
-     * @return photo file
-     */
-    private File getPhotoFile(){
-
-        // photo name
-        String photoName
-                = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()) + ".jpg";
-
-        // photo directory
-        String photoDir = PHOTO_DIRECTORY + photoName;
-
-        // photo file
-        File photoFile = new File(photoDir);
-
-        try {
-            photoFile.createNewFile();
-
-        } catch (IOException e) {
-
-        }
-
-        return photoFile;
-    }
-
-    /**
-     * Returns camera intent, that stores photos in photoFile uri.
-     * @param photoFile file to store photos
-     * @return intent
-     */
-    private Intent getCameraIntent(File photoFile){
-
-        // get photo uri
-        Uri photoUri = Uri.fromFile(photoFile);
-
-        // create intent
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-
-        return cameraIntent;
     }
 
     /**

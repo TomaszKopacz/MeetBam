@@ -3,7 +3,6 @@ package tomaszkopacz.meetbam.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +23,8 @@ import butterknife.OnClick;
 import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
-import tomaszkopacz.meetbam.views_service.PostAdapter;
-import tomaszkopacz.meetbam.web_service.WebService;
+import tomaszkopacz.meetbam.service.PostAdapter;
+import tomaszkopacz.meetbam.service.WebService;
 
 public class MainActivity extends AppCompatActivity {
 
