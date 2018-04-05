@@ -63,7 +63,7 @@ public class MainActivityPresenterTest {
         Mockito.when(service.getPosts()).thenReturn(call);
 
         //call relevant method
-        presenter.createPostsList();
+        presenter.downloadPostsList();
 
         //capture callback and set its body
         Mockito.verify(call).enqueue(captor.capture());

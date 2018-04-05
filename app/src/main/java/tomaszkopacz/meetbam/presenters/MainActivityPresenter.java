@@ -1,8 +1,10 @@
 package tomaszkopacz.meetbam.presenters;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.widget.ImageView;
 
@@ -19,9 +21,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import tomaszkopacz.meetbam.activities.AcceptPhotoDialog;
+import tomaszkopacz.meetbam.activities.LoginActivity;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.service.CameraService;
+import tomaszkopacz.meetbam.service.LoginService;
 import tomaszkopacz.meetbam.service.WebService;
 
 /**
@@ -39,9 +43,9 @@ public class MainActivityPresenter {
     private static final String PHOTO_DIRECTORY
             = Environment.getExternalStoragePublicDirectory(
                     Environment.DIRECTORY_PICTURES) + "/Meetbam/";
+    private Uri photoUri;
 
     private AcceptPhotoDialog dialog;
-    private Uri photoUri;
 
     /**
      * Constructor.
@@ -52,9 +56,23 @@ public class MainActivityPresenter {
     }
 
     /**
+     * Logout. Clears SharedPreferences and switches view to LoginActivity.
+     */
+    public void logout(){
+
+        // logout the user
+        LoginService.logout(activity.getApplicationContext());
+
+        // switch view to LoginActivity
+        Intent intent = new Intent(activity, LoginActivity.class);
+        activity.startActivity(intent);
+        activity.finish();
+    }
+
+    /**
      * Downloads posts and send them to activity.
      */
-    public void createPostsList(){
+    public void downloadPostsList(){
 
         // remove previous elements
         posts.clear();
@@ -80,6 +98,14 @@ public class MainActivityPresenter {
     }
 
     /**
+     * Returns list of posts.
+     * @return
+     */
+    public List<Post> getPosts(){
+        return posts;
+    }
+
+    /**
      * Starts camera. Creates file for available photo.
      */
     public void makePhoto(){
@@ -100,7 +126,7 @@ public class MainActivityPresenter {
     }
 
     /**
-     * Show dialog (to accept picture and pair with new person).
+     * Show dialog to accept picture and pair with new person.
      */
     public void showAcceptPhotoDialog(){
 
@@ -119,14 +145,6 @@ public class MainActivityPresenter {
      */
     public void pair(){
         dialog.getPersonTextView().setText("ZBYSZEK");
-    }
-
-    /**
-     * Returns list of posts.
-     * @return
-     */
-    public List<Post> getPosts(){
-        return posts;
     }
 
 }

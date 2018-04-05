@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import retrofit2.Response;
 import tomaszkopacz.meetbam.activities.LoginActivity;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.User;
+import tomaszkopacz.meetbam.service.LoginService;
 import tomaszkopacz.meetbam.service.WebService;
 
 /**
@@ -95,6 +97,8 @@ public class LoginActivityPresenter {
      */
     public void attemptLogin(String mail, String password){
 
+        Log.d("TomaszKopacz", "AttemptLogin");
+
         UserLoginTask userTask = new UserLoginTask(mail, password);
         userTask.execute();
 
@@ -118,24 +122,35 @@ public class LoginActivityPresenter {
         @Override
         protected Boolean doInBackground(Void... params) {
 
+            Log.d("TomaszKopacz", "UserLoginTask - background");
+
             // get user
             Call<List<User>> call = service.getUser(mEmail);
             call.enqueue(new Callback<List<User>>() {
                 @Override
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                    if (!response.body().isEmpty())
 
+                    Log.d("TomaszKopacz", "response");
+
+                    if (!response.body().isEmpty()) {
                         // user found
                         user = response.body().get(0);
 
-                    else
+                        // confirm password
+                        if (user.getSurname().equals(mPassword))
+                            onAttemptLoginResult(LOGIN_SUCCEED, user);
+                        else
+                            onAttemptLoginResult(PASSWORD_INVALID, null);
 
+                    } else
                         // no user found
                         activity.onLoginAttemptResult(NO_SUCH_MAIL);
+
                 }
 
                 @Override
                 public void onFailure(Call<List<User>> call, Throwable t) {
+                    Log.d("TomaszKopacz", "failure");
                     activity.onLoginAttemptResult(LOGIN_FAILED);
                 }
             });
@@ -145,22 +160,6 @@ public class LoginActivityPresenter {
 
         @Override
         protected void onPostExecute(final Boolean success) {
-
-            if (success && user != null) {
-                if (user.getSurname().equals(mPassword)) {
-
-                    // password correct
-                    onAttemptLoginResult(LOGIN_SUCCEED, user);
-
-                } else {
-
-                    // password invalid
-                    onAttemptLoginResult(PASSWORD_INVALID, null);
-                }
-
-            } else {
-                activity.onLoginAttemptResult(LOGIN_FAILED);
-            }
         }
 
         @Override
@@ -176,34 +175,24 @@ public class LoginActivityPresenter {
 
         if (result == LOGIN_SUCCEED){
 
-            // login successful: login user and go to main activity
-            login(user.getMail());
+            // login successful:
+            // login the user
+            LoginService.login(activity.getApplicationContext(), user.getMail());
+
+            // switch view to MainActivity
             goToMainActivity();
 
         } else {
 
-            // attemptLogin failed: pass error message to activity
+            // attemptLogin failed:
+            // pass error message to activity
             activity.onLoginAttemptResult(result);
         }
 
     }
 
     /**
-     * Saves logged users email to shared preferences.
-     * @param mail
-     */
-    private void login(String mail){
-
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(activity.getApplicationContext());
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("user", mail);
-        editor.commit();
-
-    }
-
-    /**
-     * Switches activity to MainActivity.
+     * Switches view to MainActivity.
      */
     private void goToMainActivity(){
         Intent intent = new Intent(activity, MainActivity.class);

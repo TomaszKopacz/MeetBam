@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         //prepare recycler view and download posts
         prepareRecView();
-        presenter.createPostsList();
+        presenter.downloadPostsList();
     }
 
     @Override
@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_logout:
+                presenter.logout();
                 break;
         }
         return super.onOptionsItemSelected(item);
