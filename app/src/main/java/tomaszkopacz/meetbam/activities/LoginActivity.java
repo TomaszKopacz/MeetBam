@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -17,7 +18,7 @@ import tomaszkopacz.meetbam.presenters.LoginActivityPresenter;
 import tomaszkopacz.meetbam.service.WebService;
 
 /**
- * A login screen that offers login via email/password.
+ * A attemptLogin screen that offers attemptLogin via email/password.
  */
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,8 +46,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // bind views
         ButterKnife.bind(this);
 
+        //get dependencies
+        ((MainApp)getApplication()).getWebServiceComponent().inject(this);
+
+        // set up presenter
         presenter = new LoginActivityPresenter(this, service);
     }
 
@@ -62,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         switch (presenter.areDataValid(mail, password)) {
 
             case LoginActivityPresenter.DATA_VALID:
-                presenter.login(mail, password);
+                presenter.attemptLogin(mail, password);
                 break;
 
             case LoginActivityPresenter.MAIL_EMPTY:
@@ -85,7 +92,23 @@ public class LoginActivity extends AppCompatActivity {
                 mPasswordView.requestFocus();
                 break;
         }
+    }
 
+    public void onLoginAttemptResult(int result){
+        switch (result){
+
+            case LoginActivityPresenter.NO_SUCH_MAIL:
+                Toast.makeText(this, "User does not exist!", Toast.LENGTH_SHORT);
+                break;
+
+            case LoginActivityPresenter.PASSWORD_INVALID:
+                Toast.makeText(this, "Password is incorrect!", Toast.LENGTH_SHORT);
+                break;
+
+            default:
+                Toast.makeText(this, "Login failed!", Toast.LENGTH_SHORT);
+                break;
+        }
     }
 }
 
