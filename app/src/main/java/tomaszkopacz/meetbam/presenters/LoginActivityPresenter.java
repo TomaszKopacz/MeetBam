@@ -1,9 +1,7 @@
 package tomaszkopacz.meetbam.presenters;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 import android.util.Log;
 
 import java.util.List;
@@ -29,17 +27,16 @@ public class LoginActivityPresenter {
     public static final int LOGIN_FAILED = -1;
     public static final int LOGIN_SUCCEED = 1;
 
-    public static final int DATA_VALID = 10;
+    public static final int MAIL_EMPTY = 10;
+    public static final int PASSWORD_EMPTY = 11;
+    public static final int MAIL_INVALID = 12;
+    public static final int PASSWORD_TOO_SHORT = 13;
 
-    public static final int MAIL_EMPTY = 11;
-    public static final int PASSWORD_EMPTY = 12;
-    public static final int MAIL_INVALID = 13;
-    public static final int PASSWORD_TOO_SHORT = 14;
+    public static final int NO_SUCH_MAIL = 14;
+    public static final int PASSWORD_INVALID = 15;
 
-    public static final int NO_SUCH_MAIL = 15;
-    public static final int PASSWORD_INVALID = 16;
+    private int loginStatus = LOGIN_FAILED;
 
-    private static final String NO_USER = "";
 
     /**
      * Constructor.
@@ -48,24 +45,17 @@ public class LoginActivityPresenter {
     public LoginActivityPresenter(LoginActivity activity, WebService service){
         this.activity = activity;
         this.service = service;
-
-        // if any user is logged in go to MainActivity
-        if (isUserLoggedIn()){
-            goToMainActivity();
-        }
     }
 
     /**
-     * Checks, whether any user is logged in.
-     * @return
+     * Confirm if any user is logged in. If so, switch to MainActivity.
      */
-    private boolean isUserLoggedIn(){
+    public void confirmUserIsSignedIn(){
 
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(activity.getApplicationContext());
-        String user = sharedPref.getString("user", NO_USER);
-
-        return (!user.equals(NO_USER)) ? true : false;
+        // if any user is logged in go to MainActivity
+        if (LoginService.isUserLoggedIn(activity.getApplicationContext())){
+            goToMainActivity();
+        }
     }
 
     /**
@@ -77,17 +67,28 @@ public class LoginActivityPresenter {
      * @param password
      * @return
      */
-    public int areDataValid(String mail, String password){
+    public int isLoginInputCorrect(String mail, String password){
+
+        Log.d("TomaszKopacz", "isLoginInputCorrect");
+
+        loginStatus = LOGIN_FAILED;
+
         if (mail.isEmpty())
-            return MAIL_EMPTY;
+            loginStatus = MAIL_EMPTY;
+
         else if (password.isEmpty())
-            return PASSWORD_EMPTY;
+            loginStatus = PASSWORD_EMPTY;
+
         else if (!mail.contains("@"))
-            return MAIL_INVALID;
+            loginStatus = MAIL_INVALID;
+
         else if (password.length() < 6)
-            return PASSWORD_TOO_SHORT;
+            loginStatus = PASSWORD_TOO_SHORT;
+
         else
-            return DATA_VALID;
+            attemptLogin(mail, password);
+
+        return loginStatus;
     }
 
     /**
@@ -95,24 +96,24 @@ public class LoginActivityPresenter {
      * @param mail
      * @param password
      */
-    public void attemptLogin(String mail, String password){
+    private void attemptLogin(String mail, String password){
 
-        Log.d("TomaszKopacz", "AttemptLogin");
+        Log.d("TomaszKopacz", "attemptLogin");
 
         UserLoginTask userTask = new UserLoginTask(mail, password);
         userTask.execute();
-
     }
 
     /**
      * Asynchronous login task used to authenticate the user.
      */
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    private class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
         private final String mPassword;
 
         UserLoginTask(String email, String password) {
+            Log.d("TomaszKopacz", "UserLoginTask");
             mEmail = email;
             mPassword = password;
         }
@@ -122,7 +123,7 @@ public class LoginActivityPresenter {
         @Override
         protected Boolean doInBackground(Void... params) {
 
-            Log.d("TomaszKopacz", "UserLoginTask - background");
+            Log.d("TomaszKopacz", "background");
 
             // get user
             Call<List<User>> call = service.getUser(mEmail);
@@ -130,28 +131,34 @@ public class LoginActivityPresenter {
                 @Override
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
 
-                    Log.d("TomaszKopacz", "response");
+                    Log.d("TomaszKopacz", "Response");
 
                     if (!response.body().isEmpty()) {
+
                         // user found
                         user = response.body().get(0);
 
                         // confirm password
-                        if (user.getSurname().equals(mPassword))
-                            onAttemptLoginResult(LOGIN_SUCCEED, user);
-                        else
-                            onAttemptLoginResult(PASSWORD_INVALID, null);
+                        if (user.getPassword().equals(mPassword)) {
+                            login(user);
+                            loginStatus = LOGIN_SUCCEED;
 
-                    } else
+                        }  else
+                            loginStatus = PASSWORD_INVALID;
+
+                    } else {
                         // no user found
-                        activity.onLoginAttemptResult(NO_SUCH_MAIL);
-
+                        Log.d("TomaszKopacz", "No user?");
+                        loginStatus = NO_SUCH_MAIL;
+                    }
                 }
 
                 @Override
                 public void onFailure(Call<List<User>> call, Throwable t) {
+
                     Log.d("TomaszKopacz", "failure");
-                    activity.onLoginAttemptResult(LOGIN_FAILED);
+
+                    loginStatus = LOGIN_FAILED;
                 }
             });
 
@@ -168,27 +175,17 @@ public class LoginActivityPresenter {
     }
 
     /**
-     * Reacts to attemptLogin attempt.
-     * @param result
+     * Login.
      */
-    private void onAttemptLoginResult(int result, User user){
+    private void login(User user){
 
-        if (result == LOGIN_SUCCEED){
+        Log.d("TomaszKopacz", "login");
 
-            // login successful:
-            // login the user
-            LoginService.login(activity.getApplicationContext(), user.getMail());
+        // login the user
+        LoginService.login(activity.getApplicationContext(), user.getMail());
 
-            // switch view to MainActivity
-            goToMainActivity();
-
-        } else {
-
-            // attemptLogin failed:
-            // pass error message to activity
-            activity.onLoginAttemptResult(result);
-        }
-
+        // switch view to MainActivity
+        goToMainActivity();
     }
 
     /**

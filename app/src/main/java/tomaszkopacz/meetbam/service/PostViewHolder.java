@@ -13,11 +13,11 @@ import tomaszkopacz.meetbam.R;
  */
 public class PostViewHolder extends RecyclerView.ViewHolder {
 
-    @BindView(R.id.post_name)
-    TextView name;
+    @BindView(R.id.name1)
+    TextView name1;
 
-    @BindView(R.id.post_surname)
-    TextView surname;
+    @BindView(R.id.name2)
+    TextView name2;
 
     @BindView(R.id.post_photo)
     ImageView photo;

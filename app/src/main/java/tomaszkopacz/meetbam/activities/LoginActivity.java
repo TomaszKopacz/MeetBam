@@ -2,6 +2,7 @@ package tomaszkopacz.meetbam.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -39,9 +40,6 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.login_form)
     View mLoginFormView;
 
-    @BindView(R.id.login_progress)
-    View mProgressView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,10 +53,15 @@ public class LoginActivity extends AppCompatActivity {
 
         // set up presenter
         presenter = new LoginActivityPresenter(this, service);
+
+        // check if any user is logged in
+        presenter.confirmUserIsSignedIn();
     }
 
     @OnClick(R.id.email_sign_in_button)
     public void signInBtn(){
+
+        Log.d("TomaszKopacz", "Clicked");
 
         String mail = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
@@ -66,10 +69,9 @@ public class LoginActivity extends AppCompatActivity {
         mEmailView.setError(null);
         mPasswordView.setError(null);
 
-        switch (presenter.areDataValid(mail, password)) {
+        switch (presenter.isLoginInputCorrect(mail, password)) {
 
-            case LoginActivityPresenter.DATA_VALID:
-                presenter.attemptLogin(mail, password);
+            case LoginActivityPresenter.LOGIN_SUCCEED:
                 break;
 
             case LoginActivityPresenter.MAIL_EMPTY:
@@ -91,11 +93,6 @@ public class LoginActivity extends AppCompatActivity {
                 mPasswordView.setError("Password must have min 6 signs");
                 mPasswordView.requestFocus();
                 break;
-        }
-    }
-
-    public void onLoginAttemptResult(int result){
-        switch (result){
 
             case LoginActivityPresenter.NO_SUCH_MAIL:
                 Toast.makeText(this, "User does not exist!", Toast.LENGTH_SHORT);
@@ -105,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(this, "Password is incorrect!", Toast.LENGTH_SHORT);
                 break;
 
-            default:
+            case LoginActivityPresenter.LOGIN_FAILED:
                 Toast.makeText(this, "Login failed!", Toast.LENGTH_SHORT);
                 break;
         }

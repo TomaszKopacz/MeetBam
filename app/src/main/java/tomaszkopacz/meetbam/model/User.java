@@ -6,17 +6,21 @@ package tomaszkopacz.meetbam.model;
 
 public class User {
 
-    private String id;
+    private String mail;
+    private String password;
     private String name;
     private String surname;
-    private String mail;
 
     public User(){
 
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setName(String name) {
@@ -27,13 +31,12 @@ public class User {
         this.surname = surname;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public String getMail() {
+        return mail;
     }
 
-    public String getId() {
-
-        return id;
+    public String getPassword() {
+        return password;
     }
 
     public String getName() {
@@ -42,9 +45,5 @@ public class User {
 
     public String getSurname() {
         return surname;
-    }
-
-    public String getMail() {
-        return mail;
     }
 }

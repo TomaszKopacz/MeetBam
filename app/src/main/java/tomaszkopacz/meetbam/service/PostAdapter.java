@@ -66,8 +66,8 @@ public class PostAdapter extends RecyclerView.Adapter {
         Post post = posts.get(position);
 
         //set text views
-        ((PostViewHolder) holder).name.setText(post.getName());
-        ((PostViewHolder) holder).surname.setText(post.getSurname());
+        ((PostViewHolder) holder).name1.setText(post.getName1() + " " + post.getSurname1());
+        ((PostViewHolder) holder).name2.setText(post.getName2() + " " + post.getSurname2());
         ((PostViewHolder) holder).time.setText(post.getTime());
 
         // download and set image

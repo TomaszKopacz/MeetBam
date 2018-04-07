@@ -27,4 +27,8 @@ public interface WebService {
 
     @GET("/posts.php")
     Call<List<Post>> getPosts();
+
+    @FormUrlEncoded
+    @POST("/posts.php")
+    Call<List<Post>> getUserPosts(@Field("user_mail") String user);
 }

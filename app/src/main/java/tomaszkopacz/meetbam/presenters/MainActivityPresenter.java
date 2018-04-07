@@ -1,17 +1,10 @@
 package tomaszkopacz.meetbam.presenters;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Environment;
-import android.preference.PreferenceManager;
-import android.provider.MediaStore;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,6 +30,8 @@ public class MainActivityPresenter {
     private MainActivity activity;
     private WebService service;
 
+    private String user;
+
     private List<Post> posts = new ArrayList<>();
 
     // photo storage directory
@@ -53,6 +48,16 @@ public class MainActivityPresenter {
     public MainActivityPresenter(MainActivity activity, WebService service){
         this.activity = activity;
         this.service = service;
+
+        // register user
+        registerLoggedUser();
+    }
+
+    /**
+     * Registers user.
+     */
+    public void registerLoggedUser(){
+        user = LoginService.getLoggedUser(activity.getApplicationContext());
     }
 
     /**
@@ -78,7 +83,8 @@ public class MainActivityPresenter {
         posts.clear();
 
         // when new elements downloaded
-        service.getPosts().enqueue(new Callback<List<Post>>() {
+        Call call = service.getUserPosts(user);
+        call.enqueue(new Callback<List<Post>>() {
 
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {

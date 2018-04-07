@@ -15,14 +15,14 @@
             android:padding="5dp">
 
         <TextView
-            android:id="@+id/post_name"
+            android:id="@+id/name1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#333"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/post_surname"
+            android:id="@+id/name2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
