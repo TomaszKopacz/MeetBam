@@ -3,6 +3,7 @@ package tomaszkopacz.meetbam.di.components;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import tomaszkopacz.meetbam.activities.AccountFriendsFragment;
 import tomaszkopacz.meetbam.activities.AccountPhotosFragment;
 import tomaszkopacz.meetbam.activities.LoginActivity;
 import tomaszkopacz.meetbam.activities.MainActivity;
@@ -20,4 +21,5 @@ public interface WebServiceComponent {
     void inject(LoginActivity mLoginActivity);
 
     void inject(AccountPhotosFragment mAccountPhotosFragment);
+    void inject(AccountFriendsFragment mAccountFriendsFragment);
 }

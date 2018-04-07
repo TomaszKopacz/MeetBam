@@ -32,4 +32,8 @@ public interface WebService {
     @FormUrlEncoded
     @POST("/get_people_posts.php")
     Call<List<Post>> getFriendsPosts(@Field("user_mail") String user);
+
+    @FormUrlEncoded
+    @POST("/get_friends.php")
+    Call<List<User>> getFriends(@Field("mail") String user);
 }

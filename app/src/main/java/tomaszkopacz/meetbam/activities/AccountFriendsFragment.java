@@ -3,6 +3,10 @@ package tomaszkopacz.meetbam.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +14,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import tomaszkopacz.meetbam.R;
+import tomaszkopacz.meetbam.model.Post;
+import tomaszkopacz.meetbam.model.User;
 import tomaszkopacz.meetbam.presenters.AccountFriendsFragmentPresenter;
+import tomaszkopacz.meetbam.service.PostAdapter;
+import tomaszkopacz.meetbam.service.UserAdapter;
+import tomaszkopacz.meetbam.service.WebService;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,12 +37,13 @@ public class AccountFriendsFragment extends Fragment {
 
     private AccountFriendsFragmentPresenter presenter;
 
-    @BindView(R.id.friendsText)
-    TextView friendsText;
+    @Inject
+    WebService service;
 
-    @BindView(R.id.friendsBtn)
-    Button friendsBtn;
+    @BindView(R.id.usersRecView)
+    RecyclerView recyclerView;
 
+    private UserAdapter userAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,20 +54,37 @@ public class AccountFriendsFragment extends Fragment {
         //bind view
         ButterKnife.bind(this, view);
 
+        //get dependencies
+        ((MainApp)getActivity().getApplication())
+                .getWebServiceComponent().inject(this);
+
         //set up presenter
-        presenter = new AccountFriendsFragmentPresenter(this);
+        presenter = new AccountFriendsFragmentPresenter(this, service);
+
+        //prepare recycler view and download posts
+        prepareRecView();
+        presenter.downloadPostsList();
 
         return view;
     }
 
-    @OnClick(R.id.friendsBtn)
-    public void btnClicked(){
-        Log.d("TomaszKopacz", "OnClick");
-        presenter.btnClicked();
+    /**
+     * Configures recycler view.
+     */
+    private void prepareRecView(){
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
-    public void changeText(String text){
-        Log.d("TomaszKopacz", "ChangeText");
-        friendsText.setText(text);
+    /**
+     * Sets list of users to recycler view.
+     */
+    public void setUpList(List<User> users) {
+        if (users == null)
+            users = new ArrayList<>();
+
+        userAdapter = new UserAdapter(users, recyclerView);
+        recyclerView.setAdapter(userAdapter);
     }
 }
