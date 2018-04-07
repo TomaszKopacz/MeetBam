@@ -2,9 +2,7 @@ package tomaszkopacz.meetbam.activities;
 
 import android.app.Application;
 
-import tomaszkopacz.meetbam.di.components.DaggerFragmentComponent;
 import tomaszkopacz.meetbam.di.components.DaggerWebServiceComponent;
-import tomaszkopacz.meetbam.di.components.FragmentComponent;
 import tomaszkopacz.meetbam.di.components.WebServiceComponent;
 
 /**
@@ -13,22 +11,12 @@ import tomaszkopacz.meetbam.di.components.WebServiceComponent;
 
 public class MainApp extends Application {
 
-    private FragmentComponent mFragmentComponent;
     private WebServiceComponent mWebServiceComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mFragmentComponent = DaggerFragmentComponent.builder().build();
         mWebServiceComponent = DaggerWebServiceComponent.builder().build();
-    }
-
-    /**
-     * Returns fragment component.
-     * @return
-     */
-    public FragmentComponent getFragmentComponent(){
-        return mFragmentComponent;
     }
 
     /**

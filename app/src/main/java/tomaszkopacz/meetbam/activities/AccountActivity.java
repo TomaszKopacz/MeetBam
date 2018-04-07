@@ -13,18 +13,14 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import tomaszkopacz.meetbam.R;
+import tomaszkopacz.meetbam.service.LoginService;
 import tomaszkopacz.meetbam.service.ViewPagerAdapter;
 
 public class AccountActivity extends AppCompatActivity {
 
-    @Inject
-    AccountInfoFragment mAccountInfoFragment;
-
-    @Inject
-    AccountPhotosFragment mAccountPhotosFragment;
-
-    @Inject
-    AccountFriendsFragment mAccountFriendsFragment;
+    private AccountInfoFragment mAccountInfoFragment;
+    private AccountPhotosFragment mAccountPhotosFragment;
+    private AccountFriendsFragment mAccountFriendsFragment;
 
     @BindView(R.id.account_toolbar)
     Toolbar toolbar;
@@ -47,12 +43,12 @@ public class AccountActivity extends AppCompatActivity {
         //bind views
         ButterKnife.bind(this);
 
-        //get dependencies
-        ((MainApp)getApplication()).getFragmentComponent().inject(this);
-
         //toolbar
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // set title: user name and surname
+        setTitle();
 
         //view pager
         setUpViewPager(viewPager);
@@ -75,10 +71,22 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     /**
+     * Sets title of activity bar. The title is name and surname of a logged user.
+     */
+    private void setTitle(){
+        LoginService service = new LoginService(getApplicationContext());
+        setTitle(service.getUserName() + " " + service.getUserSurname());
+    }
+
+    /**
      * Sets fragments as tabs.
      * @param viewPager view, to which tabs adapter is assigned
      */
     private void setUpViewPager(ViewPager viewPager){
+        mAccountInfoFragment = new AccountInfoFragment();
+        mAccountPhotosFragment = new AccountPhotosFragment();
+        mAccountFriendsFragment = new AccountFriendsFragment();
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addItem(mAccountInfoFragment, ACCOUNT_TITLE);
         adapter.addItem(mAccountPhotosFragment, PHOTOS_TITLE);

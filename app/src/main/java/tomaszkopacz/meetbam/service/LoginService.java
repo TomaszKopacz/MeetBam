@@ -9,55 +9,85 @@ import android.preference.PreferenceManager;
 
 public class LoginService {
 
-    private static final String USER = "user";
+    private SharedPreferences sharedPreferences;
+
+    private static final String MAIL = "mail";
+    private static final String NAME = "name";
+    private static final String SURNAME = "surname";
+    private static final String PASSWORD = "password";
     private static final String NO_USER = "";
+
+    public LoginService(Context context){
+
+        this.sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(context);
+    }
 
     /**
      * Checks, whether any user is logged in.
      * @return
      */
-    public static boolean isUserLoggedIn(Context context){
+    public boolean isUserLoggedIn(){
 
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        String user = sharedPref.getString(USER, NO_USER);
+        String user = sharedPreferences.getString(MAIL, NO_USER);
 
         return (!user.equals(NO_USER)) ? true : false;
     }
 
     /**
-     * Returns logged user.
-     * @param context
+     * Returns logged user mail.
      * @return
      */
-    public static String getLoggedUser(Context context){
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        return sharedPref.getString(USER, NO_USER);
+    public String getUserMail(){
+        return sharedPreferences.getString(MAIL, NO_USER);
+    }
+
+    /**
+     * Returns logged user name.
+     * @return
+     */
+    public String getUserName(){
+        return sharedPreferences.getString(NAME, NO_USER);
+    }
+
+    /**
+     * Returns logged user surname.
+     * @return
+     */
+    public String getUserSurname(){
+        return sharedPreferences.getString(SURNAME, NO_USER);
+    }
+
+    /**
+     * Returns logged user password.
+     * @return
+     */
+    public String getUserPassword(){
+        return sharedPreferences.getString(PASSWORD, NO_USER);
     }
 
     /**
      * Login new user. User is determined by giving his email.
-     * @param context
      * @param mail
      */
-    public static void login(Context context, String mail){
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString(USER, mail);
+    public void login(String mail, String name, String surname, String pwd){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(MAIL, mail);
+        editor.putString(NAME, name);
+        editor.putString(SURNAME, surname);
+        editor.putString(PASSWORD, pwd);
         editor.commit();
     }
 
     /**
      * Logout user.
-     * @param context
      */
-    public static void logout(Context context){
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.remove(USER);
+    public void logout(){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(MAIL);
+        editor.remove(NAME);
+        editor.remove(SURNAME);
+        editor.remove(PASSWORD);
         editor.commit();
     }
 }

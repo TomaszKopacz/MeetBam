@@ -17,11 +17,8 @@ import tomaszkopacz.meetbam.service.ViewPagerAdapter;
 
 public class StatsActivity extends AppCompatActivity {
 
-    @Inject
-    StatsLocalFragment mStatsLocalFragment;
-
-    @Inject
-    StatsGlobalFragment mStatsGlobalFragment;
+    private StatsLocalFragment mStatsLocalFragment;
+    private StatsGlobalFragment mStatsGlobalFragment;
 
     @BindView(R.id.stats_toolbar)
     Toolbar toolbar;
@@ -43,9 +40,6 @@ public class StatsActivity extends AppCompatActivity {
 
         //bind views
         ButterKnife.bind(this);
-
-        //get dependencies
-        ((MainApp)getApplication()).getFragmentComponent().inject(this);
 
         //toolbar
         setSupportActionBar(toolbar);
@@ -76,6 +70,9 @@ public class StatsActivity extends AppCompatActivity {
      * @param viewPager view, to which tabs adapter is assigned
      */
     private void setUpViewPager(ViewPager viewPager){
+        mStatsGlobalFragment = new StatsGlobalFragment();
+        mStatsLocalFragment = new StatsLocalFragment();
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addItem(mStatsLocalFragment, LOCAL_RANKING_TITLE);
         adapter.addItem(mStatsGlobalFragment, GLOBAL_RANKING_TITLE);

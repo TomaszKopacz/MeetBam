@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import javax.inject.Inject;
-
 import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.presenters.StatsGlobalFragmentPresenter;
 
@@ -17,14 +15,7 @@ import tomaszkopacz.meetbam.presenters.StatsGlobalFragmentPresenter;
  */
 public class StatsGlobalFragment extends Fragment {
 
-    @Inject
-    StatsGlobalFragmentPresenter presenter;
-
-    @Inject
-    public StatsGlobalFragment() {
-
-    }
-
+    private StatsGlobalFragmentPresenter presenter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,11 +23,8 @@ public class StatsGlobalFragment extends Fragment {
         //inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_stats_global, container, false);
 
-        //get dependencies
-        ((MainApp)getActivity().getApplication()).getFragmentComponent().inject(this);
-
         //set up presenter
-        presenter.setFragment(this);
+        presenter = new StatsGlobalFragmentPresenter(this);
 
         return view;
     }

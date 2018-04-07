@@ -61,8 +61,6 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick(R.id.email_sign_in_button)
     public void signInBtn(){
 
-        Log.d("TomaszKopacz", "Clicked");
-
         String mail = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 

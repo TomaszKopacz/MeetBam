@@ -2,7 +2,6 @@ package tomaszkopacz.meetbam.presenters;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import java.util.List;
 
@@ -22,7 +21,8 @@ import tomaszkopacz.meetbam.service.WebService;
 public class LoginActivityPresenter {
 
     private LoginActivity activity;
-    private WebService service;
+    private WebService mWebService;
+    private LoginService mLoginService;
 
     public static final int LOGIN_FAILED = -1;
     public static final int LOGIN_SUCCEED = 1;
@@ -44,7 +44,8 @@ public class LoginActivityPresenter {
      */
     public LoginActivityPresenter(LoginActivity activity, WebService service){
         this.activity = activity;
-        this.service = service;
+        this.mWebService = service;
+        this.mLoginService = new LoginService(activity.getApplicationContext());
     }
 
     /**
@@ -53,23 +54,20 @@ public class LoginActivityPresenter {
     public void confirmUserIsSignedIn(){
 
         // if any user is logged in go to MainActivity
-        if (LoginService.isUserLoggedIn(activity.getApplicationContext())){
+        if (mLoginService.isUserLoggedIn())
             goToMainActivity();
-        }
     }
 
     /**
-     * Confirm attemptLogin mail and password.
+     * Confirm login mail and password.
      * Login, as an email string, should contain '@' sign.
      * Password should have more than 5 signs.
-     * Both attemptLogin and password cannot be empty.
+     * Both login and password cannot be empty.
      * @param mail
      * @param password
      * @return
      */
     public int isLoginInputCorrect(String mail, String password){
-
-        Log.d("TomaszKopacz", "isLoginInputCorrect");
 
         loginStatus = LOGIN_FAILED;
 
@@ -98,8 +96,6 @@ public class LoginActivityPresenter {
      */
     private void attemptLogin(String mail, String password){
 
-        Log.d("TomaszKopacz", "attemptLogin");
-
         UserLoginTask userTask = new UserLoginTask(mail, password);
         userTask.execute();
     }
@@ -113,7 +109,6 @@ public class LoginActivityPresenter {
         private final String mPassword;
 
         UserLoginTask(String email, String password) {
-            Log.d("TomaszKopacz", "UserLoginTask");
             mEmail = email;
             mPassword = password;
         }
@@ -123,15 +118,11 @@ public class LoginActivityPresenter {
         @Override
         protected Boolean doInBackground(Void... params) {
 
-            Log.d("TomaszKopacz", "background");
-
             // get user
-            Call<List<User>> call = service.getUser(mEmail);
+            Call<List<User>> call = mWebService.getUser(mEmail);
             call.enqueue(new Callback<List<User>>() {
                 @Override
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-
-                    Log.d("TomaszKopacz", "Response");
 
                     if (!response.body().isEmpty()) {
 
@@ -146,18 +137,13 @@ public class LoginActivityPresenter {
                         }  else
                             loginStatus = PASSWORD_INVALID;
 
-                    } else {
+                    } else
                         // no user found
-                        Log.d("TomaszKopacz", "No user?");
                         loginStatus = NO_SUCH_MAIL;
-                    }
                 }
 
                 @Override
                 public void onFailure(Call<List<User>> call, Throwable t) {
-
-                    Log.d("TomaszKopacz", "failure");
-
                     loginStatus = LOGIN_FAILED;
                 }
             });
@@ -179,10 +165,13 @@ public class LoginActivityPresenter {
      */
     private void login(User user){
 
-        Log.d("TomaszKopacz", "login");
+        String mail = user.getMail();
+        String name = user.getName();
+        String surname = user.getSurname();
+        String password = user.getPassword();
 
         // login the user
-        LoginService.login(activity.getApplicationContext(), user.getMail());
+        mLoginService.login(mail, name, surname, password);
 
         // switch view to MainActivity
         goToMainActivity();
@@ -196,5 +185,4 @@ public class LoginActivityPresenter {
         activity.startActivity(intent);
         activity.finish();
     }
-
 }

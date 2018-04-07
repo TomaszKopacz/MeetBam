@@ -1,5 +1,7 @@
 package tomaszkopacz.meetbam.service;
 
+import android.app.Activity;
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,7 @@ import tomaszkopacz.meetbam.model.Post;
 public class PostAdapter extends RecyclerView.Adapter {
 
     // activity context
-    private MainActivity activity;
+    private Context context;
 
     // data source
     private List<Post> posts = new ArrayList<>();
@@ -36,8 +38,8 @@ public class PostAdapter extends RecyclerView.Adapter {
     /**
      * Constructor.
      */
-    public PostAdapter(MainActivity activity, List<Post> posts, RecyclerView recyclerView){
-        this.activity = activity;
+    public PostAdapter(Context context, List<Post> posts, RecyclerView recyclerView){
+        this.context = context;
         this.posts = posts;
         this.recyclerView = recyclerView;
     }
@@ -72,7 +74,7 @@ public class PostAdapter extends RecyclerView.Adapter {
 
         // download and set image
         Glide
-                .with(activity)
+                .with(context)
                 .load(BASE_URL + post.getPhotoDir())
                 .into(((PostViewHolder) holder).photo);
 

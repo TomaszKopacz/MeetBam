@@ -17,14 +17,7 @@ import tomaszkopacz.meetbam.presenters.AccountInfoFragmentPresenter;
  */
 public class AccountInfoFragment extends Fragment {
 
-    @Inject
-    AccountInfoFragmentPresenter presenter;
-
-    @Inject
-    public AccountInfoFragment() {
-        // Required empty public constructor
-    }
-
+    private AccountInfoFragmentPresenter presenter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,11 +25,8 @@ public class AccountInfoFragment extends Fragment {
         //inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_account_info, container, false);
 
-        //get dependencies
-        ((MainApp)getActivity().getApplication()).getFragmentComponent().inject(this);
-
         //set up presenter
-        presenter.setFragment(this);
+        presenter = new AccountInfoFragmentPresenter(this);
 
         return view;
     }

@@ -1,7 +1,5 @@
 package tomaszkopacz.meetbam.presenters;
 
-import javax.inject.Inject;
-
 import tomaszkopacz.meetbam.activities.StatsGlobalFragment;
 
 /**
@@ -15,16 +13,7 @@ public class StatsGlobalFragmentPresenter {
     /**
      * Constructor.
      */
-    @Inject
-    public StatsGlobalFragmentPresenter(){
-
-    }
-
-    /**
-     * Sets fragment.
-     * @param fragment
-     */
-    public void setFragment(StatsGlobalFragment fragment) {
+    public StatsGlobalFragmentPresenter(StatsGlobalFragment fragment){
         this.fragment = fragment;
     }
 }

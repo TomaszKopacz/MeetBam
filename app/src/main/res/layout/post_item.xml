@@ -18,16 +18,13 @@
             android:id="@+id/name1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#333"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/name2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#888"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/post_photo"

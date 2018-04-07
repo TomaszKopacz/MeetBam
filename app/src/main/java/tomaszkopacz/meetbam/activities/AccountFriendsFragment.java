@@ -23,19 +23,13 @@ import tomaszkopacz.meetbam.presenters.AccountFriendsFragmentPresenter;
  */
 public class AccountFriendsFragment extends Fragment {
 
-    @Inject
-    AccountFriendsFragmentPresenter presenter;
+    private AccountFriendsFragmentPresenter presenter;
 
     @BindView(R.id.friendsText)
     TextView friendsText;
 
     @BindView(R.id.friendsBtn)
     Button friendsBtn;
-
-    @Inject
-    public AccountFriendsFragment() {
-        // Required empty public constructor
-    }
 
 
     @Override
@@ -47,11 +41,8 @@ public class AccountFriendsFragment extends Fragment {
         //bind view
         ButterKnife.bind(this, view);
 
-        //get dependencies
-        ((MainApp)getActivity().getApplication()).getFragmentComponent().inject(this);
-
         //set up presenter
-        presenter.setFragment(this);
+        presenter = new AccountFriendsFragmentPresenter(this);
 
         return view;
     }

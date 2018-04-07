@@ -25,10 +25,11 @@ public interface WebService {
     @POST("/users.php")
     Call<List<User>> getUser(@Field("mail") String mail);
 
-    @GET("/posts.php")
-    Call<List<Post>> getPosts();
+    @FormUrlEncoded
+    @POST("/get_user_posts.php")
+    Call<List<Post>> getUserPosts(@Field("user_mail") String user);
 
     @FormUrlEncoded
-    @POST("/posts.php")
-    Call<List<Post>> getUserPosts(@Field("user_mail") String user);
+    @POST("/get_people_posts.php")
+    Call<List<Post>> getFriendsPosts(@Field("user_mail") String user);
 }

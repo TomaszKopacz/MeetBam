@@ -17,17 +17,10 @@ public class AccountFriendsFragmentPresenter {
     /**
      * Constructor.
      */
-    @Inject
-    public AccountFriendsFragmentPresenter (){
-    }
-
-    /**
-     * Sets fragment.
-     * @param fragment
-     */
-    public void setFragment(AccountFriendsFragment fragment) {
+    public AccountFriendsFragmentPresenter (AccountFriendsFragment fragment){
         this.fragment = fragment;
     }
+
 
     public void btnClicked() {
         Log.d("TomaszKopacz", "OnClick - presenter");

@@ -1,10 +1,5 @@
 package tomaszkopacz.meetbam.presenters;
 
-import android.app.Fragment;
-
-import javax.inject.Inject;
-
-import tomaszkopacz.meetbam.activities.AccountFriendsFragment;
 import tomaszkopacz.meetbam.activities.StatsLocalFragment;
 
 /**
@@ -18,16 +13,7 @@ public class StatsLocalFragmentPresenter {
     /**
      * Constructor.
      */
-    @Inject
-    public StatsLocalFragmentPresenter(){
-
-    }
-
-    /**
-     * Sets fragment.
-     * @param fragment
-     */
-    public void setFragment(StatsLocalFragment fragment) {
+    public StatsLocalFragmentPresenter(StatsLocalFragment fragment){
         this.fragment = fragment;
     }
 }

@@ -15,16 +15,8 @@ public class AccountInfoFragmentPresenter {
     /**
      * Constructor.
      */
-    @Inject
-    public AccountInfoFragmentPresenter(){
+    public AccountInfoFragmentPresenter(AccountInfoFragment fragment){
 
-    }
-
-    /**
-     * Sets fragment.
-     * @param fragment
-     */
-    public void setFragment(AccountInfoFragment fragment) {
         this.fragment = fragment;
     }
 }

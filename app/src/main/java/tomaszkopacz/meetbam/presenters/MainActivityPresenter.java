@@ -28,9 +28,8 @@ import tomaszkopacz.meetbam.service.WebService;
 public class MainActivityPresenter {
 
     private MainActivity activity;
-    private WebService service;
-
-    private String user;
+    private WebService mWebService;
+    private LoginService mLoginService;
 
     private List<Post> posts = new ArrayList<>();
 
@@ -47,17 +46,8 @@ public class MainActivityPresenter {
      */
     public MainActivityPresenter(MainActivity activity, WebService service){
         this.activity = activity;
-        this.service = service;
-
-        // register user
-        registerLoggedUser();
-    }
-
-    /**
-     * Registers user.
-     */
-    public void registerLoggedUser(){
-        user = LoginService.getLoggedUser(activity.getApplicationContext());
+        this.mWebService = service;
+        this.mLoginService = new LoginService(activity.getApplicationContext());
     }
 
     /**
@@ -66,7 +56,7 @@ public class MainActivityPresenter {
     public void logout(){
 
         // logout the user
-        LoginService.logout(activity.getApplicationContext());
+        mLoginService.logout();
 
         // switch view to LoginActivity
         Intent intent = new Intent(activity, LoginActivity.class);
@@ -83,7 +73,7 @@ public class MainActivityPresenter {
         posts.clear();
 
         // when new elements downloaded
-        Call call = service.getUserPosts(user);
+        Call call = mWebService.getFriendsPosts(mLoginService.getUserMail());
         call.enqueue(new Callback<List<Post>>() {
 
             @Override
