@@ -1,6 +1,7 @@
 package tomaszkopacz.meetbam.presenters;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.bumptech.glide.Glide;
 
@@ -94,6 +95,11 @@ public class AccountPhotosFragmentPresenter implements RecyclerViewPresenter{
         // get appropriate info about how long ago post was uploaded
         String timeAgoText = PostTimeProvider.getTimeAgoText(timeAgo);
         ((PostViewHolder) holder).getTime().setText(timeAgoText);
+    }
+
+    @Override
+    public void onItemClick(View view) {
+
     }
 
     @Override

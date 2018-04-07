@@ -2,6 +2,7 @@ package tomaszkopacz.meetbam.presenters;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +77,11 @@ public class AccountFriendsFragmentPresenter implements RecyclerViewPresenter{
     public void onItemBoundAtPosition(RecyclerView.ViewHolder holder, int position) {
         User user = users.get(position);
         ((UserViewHolder)holder).getUsername().setText(user.getName() + " " + user.getSurname());
+    }
+
+    @Override
+    public void onItemClick(View view) {
+
     }
 
     @Override

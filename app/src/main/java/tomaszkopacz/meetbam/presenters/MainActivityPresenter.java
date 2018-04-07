@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.bumptech.glide.Glide;
 
@@ -59,21 +60,16 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         this.activity = activity;
         this.mWebService = service;
         this.mLoginService = new LoginService(activity.getApplicationContext());
-        this.adapter = new PostAdapter(this);
+
+        setUpAdapter();
     }
 
     /**
-     * Logout. Clears SharedPreferences and switches view to LoginActivity.
+     * Creates adapter to store posts and service items actions.
      */
-    public void logout(){
+    private void setUpAdapter(){
+        this.adapter = new PostAdapter(this);
 
-        // logout the user
-        mLoginService.logout();
-
-        // switch view to LoginActivity
-        Intent intent = new Intent(activity, LoginActivity.class);
-        activity.startActivity(intent);
-        activity.finish();
     }
 
     /**
@@ -112,7 +108,6 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         //set text views
         ((PostViewHolder) holder).getName1().setText(post.getName1() + " " + post.getSurname1());
         ((PostViewHolder) holder).getName2().setText(post.getName2() + " " + post.getSurname2());
-        //((PostViewHolder) holder).getTime().setText(post.getTime());
 
         // download and set image
         Glide
@@ -126,6 +121,13 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         // get appropriate info about how long ago post was uploaded
         String timeAgoText = PostTimeProvider.getTimeAgoText(timeAgo);
         ((PostViewHolder) holder).getTime().setText(timeAgoText);
+    }
+
+    @Override
+    public void onItemClick(View view) {
+        int position = activity.getPostsRecView().getChildAdapterPosition(view);
+        // posts.remove(position);
+        // adapter.notifyItemRemoved(position);
     }
 
     @Override
@@ -173,5 +175,19 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
      */
     public void pair(){
         dialog.getPersonTextView().setText("ZBYSZEK");
+    }
+
+    /**
+     * Logout. Clears SharedPreferences and switches view to LoginActivity.
+     */
+    public void logout(){
+
+        // logout the user
+        mLoginService.logout();
+
+        // switch view to LoginActivity
+        Intent intent = new Intent(activity, LoginActivity.class);
+        activity.startActivity(intent);
+        activity.finish();
     }
 }

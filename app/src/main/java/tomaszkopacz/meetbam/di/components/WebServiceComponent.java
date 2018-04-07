@@ -7,6 +7,8 @@ import tomaszkopacz.meetbam.activities.AccountFriendsFragment;
 import tomaszkopacz.meetbam.activities.AccountPhotosFragment;
 import tomaszkopacz.meetbam.activities.LoginActivity;
 import tomaszkopacz.meetbam.activities.MainActivity;
+import tomaszkopacz.meetbam.activities.StatsGlobalFragment;
+import tomaszkopacz.meetbam.activities.StatsLocalFragment;
 import tomaszkopacz.meetbam.di.providers.WebServiceModule;
 
 /**
@@ -22,4 +24,6 @@ public interface WebServiceComponent {
 
     void inject(AccountPhotosFragment mAccountPhotosFragment);
     void inject(AccountFriendsFragment mAccountFriendsFragment);
+    void inject(StatsGlobalFragment mStatsGlobalFragment);
+    void inject(StatsLocalFragment mStatsLocalFragment);
 }

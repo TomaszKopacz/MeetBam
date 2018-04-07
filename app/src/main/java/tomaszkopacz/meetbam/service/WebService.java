@@ -10,6 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.model.User;
+import tomaszkopacz.meetbam.model.UserResult;
 
 /**
  * Created by tomas on 03.03.2018.
@@ -36,4 +37,11 @@ public interface WebService {
     @FormUrlEncoded
     @POST("/get_friends.php")
     Call<List<User>> getFriends(@Field("mail") String user);
+
+    @GET("/get_results.php")
+    Call<List<UserResult>> getGlobalResults();
+
+    @FormUrlEncoded
+    @POST("/get_results.php")
+    Call<List<UserResult>> getLocalResults(@Field("mail") String user);
 }

@@ -39,16 +39,13 @@ public class PostAdapter extends RecyclerView.Adapter {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.post_item, parent, false);
 
-        /* remove item when clicked
+        // when item clicked remove it
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int position = recyclerView.getChildAdapterPosition(view);
-                posts.remove(position);
-                notifyItemRemoved(position);
+                presenter.onItemClick(view);
             }
         });
-        */
 
         return new PostViewHolder(view);
     }
