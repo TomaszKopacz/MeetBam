@@ -29,4 +29,36 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         ButterKnife.bind(this, itemView);
     }
+
+    public TextView getName1() {
+        return name1;
+    }
+
+    public void setName1(TextView name1) {
+        this.name1 = name1;
+    }
+
+    public TextView getName2() {
+        return name2;
+    }
+
+    public void setName2(TextView name2) {
+        this.name2 = name2;
+    }
+
+    public ImageView getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(ImageView photo) {
+        this.photo = photo;
+    }
+
+    public TextView getTime() {
+        return time;
+    }
+
+    public void setTime(TextView time) {
+        this.time = time;
+    }
 }

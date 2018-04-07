@@ -5,11 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import tomaszkopacz.meetbam.R;
-import tomaszkopacz.meetbam.model.User;
+import tomaszkopacz.meetbam.presenters.RecyclerViewPresenter;
 
 /**
  * Created by tomas on 07.04.2018.
@@ -17,12 +14,10 @@ import tomaszkopacz.meetbam.model.User;
 
 public class UserAdapter extends RecyclerView.Adapter {
 
-    private List<User> users = new ArrayList<>();
-    private RecyclerView recView;
+    private RecyclerViewPresenter presenter;
 
-    public UserAdapter(List<User> users, RecyclerView recView){
-        this.users = users;
-        this.recView = recView;
+    public UserAdapter(RecyclerViewPresenter presenter){
+        this.presenter = presenter;
     }
 
     @Override
@@ -36,13 +31,11 @@ public class UserAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        User user = users.get(position);
-
-        ((UserViewHolder)holder).username.setText(user.getName() + " " + user.getSurname());
+        presenter.onItemBoundAtPosition(holder, position);
     }
 
     @Override
     public int getItemCount() {
-        return users.size();
+        return presenter.getItemCount();
     }
 }

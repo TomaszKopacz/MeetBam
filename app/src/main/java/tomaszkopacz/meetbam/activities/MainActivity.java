@@ -24,6 +24,7 @@ import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
 import tomaszkopacz.meetbam.service.PostAdapter;
+import tomaszkopacz.meetbam.service.UserAdapter;
 import tomaszkopacz.meetbam.service.WebService;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.fab_main)
     FloatingActionButton fab;
-
-    private PostAdapter postAdapter;
 
     public static final int CAMERA_CODE = 1;
 
@@ -117,14 +116,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Sets list of posts to recycler view.
+     * Puts posts stored in adapter into recycler view list.
+     * @param adapter
      */
-    public void setUpList(List<Post> posts) {
-        if (posts == null)
-            posts = new ArrayList<>();
-
-        postAdapter = new PostAdapter(this, posts, postsRecView);
-        postsRecView.setAdapter(postAdapter);
+    public void putPosts(PostAdapter adapter){
+        postsRecView.setAdapter(adapter);
     }
 
     @Override

@@ -36,8 +36,6 @@ public class AccountPhotosFragment extends Fragment {
     @BindView(R.id.userPostsRecView)
     RecyclerView recView;
 
-    private PostAdapter adapter;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,13 +72,10 @@ public class AccountPhotosFragment extends Fragment {
     }
 
     /**
-     * Sets list of posts to recycler view.
+     * Puts photos stored in adapter into recycler view list.
+     * @param adapter
      */
-    public void setUpList(List<Post> posts) {
-        if (posts == null)
-            posts = new ArrayList<>();
-
-        adapter = new PostAdapter(this.getActivity(), posts, recView);
+    public void putPhotos(PostAdapter adapter){
         recView.setAdapter(adapter);
     }
 }

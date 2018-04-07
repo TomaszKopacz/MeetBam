@@ -15,6 +15,7 @@ import java.util.List;
 import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.model.Post;
+import tomaszkopacz.meetbam.presenters.RecyclerViewPresenter;
 
 /**
  * Created by tomas on 03.03.2018.
@@ -23,25 +24,13 @@ import tomaszkopacz.meetbam.model.Post;
 
 public class PostAdapter extends RecyclerView.Adapter {
 
-    // activity context
-    private Context context;
-
-    // data source
-    private List<Post> posts = new ArrayList<>();
-
-    // list
-    private RecyclerView recyclerView;
-
-    // photo base url
-    private static final String BASE_URL = "http://meetbam.cba.pl/";
+    private RecyclerViewPresenter presenter;
 
     /**
      * Constructor.
      */
-    public PostAdapter(Context context, List<Post> posts, RecyclerView recyclerView){
-        this.context = context;
-        this.posts = posts;
-        this.recyclerView = recyclerView;
+    public PostAdapter(RecyclerViewPresenter presenter){
+        this.presenter = presenter;
     }
 
     @Override
@@ -50,7 +39,7 @@ public class PostAdapter extends RecyclerView.Adapter {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.post_item, parent, false);
 
-        // remove item when clicked
+        /* remove item when clicked
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,36 +48,18 @@ public class PostAdapter extends RecyclerView.Adapter {
                 notifyItemRemoved(position);
             }
         });
+        */
 
         return new PostViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        Post post = posts.get(position);
-
-        //set text views
-        ((PostViewHolder) holder).name1.setText(post.getName1() + " " + post.getSurname1());
-        ((PostViewHolder) holder).name2.setText(post.getName2() + " " + post.getSurname2());
-        ((PostViewHolder) holder).time.setText(post.getTime());
-
-        // download and set image
-        Glide
-                .with(context)
-                .load(BASE_URL + post.getPhotoDir())
-                .into(((PostViewHolder) holder).photo);
-
-        // count time since post was uploaded
-        float timeAgo = PostTimeProvider.countTimeAgo(post.getTime());
-
-        // get appropriate info about how long ago post was uploaded
-        String timeAgoText = PostTimeProvider.getTimeAgoText(timeAgo);
-        ((PostViewHolder) holder).time.setText(timeAgoText);
-
+        presenter.onItemBoundAtPosition(holder, position);
     }
 
     @Override
     public int getItemCount() {
-        return posts.size();
+        return presenter.getItemCount();
     }
 }

@@ -1,5 +1,6 @@
 package tomaszkopacz.meetbam.presenters;
 
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -14,18 +15,22 @@ import tomaszkopacz.meetbam.activities.AccountFriendsFragment;
 import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.model.User;
 import tomaszkopacz.meetbam.service.LoginService;
+import tomaszkopacz.meetbam.service.UserAdapter;
+import tomaszkopacz.meetbam.service.UserViewHolder;
 import tomaszkopacz.meetbam.service.WebService;
 
 /**
  * Created by tomas on 02.03.2018.
  */
 
-public class AccountFriendsFragmentPresenter {
+public class AccountFriendsFragmentPresenter implements RecyclerViewPresenter{
 
     private AccountFriendsFragment fragment;
     private WebService mWebService;
     private LoginService mLoginService;
 
+    // list of users
+    private UserAdapter adapter;
     private List<User> users = new ArrayList<>();
 
     /**
@@ -35,6 +40,7 @@ public class AccountFriendsFragmentPresenter {
         this.fragment = fragment;
         this.mWebService = service;
         this.mLoginService = new LoginService(fragment.getActivity().getApplicationContext());
+        this.adapter = new UserAdapter(this);
     }
 
     /**
@@ -56,7 +62,7 @@ public class AccountFriendsFragmentPresenter {
                 users = response.body();
 
                 // send users to activity
-                fragment.setUpList(users);
+                fragment.putUsers(adapter);
             }
 
             @Override
@@ -64,5 +70,16 @@ public class AccountFriendsFragmentPresenter {
 
             }
         });
+    }
+
+    @Override
+    public void onItemBoundAtPosition(RecyclerView.ViewHolder holder, int position) {
+        User user = users.get(position);
+        ((UserViewHolder)holder).getUsername().setText(user.getName() + " " + user.getSurname());
+    }
+
+    @Override
+    public int getItemCount() {
+        return users.size();
     }
 }

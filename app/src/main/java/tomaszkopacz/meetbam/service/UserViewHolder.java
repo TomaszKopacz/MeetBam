@@ -25,4 +25,20 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         ButterKnife.bind(this, itemView);
     }
+
+    public TextView getUsername() {
+        return username;
+    }
+
+    public void setUsername(TextView username) {
+        this.username = username;
+    }
+
+    public ImageView getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(ImageView userImage) {
+        this.userImage = userImage;
+    }
 }

@@ -78,13 +78,18 @@ public class AccountFriendsFragment extends Fragment {
     }
 
     /**
-     * Sets list of users to recycler view.
+     * Puts users stored in adapter into recycler view list.
+     * @param adapter
      */
-    public void setUpList(List<User> users) {
-        if (users == null)
-            users = new ArrayList<>();
+    public void putUsers(UserAdapter adapter){
+        recyclerView.setAdapter(adapter);
+    }
 
-        userAdapter = new UserAdapter(users, recyclerView);
-        recyclerView.setAdapter(userAdapter);
+    /**
+     * Returns recycler view.
+     * @return
+     */
+    public RecyclerView getRecyclerView(){
+        return recyclerView;
     }
 }
