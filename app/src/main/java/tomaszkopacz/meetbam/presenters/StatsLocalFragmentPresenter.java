@@ -72,10 +72,10 @@ public class StatsLocalFragmentPresenter implements RecyclerViewPresenter {
     public void onItemBoundAtPosition(RecyclerView.ViewHolder holder, int position) {
         UserResult result = results.get(position);
         ((UserViewHolder)holder).getUsername()
-                .setText(result.getName() + " " + result.getSurname());
+                .setText(position + 1 + ". " + result.getName() + " " + result.getSurname());
 
         ((UserViewHolder)holder).getResult()
-                .setText(result.getResult());
+                .setText(result.getResult() + " posts");
     }
 
     @Override

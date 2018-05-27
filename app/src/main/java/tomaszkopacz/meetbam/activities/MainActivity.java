@@ -12,19 +12,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import tomaszkopacz.meetbam.R;
-import tomaszkopacz.meetbam.model.Post;
 import tomaszkopacz.meetbam.presenters.MainActivityPresenter;
 import tomaszkopacz.meetbam.service.PostAdapter;
-import tomaszkopacz.meetbam.service.UserAdapter;
 import tomaszkopacz.meetbam.service.WebService;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         //prepare recycler view and download posts
         prepareRecView();
-        presenter.downloadPostsList();
+        presenter.downloadPostsListToActivity();
     }
 
     @Override
@@ -85,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_stats:
                 Intent stats_intent = new Intent(this, StatsActivity.class);
                 startActivity(stats_intent);
+                break;
+
+            case R.id.action_map:
+                Intent map_intent = new Intent(this, MapActivity.class);
+                startActivity(map_intent);
                 break;
 
             case R.id.action_search:
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
         // when picture is taken
         if (requestCode == CAMERA_CODE && resultCode == RESULT_OK){
-            presenter.showAcceptPhotoDialog();
+            presenter.afterPhotoTaken();
         }
     }
 

@@ -1,12 +1,18 @@
 package tomaszkopacz.meetbam.presenters;
 
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
-import com.bumptech.glide.Glide;
+import android.widget.Toast;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -17,14 +23,15 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import tomaszkopacz.meetbam.activities.AcceptPhotoDialog;
 import tomaszkopacz.meetbam.activities.LoginActivity;
 import tomaszkopacz.meetbam.activities.MainActivity;
+import tomaszkopacz.meetbam.dialogs.AcceptPhotoDialog;
+import tomaszkopacz.meetbam.dialogs.ChooseDeviceDialog;
 import tomaszkopacz.meetbam.model.Post;
+import tomaszkopacz.meetbam.model.User;
 import tomaszkopacz.meetbam.service.CameraService;
 import tomaszkopacz.meetbam.service.LoginService;
 import tomaszkopacz.meetbam.service.PostAdapter;
-import tomaszkopacz.meetbam.service.PostTimeProvider;
 import tomaszkopacz.meetbam.service.PostViewHolder;
 import tomaszkopacz.meetbam.service.WebService;
 
@@ -51,46 +58,31 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
                     Environment.DIRECTORY_PICTURES) + "/Meetbam/";
     private Uri photoUri;
 
-    private AcceptPhotoDialog dialog;
+    //bt pairing
+    private AcceptPhotoDialog acceptPhotoDialog;
+    private ChooseDeviceDialog chooseDeviceDialog;
+    private BluetoothAdapter bluetoothAdapter;
+    private IntentFilter btDetectionIntentFilter;
+    private List<BluetoothDevice> discoveredDevices = new ArrayList<>();
 
-    /**
-     * Constructor.
-     */
     public MainActivityPresenter(MainActivity activity, WebService service){
         this.activity = activity;
         this.mWebService = service;
         this.mLoginService = new LoginService(activity.getApplicationContext());
 
         setUpAdapter();
+        setUpIntentFilters();
     }
 
-    /**
-     * Creates adapter to store posts and service items actions.
-     */
-    private void setUpAdapter(){
-        this.adapter = new PostAdapter(this);
-
-    }
-
-    /**
-     * Downloads posts and send them to activity.
-     */
-    public void downloadPostsList(){
-
-        // remove previous elements
+    public void downloadPostsListToActivity(){
         posts.clear();
 
-        // when new elements downloaded
         Call call = mWebService.getFriendsPosts(mLoginService.getUserMail());
         call.enqueue(new Callback<List<Post>>() {
 
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
-
-                // assign response objects to list
                 posts = response.body();
-
-                // send posts to activity
                 activity.putPosts(adapter);
             }
 
@@ -101,26 +93,78 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         });
     }
 
+    public void makePhoto(){
+        String photoFileName = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
+                .format(new Date()) + ".jpg";
+        File photoFile = CameraService.getFileForDirectory(PHOTO_DIRECTORY, photoFileName);
+        photoUri = Uri.fromFile(photoFile);
+
+        if (photoFile != null){
+            Intent cameraIntent = CameraService.getCameraIntent(photoFile);
+            activity.startActivityForResult(cameraIntent, activity.CAMERA_CODE);
+        }
+    }
+
+    public void afterPhotoTaken(){
+        acceptPhotoDialog = new AcceptPhotoDialog(activity, this);
+        acceptPhotoDialog.loadPhoto(photoUri);
+        acceptPhotoDialog.show();
+    }
+
+    public void addPhoto(){
+        Toast.makeText(activity, "PHOTO UPLOADED!", Toast.LENGTH_SHORT).show();
+        acceptPhotoDialog.dismiss();
+    }
+
+    public void pair(){
+
+        discoveredDevices.clear();
+        requestBT();
+        activity.registerReceiver(btDetectionReceiver, btDetectionIntentFilter);
+
+        chooseDeviceDialog = new ChooseDeviceDialog(activity, this);
+
+        afterDiscoveryHandler.postDelayed(afterDiscoveryRunnable, 5000);
+        bluetoothAdapter.startDiscovery();
+    }
+
+    public void deviceSelected(String device){
+        Call<List<User>> call = mWebService.getUserLoggedOnDevice(device);
+        call.enqueue(new Callback<List<User>>() {
+            @Override
+            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+
+                if (response.body().size() != 0){
+                    User user = response.body().get(0);
+                    String name = user.getName();
+                    String surname = user.getSurname();
+                    acceptPhotoDialog.getPersonTextView().setText(name + " " + surname);
+
+                    acceptPhotoDialog.getAcceptBtn().setClickable(true);
+                    acceptPhotoDialog.getAcceptBtn().setTextColor(Color.BLACK);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<User>> call, Throwable t) {
+            }
+        });
+
+        chooseDeviceDialog.dismiss();
+    }
+
+    public void logout(){
+        mLoginService.logout();
+
+        Intent intent = new Intent(activity, LoginActivity.class);
+        activity.startActivity(intent);
+        activity.finish();
+    }
+
     @Override
     public void onItemBoundAtPosition(RecyclerView.ViewHolder holder, int position) {
         Post post = posts.get(position);
-
-        //set text views
-        ((PostViewHolder) holder).getName1().setText(post.getName1() + " " + post.getSurname1());
-        ((PostViewHolder) holder).getName2().setText(post.getName2() + " " + post.getSurname2());
-
-        // download and set image
-        Glide
-                .with(activity)
-                .load(BASE_URL + post.getPhotoDir())
-                .into(((PostViewHolder) holder).getPhoto());
-
-        // count time since post was uploaded
-        float timeAgo = PostTimeProvider.countTimeAgo(post.getTime());
-
-        // get appropriate info about how long ago post was uploaded
-        String timeAgoText = PostTimeProvider.getTimeAgoText(timeAgo);
-        ((PostViewHolder) holder).getTime().setText(timeAgoText);
+        ((PostViewHolder)holder).setContent(post, activity, BASE_URL);
     }
 
     @Override
@@ -135,59 +179,49 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         return posts.size();
     }
 
-    /**
-     * Starts camera. Creates file for available photo.
-     */
-    public void makePhoto(){
+    private void setUpAdapter(){
+        this.adapter = new PostAdapter(this);
+    }
 
-        // create file to store photo
-        String photoFileName
-                = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()) + ".jpg";
-        File photoFile = CameraService.getFileForDirectory(PHOTO_DIRECTORY, photoFileName);
+    private void setUpIntentFilters(){
+        btDetectionIntentFilter = new IntentFilter();
+        btDetectionIntentFilter.addAction(BluetoothDevice.ACTION_FOUND);
+    }
 
-        // set uri of file created
-        photoUri = Uri.fromFile(photoFile);
+    private void requestBT(){
+        if (bluetoothAdapter == null)
+            bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
-        // open camera activity
-        if (photoFile != null){
-            Intent cameraIntent = CameraService.getCameraIntent(photoFile);
-            activity.startActivityForResult(cameraIntent, activity.CAMERA_CODE);
+        if (!bluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent =
+                    new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            activity.startActivityForResult(enableBtIntent, 0);
         }
     }
 
-    /**
-     * Show dialog to accept picture and pair with new person.
-     */
-    public void showAcceptPhotoDialog(){
+    private BroadcastReceiver btDetectionReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
 
-        // new dialog
-        dialog = new AcceptPhotoDialog(activity, this);
+            switch (action){
+                case BluetoothDevice.ACTION_FOUND:
+                    BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                    discoveredDevices.add(device);
+                    break;
+            }
+        }
+    };
 
-        // load photo
-        dialog.loadPhoto(photoUri);
+    private Handler afterDiscoveryHandler = new Handler();
+    private Runnable afterDiscoveryRunnable = new Runnable() {
+        @Override
+        public void run() {
+            bluetoothAdapter.cancelDiscovery();
+            activity.unregisterReceiver(btDetectionReceiver);
 
-        // show dialog
-        dialog.show();
-    }
-
-    /**
-     * Pair with a new person.
-     */
-    public void pair(){
-        dialog.getPersonTextView().setText("ZBYSZEK");
-    }
-
-    /**
-     * Logout. Clears SharedPreferences and switches view to LoginActivity.
-     */
-    public void logout(){
-
-        // logout the user
-        mLoginService.logout();
-
-        // switch view to LoginActivity
-        Intent intent = new Intent(activity, LoginActivity.class);
-        activity.startActivity(intent);
-        activity.finish();
-    }
+            chooseDeviceDialog.setDevices(discoveredDevices);
+            chooseDeviceDialog.show();
+        }
+    };
 }

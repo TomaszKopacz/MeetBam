@@ -23,10 +23,6 @@ public class LoginService {
                 .getDefaultSharedPreferences(context);
     }
 
-    /**
-     * Checks, whether any user is logged in.
-     * @return
-     */
     public boolean isUserLoggedIn(){
 
         String user = sharedPreferences.getString(MAIL, NO_USER);
@@ -34,42 +30,23 @@ public class LoginService {
         return (!user.equals(NO_USER)) ? true : false;
     }
 
-    /**
-     * Returns logged user mail.
-     * @return
-     */
     public String getUserMail(){
         return sharedPreferences.getString(MAIL, NO_USER);
     }
 
-    /**
-     * Returns logged user name.
-     * @return
-     */
     public String getUserName(){
         return sharedPreferences.getString(NAME, NO_USER);
     }
 
-    /**
-     * Returns logged user surname.
-     * @return
-     */
     public String getUserSurname(){
         return sharedPreferences.getString(SURNAME, NO_USER);
     }
 
-    /**
-     * Returns logged user password.
-     * @return
-     */
     public String getUserPassword(){
         return sharedPreferences.getString(PASSWORD, NO_USER);
     }
 
-    /**
-     * Login new user. User is determined by giving his email.
-     * @param mail
-     */
+
     public void login(String mail, String name, String surname, String pwd){
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(MAIL, mail);
@@ -79,9 +56,6 @@ public class LoginService {
         editor.commit();
     }
 
-    /**
-     * Logout user.
-     */
     public void logout(){
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove(MAIL);

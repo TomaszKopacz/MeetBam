@@ -1,10 +1,12 @@
 package tomaszkopacz.meetbam.presenters;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.AsyncTask;
 
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,38 +39,18 @@ public class LoginActivityPresenter {
 
     private int loginStatus = LOGIN_FAILED;
 
-
-    /**
-     * Constructor.
-     * @param activity
-     */
     public LoginActivityPresenter(LoginActivity activity, WebService service){
         this.activity = activity;
         this.mWebService = service;
         this.mLoginService = new LoginService(activity.getApplicationContext());
     }
 
-    /**
-     * Confirm if any user is logged in. If so, switch to MainActivity.
-     */
     public void confirmUserIsSignedIn(){
-
-        // if any user is logged in go to MainActivity
         if (mLoginService.isUserLoggedIn())
             goToMainActivity();
     }
 
-    /**
-     * Confirm login mail and password.
-     * Login, as an email string, should contain '@' sign.
-     * Password should have more than 5 signs.
-     * Both login and password cannot be empty.
-     * @param mail
-     * @param password
-     * @return
-     */
     public int isLoginInputCorrect(String mail, String password){
-
         loginStatus = LOGIN_FAILED;
 
         if (mail.isEmpty())
@@ -89,22 +71,12 @@ public class LoginActivityPresenter {
         return loginStatus;
     }
 
-    /**
-     * Tries to login the user.
-     * @param mail
-     * @param password
-     */
     private void attemptLogin(String mail, String password){
-
         UserLoginTask userTask = new UserLoginTask(mail, password);
         userTask.execute();
     }
 
-    /**
-     * Asynchronous login task used to authenticate the user.
-     */
     private class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
-
         private final String mEmail;
         private final String mPassword;
 
@@ -118,18 +90,14 @@ public class LoginActivityPresenter {
         @Override
         protected Boolean doInBackground(Void... params) {
 
-            // get user
             Call<List<User>> call = mWebService.getUser(mEmail);
             call.enqueue(new Callback<List<User>>() {
                 @Override
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
 
                     if (!response.body().isEmpty()) {
-
-                        // user found
                         user = response.body().get(0);
 
-                        // confirm password
                         if (user.getPassword().equals(mPassword)) {
                             login(user);
                             loginStatus = LOGIN_SUCCEED;
@@ -138,7 +106,6 @@ public class LoginActivityPresenter {
                             loginStatus = PASSWORD_INVALID;
 
                     } else
-                        // no user found
                         loginStatus = NO_SUCH_MAIL;
                 }
 
@@ -160,26 +127,33 @@ public class LoginActivityPresenter {
         }
     }
 
-    /**
-     * Login.
-     */
     private void login(User user){
-
         String mail = user.getMail();
         String name = user.getName();
         String surname = user.getSurname();
         String password = user.getPassword();
-
-        // login the user
         mLoginService.login(mail, name, surname, password);
 
-        // switch view to MainActivity
+        updateUserLoggedOnDevice(mail);
+
         goToMainActivity();
     }
 
-    /**
-     * Switches view to MainActivity.
-     */
+    private void updateUserLoggedOnDevice(String mail){
+        String device = BluetoothAdapter.getDefaultAdapter().getAddress();
+        Call<ResponseBody> call = mWebService.updateLoggedState(device, mail);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+            }
+        });
+    }
+
     private void goToMainActivity(){
         Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);

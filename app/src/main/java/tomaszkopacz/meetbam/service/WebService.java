@@ -2,8 +2,8 @@ package tomaszkopacz.meetbam.service;
 
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -27,6 +27,15 @@ public interface WebService {
     Call<List<User>> getUser(@Field("mail") String mail);
 
     @FormUrlEncoded
+    @POST("/update_logged.php")
+    Call<ResponseBody> updateLoggedState(@Field("device") String device,
+                                         @Field("user") String mail);
+
+    @FormUrlEncoded
+    @POST("/logged.php")
+    Call<List<User>> getUserLoggedOnDevice(@Field("device") String device);
+
+    @FormUrlEncoded
     @POST("/get_user_posts.php")
     Call<List<Post>> getUserPosts(@Field("user_mail") String user);
 
@@ -44,4 +53,5 @@ public interface WebService {
     @FormUrlEncoded
     @POST("/get_results.php")
     Call<List<UserResult>> getLocalResults(@Field("mail") String user);
+
 }

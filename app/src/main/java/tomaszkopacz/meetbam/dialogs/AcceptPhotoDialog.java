@@ -1,4 +1,4 @@
-package tomaszkopacz.meetbam.activities;
+package tomaszkopacz.meetbam.dialogs;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -29,18 +29,15 @@ public class AcceptPhotoDialog extends Dialog{
     TextView personTextView;
 
     @BindView(R.id.pair_btn)
-    Button pairBtn;
+    Button searchBtn;
+
+    @BindView(R.id.accept_btn)
+    Button acceptBtn;
 
     public AcceptPhotoDialog(Context context, MainActivityPresenter presenter) {
         super(context);
-
-        // set layout
         setContentView(R.layout.dialog_accept_photo);
-
-        // bind views
         ButterKnife.bind(this);
-
-        // set presenter
         this.presenter = presenter;
     }
 
@@ -49,10 +46,11 @@ public class AcceptPhotoDialog extends Dialog{
         presenter.pair();
     }
 
-    /**
-     * Loads photo from uri into the image view.
-     * @param uri uri of image to load
-     */
+    @OnClick(R.id.accept_btn)
+    public void onAcceptBtnClick(){
+        presenter.addPhoto();
+    }
+
     public void loadPhoto(Uri uri){
         if (uri != null)
             Glide.with(getContext()).load(uri).into(photoImageView);
@@ -66,7 +64,11 @@ public class AcceptPhotoDialog extends Dialog{
         return personTextView;
     }
 
-    public Button getPairBtn() {
-        return pairBtn;
+    public Button getSearchBtn() {
+        return searchBtn;
+    }
+
+    public Button getAcceptBtn() {
+        return acceptBtn;
     }
 }
