@@ -9,7 +9,7 @@ import android.preference.PreferenceManager;
 
 public class LoginService {
 
-    private SharedPreferences sharedPreferences;
+    private static SharedPreferences sharedPreferences;
 
     private static final String MAIL = "mail";
     private static final String NAME = "name";
@@ -30,19 +30,19 @@ public class LoginService {
         return (!user.equals(NO_USER)) ? true : false;
     }
 
-    public String getUserMail(){
+    public static String getUserMail(){
         return sharedPreferences.getString(MAIL, NO_USER);
     }
 
-    public String getUserName(){
+    public static String getUserName(){
         return sharedPreferences.getString(NAME, NO_USER);
     }
 
-    public String getUserSurname(){
+    public static String getUserSurname(){
         return sharedPreferences.getString(SURNAME, NO_USER);
     }
 
-    public String getUserPassword(){
+    public static String getUserPassword(){
         return sharedPreferences.getString(PASSWORD, NO_USER);
     }
 

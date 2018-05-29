@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
@@ -20,9 +21,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import tomaszkopacz.meetbam.R;
 import tomaszkopacz.meetbam.activities.LoginActivity;
 import tomaszkopacz.meetbam.activities.MainActivity;
 import tomaszkopacz.meetbam.dialogs.AcceptPhotoDialog;
@@ -56,7 +62,6 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
     private static final String PHOTO_DIRECTORY
             = Environment.getExternalStoragePublicDirectory(
                     Environment.DIRECTORY_PICTURES) + "/Meetbam/";
-    private Uri photoUri;
 
     //bt pairing
     private AcceptPhotoDialog acceptPhotoDialog;
@@ -65,13 +70,17 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
     private IntentFilter btDetectionIntentFilter;
     private List<BluetoothDevice> discoveredDevices = new ArrayList<>();
 
+    //current post
+    private Uri photoUri;
+    private User pairedUser;
+
     public MainActivityPresenter(MainActivity activity, WebService service){
         this.activity = activity;
         this.mWebService = service;
         this.mLoginService = new LoginService(activity.getApplicationContext());
 
         setUpAdapter();
-        setUpIntentFilters();
+        setUpBluetoothIntentFilters();
     }
 
     public void downloadPostsListToActivity(){
@@ -93,39 +102,30 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         });
     }
 
-    public void makePhoto(){
-        String photoFileName = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
-                .format(new Date()) + ".jpg";
-        File photoFile = CameraService.getFileForDirectory(PHOTO_DIRECTORY, photoFileName);
-        photoUri = Uri.fromFile(photoFile);
-
-        if (photoFile != null){
-            Intent cameraIntent = CameraService.getCameraIntent(photoFile);
-            activity.startActivityForResult(cameraIntent, activity.CAMERA_CODE);
+    public void photoAttempt(){
+        if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled())
+            requestBT();
+        else {
+            activity.registerReceiver(btDetectionReceiver, btDetectionIntentFilter);
+            makePhoto();
         }
     }
 
     public void afterPhotoTaken(){
-        acceptPhotoDialog = new AcceptPhotoDialog(activity, this);
-        acceptPhotoDialog.loadPhoto(photoUri);
-        acceptPhotoDialog.show();
-    }
-
-    public void addPhoto(){
-        Toast.makeText(activity, "PHOTO UPLOADED!", Toast.LENGTH_SHORT).show();
-        acceptPhotoDialog.dismiss();
+        if (photoUri != null) {
+            acceptPhotoDialog = new AcceptPhotoDialog(activity, this);
+            acceptPhotoDialog.loadPhoto(photoUri);
+            acceptPhotoDialog.show();
+        }
     }
 
     public void pair(){
-
         discoveredDevices.clear();
-        requestBT();
-        activity.registerReceiver(btDetectionReceiver, btDetectionIntentFilter);
 
-        chooseDeviceDialog = new ChooseDeviceDialog(activity, this);
-
-        afterDiscoveryHandler.postDelayed(afterDiscoveryRunnable, 5000);
-        bluetoothAdapter.startDiscovery();
+        if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled())
+            Toast.makeText(activity, "Bluetooth not enabled!", Toast.LENGTH_LONG).show();
+        else
+            scanDevices();
     }
 
     public void deviceSelected(String device){
@@ -135,9 +135,12 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
 
                 if (response.body().size() != 0){
-                    User user = response.body().get(0);
-                    String name = user.getName();
-                    String surname = user.getSurname();
+
+                    acceptPhotoDialog.getProgressBar().setVisibility(View.GONE);
+
+                    pairedUser = response.body().get(0);
+                    String name = pairedUser.getName();
+                    String surname = pairedUser.getSurname();
                     acceptPhotoDialog.getPersonTextView().setText(name + " " + surname);
 
                     acceptPhotoDialog.getAcceptBtn().setClickable(true);
@@ -151,6 +154,38 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         });
 
         chooseDeviceDialog.dismiss();
+    }
+
+    public void uploadPhoto(){
+        acceptPhotoDialog.dismiss();
+
+        File photo = new File(photoUri.getPath());
+        RequestBody requestBody = RequestBody.create(MediaType.parse("*/*"), photo);
+        MultipartBody.Part file =
+                MultipartBody.Part.createFormData("file", photo.getName(), requestBody);
+        RequestBody user1
+                = RequestBody.create(MediaType.parse("text/plain"), LoginService.getUserMail());
+        RequestBody user2
+                = RequestBody.create(MediaType.parse("text/plain"), pairedUser.getMail());
+
+        Call<ResponseBody> call = mWebService.uploadPost(file, user1, user2);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Snackbar.make(activity.findViewById(R.id.coordinator),
+                            "Photo uploaded successfully!", Snackbar.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Snackbar.make(activity.findViewById(R.id.coordinator),
+                        "Ups! Error while uploading photo!", Snackbar.LENGTH_LONG).show();
+            }
+        });
+
+        photoUri = null;
+        pairedUser = null;
     }
 
     public void logout(){
@@ -169,9 +204,9 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
 
     @Override
     public void onItemClick(View view) {
-        int position = activity.getPostsRecView().getChildAdapterPosition(view);
-        // posts.remove(position);
-        // adapter.notifyItemRemoved(position);
+        //int position = activity.getPostsRecView().getChildAdapterPosition(view);
+        //posts.remove(position);
+        //adapter.notifyItemRemoved(position);
     }
 
     @Override
@@ -183,9 +218,17 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
         this.adapter = new PostAdapter(this);
     }
 
-    private void setUpIntentFilters(){
+    private void setUpBluetoothIntentFilters(){
         btDetectionIntentFilter = new IntentFilter();
         btDetectionIntentFilter.addAction(BluetoothDevice.ACTION_FOUND);
+    }
+
+    private Uri getCustomPhotoUri(){
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhhmmssSSSS");
+        String photoFileName = dateFormat.format(new Date()) + ".jpg";
+        File photoFile = CameraService.getFileForDirectory(PHOTO_DIRECTORY, photoFileName);
+        return Uri.fromFile(photoFile);
     }
 
     private void requestBT(){
@@ -193,10 +236,36 @@ public class MainActivityPresenter implements RecyclerViewPresenter{
             bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         if (!bluetoothAdapter.isEnabled()) {
-            Intent enableBtIntent =
-                    new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            activity.startActivityForResult(enableBtIntent, 0);
+            Snackbar btRequestSnackBar = Snackbar
+                    .make(activity.findViewById(R.id.coordinator), "Bluetooth turned off", Snackbar.LENGTH_LONG)
+                    .setAction("OPEN", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            bluetoothAdapter.enable();
+                            activity.registerReceiver(btDetectionReceiver, btDetectionIntentFilter);
+                        }
+                    });
+            btRequestSnackBar.show();
         }
+    }
+
+    private void makePhoto(){
+        photoUri = getCustomPhotoUri();
+        File img = new File(photoUri.getPath());
+
+        if (img != null){
+            Intent cameraIntent = CameraService.getCameraIntent(img);
+            activity.startActivityForResult(cameraIntent, activity.CAMERA_CODE);
+        }
+    }
+
+    private void scanDevices(){
+        if (acceptPhotoDialog != null)
+            acceptPhotoDialog.getProgressBar().setVisibility(View.VISIBLE);
+
+        chooseDeviceDialog = new ChooseDeviceDialog(activity, this);
+        afterDiscoveryHandler.postDelayed(afterDiscoveryRunnable, 5000);
+        bluetoothAdapter.startDiscovery();
     }
 
     private BroadcastReceiver btDetectionReceiver = new BroadcastReceiver() {

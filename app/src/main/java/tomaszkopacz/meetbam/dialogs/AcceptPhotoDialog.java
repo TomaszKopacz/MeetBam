@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -28,6 +29,9 @@ public class AcceptPhotoDialog extends Dialog{
     @BindView(R.id.person_found)
     TextView personTextView;
 
+    @BindView(R.id.circular_progress_bar)
+    ProgressBar progressBar;
+
     @BindView(R.id.pair_btn)
     Button searchBtn;
 
@@ -48,7 +52,7 @@ public class AcceptPhotoDialog extends Dialog{
 
     @OnClick(R.id.accept_btn)
     public void onAcceptBtnClick(){
-        presenter.addPhoto();
+        presenter.uploadPhoto();
     }
 
     public void loadPhoto(Uri uri){
@@ -62,6 +66,10 @@ public class AcceptPhotoDialog extends Dialog{
 
     public TextView getPersonTextView() {
         return personTextView;
+    }
+
+    public ProgressBar getProgressBar(){
+        return progressBar;
     }
 
     public Button getSearchBtn() {

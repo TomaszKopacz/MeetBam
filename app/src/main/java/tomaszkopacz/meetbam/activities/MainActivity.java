@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab_main)
     public void onFabClick(View view){
-        presenter.makePhoto();
+        presenter.photoAttempt();
     }
 
     /**
