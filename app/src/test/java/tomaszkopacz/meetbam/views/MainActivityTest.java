@@ -11,8 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tomaszkopacz.meetbam.BuildConfig;
-import tomaszkopacz.meetbam.activities.MainActivity;
-import tomaszkopacz.meetbam.model.Post;
+import tomaszkopacz.meetbam.view.MainActivity;
 
 import static junit.framework.Assert.assertTrue;
 

@@ -5,7 +5,6 @@ import android.app.Instrumentation;
 import android.content.Intent;
 import android.provider.MediaStore;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
-import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Before;
@@ -14,7 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import tomaszkopacz.meetbam.R;
-import tomaszkopacz.meetbam.activities.MainActivity;
+import tomaszkopacz.meetbam.view.MainActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -27,7 +26,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.withChild;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.allOf;
-import static org.hamcrest.CoreMatchers.equalTo;
 
 /**
  * Created by tomas on 07.03.2018.
@@ -51,7 +49,7 @@ public class MainActivityAndroidTest {
     @Test
     /**
      * When floating action button is clicked, camera activity should be opened. Assume that user
-     * took a photo properly - then AcceptPhotoDialog should be displayed.
+     * took a photo properly - then CommitPhotoDialog should be displayed.
      */
     public void testFabBtnClicked(){
 

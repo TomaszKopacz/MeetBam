@@ -25,7 +25,7 @@ public class CameraServiceTest {
         String directory = null;
         String fileName = "file_name";
 
-        File file = CameraService.getFileForDirectory(directory, fileName);
+        File file = CameraService.INSTANCE.getFileForDirectory(directory, fileName);
         assertTrue(file == null);
     }
 
@@ -38,7 +38,7 @@ public class CameraServiceTest {
         String directory = "directory/meetbam/";
         String fileName = null;
 
-        File file = CameraService.getFileForDirectory(directory, fileName);
+        File file = CameraService.INSTANCE.getFileForDirectory(directory, fileName);
         assertTrue(file == null);
     }
 
@@ -51,7 +51,7 @@ public class CameraServiceTest {
         String directory = "directory/meetbam/";
         String fileName = "";
 
-        File file = CameraService.getFileForDirectory(directory, fileName);
+        File file = CameraService.INSTANCE.getFileForDirectory(directory, fileName);
         assertTrue(file == null);
     }
 
@@ -63,7 +63,7 @@ public class CameraServiceTest {
         String directory = "directory/meetbam/";
         String fileName = "photo_name";
 
-        File file = CameraService.getFileForDirectory(directory, fileName);
+        File file = CameraService.INSTANCE.getFileForDirectory(directory, fileName);
         assertTrue(file != null);
     }
 
@@ -74,9 +74,9 @@ public class CameraServiceTest {
     public void testGetCameraIntent(){
         String directory = "directory/meetbam/";
         String fileName = "photo_name";
-        File file = CameraService.getFileForDirectory(directory, fileName);
+        File file = CameraService.INSTANCE.getFileForDirectory(directory, fileName);
 
-        Intent cameraIntent = CameraService.getCameraIntent(file);
+        Intent cameraIntent = CameraService.INSTANCE.getCameraIntent(file);
         assertTrue(cameraIntent != null);
     }
 }

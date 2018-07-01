@@ -12,11 +12,29 @@
     <string name="title_activity_user">Your account</string>
     <string name="title_activity_stats">Ranking</string>
     <string name="title_activity_search">Search</string>
-
     <string name="search_users">Search users</string>
-
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_login">Sign in</string>
+    
+    <!-- Login Activity -->
+    <string name="mail_empty_error">Mail cannot be empty</string>
+    <string name="password_empty_error">Password cannot be empty</string>
+    <string name="mail_invalid_error">Mail is invalid</string>
+    <string name="password_too_short_error">Password must have 6 signs at minimum</string>
+    <string name="no_such_user_error">User does not exist!</string>
+    <string name="wrong_password_error">Password is wrong!</string>
+    <string name="failure_login_error">Login failed!</string>
+
+    <!-- Main Activity -->
+    <string name="paired_user">%1$s %2$s</string>
+
+    <!-- Account Activity -->
+    <string name="logged_user">%1$s %2$s</string>
+    <string name="custom_user">%1$s %2$s</string>
+
+    <!-- Stats Activity -->
+    <string name="user_at_position">%1$d. %2$s %3$s</string>
+    <string name="posts_number">%1$s posts</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
