@@ -3,9 +3,9 @@ package tomaszkopacz.meetbam.service
 import java.text.SimpleDateFormat
 import java.util.*
 
-object PostTimeProvider {
+object TimeAgoTextProvider {
 
-    const val FORMAT_MINS: String = "MINUTES"
+    const val FORMAT_MINUTES: String = "MINUTES"
     const val FORMAT_HOURS: String = "HOURS"
     const val FORMAT_DAYS: String = "DAYS"
     const val ERROR: String = "TIME ERROR"
@@ -31,7 +31,7 @@ object PostTimeProvider {
     fun getCustomTimeAgoText(timeAgo: Float, format: String): String {
 
         when (format){
-            FORMAT_MINS ->
+            FORMAT_MINUTES ->
                 return when {
                     timeAgo < 0 -> ERROR
                     timeAgo < 1f -> "at the moment"

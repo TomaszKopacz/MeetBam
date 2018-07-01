@@ -12,7 +12,7 @@ import java.lang.Override;
 public final class CommitPhotoDialog_ViewBinding implements Unbinder {
   private CommitPhotoDialog target;
 
-  private View view2131230854;
+  private View view2131230853;
 
   private View view2131230726;
 
@@ -26,8 +26,8 @@ public final class CommitPhotoDialog_ViewBinding implements Unbinder {
     this.target = target;
 
     View view;
-    view = Utils.findRequiredView(source, 2131230854, "method 'onPairBtnClick'");
-    view2131230854 = view;
+    view = Utils.findRequiredView(source, 2131230853, "method 'onPairBtnClick'");
+    view2131230853 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,8 +50,8 @@ public final class CommitPhotoDialog_ViewBinding implements Unbinder {
     target = null;
 
 
-    view2131230854.setOnClickListener(null);
-    view2131230854 = null;
+    view2131230853.setOnClickListener(null);
+    view2131230853 = null;
     view2131230726.setOnClickListener(null);
     view2131230726 = null;
   }

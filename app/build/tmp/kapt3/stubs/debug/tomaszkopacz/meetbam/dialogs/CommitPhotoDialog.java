@@ -43,7 +43,7 @@ public final class CommitPhotoDialog extends android.app.Dialog {
         return null;
     }
     
-    @butterknife.OnClick(value = {2131230854})
+    @butterknife.OnClick(value = {2131230853})
     public final void onPairBtnClick() {
     }
     

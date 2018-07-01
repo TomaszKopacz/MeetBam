@@ -162,7 +162,7 @@ class MainActivityPresenter(private val activity: MainActivity)
 
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val post = posts[position]
-        (holder as PostViewHolder).setContent(post, activity, BASE_URL)
+        (holder as PostViewHolder).setContent(activity, post, BASE_URL)
     }
 
     override fun onItemClick(view: View) {

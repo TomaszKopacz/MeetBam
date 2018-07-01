@@ -18,7 +18,7 @@ public class PostTimeProviderTest {
      */
     public void testCountTimeAgo(){
         String date = "2018-03-08 23:28:07.001234";
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(date) > 0);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(date) > 0);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class PostTimeProviderTest {
 
         String argument = "xxx 123 meetbam";
 
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(argument) == -1);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(argument) == -1);
     }
 
     @Test
@@ -41,9 +41,9 @@ public class PostTimeProviderTest {
         String pattern2 = "2010/01/30 12:00:00";
         String pattern3 = "30 Jun 2010 12/00/00";
 
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(pattern1) == -1);
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(pattern2) == -1);
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(pattern3) == -1);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(pattern1) == -1);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(pattern2) == -1);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(pattern3) == -1);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class PostTimeProviderTest {
      */
     public void testCountTimeAgoWhenIncorrectDate(){
         String date = "2010-15-90 12:00:00";
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(date) == -1);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(date) == -1);
     }
 
     @Test
@@ -61,7 +61,7 @@ public class PostTimeProviderTest {
      */
     public void testCountTimeAgoWhenDateTooBig(){
         String date = "5000-01-30 12:00:00";
-        assertTrue(PostTimeProvider.INSTANCE.countTimeAgo(date) == -1);
+        assertTrue(TimeAgoTextProvider.INSTANCE.countTimeAgo(date) == -1);
     }
 
     @Test
@@ -70,7 +70,7 @@ public class PostTimeProviderTest {
      */
     public void testGetTimeAgoTextWhenArgumentIsLessThanZero(){
         float time = -100;
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time).equals("TIME ERROR"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time).equals("TIME ERROR"));
     }
 
     @Test
@@ -81,8 +81,8 @@ public class PostTimeProviderTest {
     public void testGetTimeAgoTextForMinutes(){
         float time1 = 1;
         float time2 = 45;
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time1).equals("1 minute ago"));
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time2).equals("45 minutes ago"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time1).equals("1 minute ago"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time2).equals("45 minutes ago"));
     }
 
     @Test
@@ -97,8 +97,8 @@ public class PostTimeProviderTest {
 
         // example: 15h and 15 minutes = 15*60 + 15 = 915 min -> approximately 15h
         float time2 = 915;
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time1).equals("1 hour ago"));
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time2).equals("15 hours ago"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time1).equals("1 hour ago"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time2).equals("15 hours ago"));
     }
 
     @Test
@@ -114,7 +114,7 @@ public class PostTimeProviderTest {
         // example: 20 days and 4h = 20*24*60 + 4*60 = 29040 minutes -> approximately 20 days
         float time2 = 29040;
 
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time1).equals("1 day ago"));
-        assertTrue(PostTimeProvider.INSTANCE.getCustomTimeAgoText(time2).equals("20 days ago"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time1).equals("1 day ago"));
+        assertTrue(TimeAgoTextProvider.INSTANCE.getCustomTimeAgoText(time2).equals("20 days ago"));
     }
 }

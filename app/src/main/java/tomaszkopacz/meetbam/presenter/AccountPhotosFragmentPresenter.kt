@@ -2,16 +2,13 @@ package tomaszkopacz.meetbam.presenter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import com.bumptech.glide.Glide
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.service.PostAdapter
-import tomaszkopacz.meetbam.service.PostTimeProvider
 import tomaszkopacz.meetbam.service.PostViewHolder
 import tomaszkopacz.meetbam.view.AccountPhotosFragment
 import tomaszkopacz.meetbam.view.MainApp
@@ -61,19 +58,7 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
         val post = photos!![position]
 
         holder as PostViewHolder
-        holder.name1.text = fragment.getString(R.string.custom_user, post.name1, post.surname1)
-        holder.name2.text = fragment.getString(R.string.custom_user, post.name2, post.surname2)
-
-        Glide
-                .with(fragment)
-                .load(BASE_URL + post.photo_dir!!)
-                .into(holder.photo)
-
-        val timeAgo = PostTimeProvider
-                .countTimeAgoInMin(post.time!!)
-        val timeAgoText = PostTimeProvider
-                .getCustomTimeAgoText(timeAgo, PostTimeProvider.FORMAT_MINS)
-        holder.time.text = timeAgoText
+        holder.setContent(fragment.context!!, post, BASE_URL)
     }
 
     override fun onItemClick(view: View) {

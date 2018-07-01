@@ -35,6 +35,11 @@
     <!-- Stats Activity -->
     <string name="user_at_position">%1$d. %2$s %3$s</string>
     <string name="posts_number">%1$s posts</string>
+    
+    <!-- Post View -->
+    <string name="post_user">%1$s %2$s</string>
+    <string name="post_time">%1$s</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

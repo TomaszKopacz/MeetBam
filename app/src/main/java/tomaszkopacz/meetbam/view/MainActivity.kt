@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         presenter = MainActivityPresenter(this)
 
-        fab_main.setOnClickListener { onFabClick()}
-
         prepareRecyclerView()
         presenter.downloadPosts()
     }
@@ -65,10 +63,6 @@ class MainActivity : AppCompatActivity() {
             R.id.action_logout -> presenter.logout()
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun onFabClick() {
-        presenter.takePhoto()
     }
 
     private fun prepareRecyclerView() {
