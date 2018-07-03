@@ -2,43 +2,41 @@ package tomaszkopacz.meetbam.dialogs
 
 import android.app.Dialog
 import android.content.Context
+import android.graphics.Color
 import android.net.Uri
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
-import butterknife.OnClick
+import android.view.View
 import com.bumptech.glide.Glide
-import kotterknife.bindView
+import kotlinx.android.synthetic.main.dialog_commit_photo.*
 import tomaszkopacz.meetbam.R
+import tomaszkopacz.meetbam.entity.User
 
 class CommitPhotoDialog(context: Context, internal var presenter: CommitPhotoDialogPresenter)
     : Dialog(context) {
 
-    val photoImageView: ImageView by bindView(R.id.photo)
-    val personTextView: TextView by bindView(R.id.person_found)
-    val progressBar: ProgressBar by bindView(R.id.circular_progress_bar)
-    val searchBtn: Button by bindView(R.id.pair_btn)
-    val acceptBtn: Button by bindView(R.id.accept_btn)
-
     private var photoUri: Uri? = null
 
     init {
-        setContentView(R.layout.dialog_accept_photo)
-    }
+        setContentView(R.layout.dialog_commit_photo)
 
-    @OnClick(R.id.pair_btn)
-    fun onPairBtnClick() {
-        presenter.pair()
+        pair_btn.setOnClickListener {presenter.pair()}
+        commit_btn.setOnClickListener {presenter.commitPost(photoUri!!)}
     }
 
     fun loadPhoto(uri: Uri) {
         this.photoUri = uri
-        Glide.with(context).load(uri).into(photoImageView)
+        Glide.with(context).load(uri).into(thumbnail_imageview)
     }
 
-    @OnClick(R.id.accept_btn)
-    fun onAcceptBtnClick() {
-        presenter.commitPost(photoUri!!)
+    fun pairInProgress(){
+        discover_progressbar.visibility = View.VISIBLE
+    }
+
+    fun notifyUserPaired(user: User){
+        discover_progressbar.visibility = View.GONE
+        found_person_textview.text = context
+                .getString(R.string.paired_user, user.name, user.surname)
+
+        commit_btn.isClickable = true
+        commit_btn.setTextColor(Color.BLACK)
     }
 }

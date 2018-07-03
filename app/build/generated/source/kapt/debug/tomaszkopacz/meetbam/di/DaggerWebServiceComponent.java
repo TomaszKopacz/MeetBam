@@ -13,8 +13,8 @@ import tomaszkopacz.meetbam.presenter.AccountPhotosFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.AccountPhotosFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.LoginActivityPresenter;
 import tomaszkopacz.meetbam.presenter.LoginActivityPresenter_MembersInjector;
-import tomaszkopacz.meetbam.presenter.MainActivityPresenter;
-import tomaszkopacz.meetbam.presenter.MainActivityPresenter_MembersInjector;
+import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter;
+import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.StatsLocalFragmentPresenter;
@@ -55,8 +55,8 @@ public final class DaggerWebServiceComponent implements WebServiceComponent {
   }
 
   @Override
-  public void inject(MainActivityPresenter mainActivityPresenter) {
-    injectMainActivityPresenter(mainActivityPresenter);
+  public void inject(MainPostsFragmentPresenter mainActivityPresenter) {
+    injectMainPostsFragmentPresenter(mainActivityPresenter);
   }
 
   @Override
@@ -84,8 +84,9 @@ public final class DaggerWebServiceComponent implements WebServiceComponent {
     injectStatsLocalFragmentPresenter(mStatsLocalFragmentPresenter);
   }
 
-  private MainActivityPresenter injectMainActivityPresenter(MainActivityPresenter instance) {
-    MainActivityPresenter_MembersInjector.injectWebService(
+  private MainPostsFragmentPresenter injectMainPostsFragmentPresenter(
+      MainPostsFragmentPresenter instance) {
+    MainPostsFragmentPresenter_MembersInjector.injectWebService(
         instance, provideWebService$app_debugProvider.get());
     return instance;
   }

@@ -3,22 +3,25 @@ package tomaszkopacz.meetbam.view
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
+import android.support.v4.app.FragmentStatePagerAdapter
+import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.MainActivityPresenter
-import tomaszkopacz.meetbam.service.PostAdapter
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var presenter: MainActivityPresenter
+    private lateinit var pagerAdapter: ScreenSliderPagerAdapter
 
     companion object {
         const val CAMERA_CODE = 1
+        private val NUM_PAGES = 2
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +30,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar_main)
 
         presenter = MainActivityPresenter(this)
-
-        prepareRecyclerView()
-        presenter.downloadPosts()
+        pagerAdapter = ScreenSliderPagerAdapter(supportFragmentManager)
+        preparePagerView()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -65,17 +67,6 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun prepareRecyclerView() {
-        posts_recview.setHasFixedSize(true)
-        posts_recview.layoutManager = StaggeredGridLayoutManager(2,
-                StaggeredGridLayoutManager.VERTICAL)
-        posts_recview.itemAnimator = DefaultItemAnimator()
-    }
-
-    fun putPosts(adapter: PostAdapter) {
-        posts_recview.adapter = adapter
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -83,4 +74,45 @@ class MainActivity : AppCompatActivity() {
             presenter.photoTaken()
         }
     }
+
+    /*==============================================================================================
+                                        PAGER VIEW
+    ==============================================================================================*/
+
+    private class ScreenSliderPagerAdapter(fm: FragmentManager): FragmentStatePagerAdapter(fm) {
+
+        override fun getItem(position: Int): Fragment {
+            when (position){
+                0 -> return MainPhotoFragment()
+                1 -> return MainPostsFragment()
+            }
+
+            return Fragment()
+        }
+
+        override fun getCount(): Int {
+            return NUM_PAGES
+        }
+
+    }
+
+    private fun preparePagerView(){
+        main_viewpager.adapter = pagerAdapter
+        main_viewpager.currentItem = 1
+        main_viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            }
+
+            override fun onPageSelected(position: Int) {
+                when(position){
+                    0 -> supportActionBar!!.hide()
+                    1 -> supportActionBar!!.show()
+                }
+            }
+        })
+    }
+
 }

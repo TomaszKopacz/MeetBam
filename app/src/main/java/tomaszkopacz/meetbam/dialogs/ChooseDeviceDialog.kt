@@ -7,10 +7,10 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import kotterknife.bindView
 import tomaszkopacz.meetbam.R
-import tomaszkopacz.meetbam.presenter.MainActivityPresenter
+import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter
 import java.util.*
 
-class ChooseDeviceDialog(context: Context, presenter: MainActivityPresenter) : Dialog(context) {
+class ChooseDeviceDialog(context: Context, presenter: MainPostsFragmentPresenter) : Dialog(context) {
 
     private var devices: MutableList<BluetoothDevice> = ArrayList()
     val group: RadioGroup by bindView(R.id.devices_group)
@@ -18,7 +18,7 @@ class ChooseDeviceDialog(context: Context, presenter: MainActivityPresenter) : D
     private val listener = RadioGroup.OnCheckedChangeListener {
         radioGroup, _ ->
             val selectedItem = radioGroup.checkedRadioButtonId
-            presenter.deviceSelected(devices[selectedItem])
+            //presenter.deviceSelected(devices[selectedItem])
     }
 
     init {

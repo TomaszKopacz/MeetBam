@@ -8,7 +8,7 @@ import javax.inject.Singleton
 @Component(modules = [(WebServiceModule::class)])
 interface WebServiceComponent {
 
-    fun inject(mainActivityPresenter: MainActivityPresenter)
+    fun inject(mainActivityPresenter: MainPostsFragmentPresenter)
     fun inject(mLoginActivityPresenter: LoginActivityPresenter)
 
     fun inject(mAccountPhotosFragmentPresenter: AccountPhotosFragmentPresenter)

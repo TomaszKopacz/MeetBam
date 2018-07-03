@@ -158,7 +158,7 @@
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="colorAccent">#FFC107</color>
-    <color name="colorAccentMeetBam">#ff5722</color>
+    <color name="colorAccentMeetBam">#f44336</color>
     <color name="colorPrimary">#795548</color>
     <color name="colorPrimaryDark">#5D4037</color>
     <color name="colorPrimaryDarkMeetBam">#d32f2f</color>
@@ -172,14 +172,6 @@
     <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
-    <color name="cpb_blue">#ff0099cc</color>
-    <color name="cpb_blue_dark">#ff00719b</color>
-    <color name="cpb_green">#ff99cc00</color>
-    <color name="cpb_green_dark">#ff6d9b00</color>
-    <color name="cpb_grey">#ffdedede</color>
-    <color name="cpb_red">#ffff4444</color>
-    <color name="cpb_red_dark">#ffcd3a3a</color>
-    <color name="cpb_white">@android:color/white</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -320,7 +312,6 @@
         </attr><attr format="boolean" name="behavior_hideable"/><attr format="boolean" name="behavior_skipCollapsed"/></declare-styleable>
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
     <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
-    <declare-styleable name="CircularProgressButton"><attr format="reference" name="cpb_selectorIdle"/><attr format="reference" name="cpb_selectorComplete"/><attr format="reference" name="cpb_selectorError"/><attr format="string" name="cpb_textComplete"/><attr format="string" name="cpb_textIdle"/><attr format="string" name="cpb_textError"/><attr format="string" name="cpb_textProgress"/><attr format="color" name="cpb_colorProgress"/><attr format="color" name="cpb_colorIndicator"/><attr format="color" name="cpb_colorIndicatorBackground"/><attr format="reference" name="cpb_iconError"/><attr format="reference" name="cpb_iconComplete"/><attr format="dimension" name="cpb_cornerRadius"/><attr format="dimension" name="cpb_paddingProgress"/></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr format="dimension" name="scrimVisibleHeightTrigger"/><attr format="integer" name="scrimAnimationDuration"/><attr name="collapsedTitleGravity">
             
             <flag name="top" value="0x30"/>
@@ -729,7 +720,6 @@
     <dimen name="compat_button_padding_vertical_material">4dp</dimen>
     <dimen name="compat_control_corner_material">2dp</dimen>
     <dimen name="component_margin">16dp</dimen>
-    <dimen name="cpb_stroke_width">4dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -889,7 +879,9 @@
     <string name="app_name">MeetBam</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="capture_photo">CAPTURE</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="commit">OK</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -909,22 +901,12 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="custom_user">%1$s %2$s</string>
-    <string name="define_circularprogressbutton">circularprogressbutton</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="failure_login_error">Login failed!</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDhKc7RTvq91oXK42cKguYS5rkrNT3_1BY</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="library_circularprogressbutton_author">Dmytro Danylyk</string>
-    <string name="library_circularprogressbutton_authorWebsite">http://dmytrodanylyk.com/</string>
-    <string name="library_circularprogressbutton_isOpenSource">true</string>
-    <string name="library_circularprogressbutton_libraryDescription">Android Button which can morph to Circular Progress.</string>
-    <string name="library_circularprogressbutton_libraryName">Circular Progress Button</string>
-    <string name="library_circularprogressbutton_libraryVersion">1.1.0</string>
-    <string name="library_circularprogressbutton_libraryWebsite">http://dmytrodanylyk.com/pages/portfolio/circular-progress-button.html</string>
-    <string name="library_circularprogressbutton_licenseId">mit</string>
-    <string name="library_circularprogressbutton_repositoryLink">https://github.com/dmytrodanylyk/circular-progress-button</string>
     <string name="logged_user">%1$s %2$s</string>
     <string name="mail_empty_error">Mail cannot be empty</string>
     <string name="mail_invalid_error">Mail is invalid</string>
@@ -942,6 +924,7 @@
     <string name="posts_number">%1$s posts</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="search">SEARCH</string>
     <string name="search_menu_title">Search</string>
     <string name="search_users">Search users</string>
     <string name="status_bar_notification_info_overflow">999+</string>
