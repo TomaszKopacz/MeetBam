@@ -1,6 +1,5 @@
 package tomaszkopacz.meetbam.view
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -65,14 +64,6 @@ class MainActivity : AppCompatActivity() {
             R.id.action_logout -> presenter.logout()
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == CAMERA_CODE && resultCode == Activity.RESULT_OK) {
-            presenter.photoTaken()
-        }
     }
 
     /*==============================================================================================

@@ -2,49 +2,50 @@ package tomaszkopacz.meetbam.service;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 1, 10}, bv = {1, 0, 2}, k = 1, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c6\u0002\u0018\u00002\u00020\u0001:\u0001\tB\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004J\u000e\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b\u00a8\u0006\n"}, d2 = {"Ltomaszkopacz/meetbam/service/CameraService;", "", "()V", "getCameraInstance", "Landroid/hardware/Camera;", "getCameraIntent", "Landroid/content/Intent;", "file", "Ljava/io/File;", "CameraPreview", "app_debug"})
+@kotlin.Metadata(mv = {1, 1, 10}, bv = {1, 0, 2}, k = 1, d1 = {"\u0000i\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\b*\u0001\u001e\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\b\u0010 \u001a\u00020!H\u0002J\b\u0010\"\u001a\u00020!H\u0002J\b\u0010#\u001a\u00020!H\u0002J\b\u0010$\u001a\u00020!H\u0002J\b\u0010%\u001a\u00020!H\u0002J\b\u0010&\u001a\u00020!H\u0002J\u0006\u0010\'\u001a\u00020!J\u0006\u0010(\u001a\u00020!R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082D\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u001cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u00020\u001eX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\u001fR\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006)"}, d2 = {"Ltomaszkopacz/meetbam/service/CameraService;", "", "context", "Landroid/content/Context;", "textureView", "Landroid/view/TextureView;", "(Landroid/content/Context;Landroid/view/TextureView;)V", "backgroundHandler", "Landroid/os/Handler;", "backgroundThread", "Landroid/os/HandlerThread;", "cameraCaptureSession", "Landroid/hardware/camera2/CameraCaptureSession;", "cameraDevice", "Landroid/hardware/camera2/CameraDevice;", "cameraFacing", "", "cameraID", "", "cameraManager", "Landroid/hardware/camera2/CameraManager;", "captureRequest", "Landroid/hardware/camera2/CaptureRequest;", "captureRequestBuilder", "Landroid/hardware/camera2/CaptureRequest$Builder;", "previewSize", "Landroid/util/Size;", "stateCallback", "Landroid/hardware/camera2/CameraDevice$StateCallback;", "surfaceTextureListener", "tomaszkopacz/meetbam/service/CameraService$surfaceTextureListener$1", "Ltomaszkopacz/meetbam/service/CameraService$surfaceTextureListener$1;", "closeBackgroundThread", "", "closeCamera", "createPreviewSession", "openBackgroundThread", "openCamera", "setUpCamera", "start", "stop", "app_debug"})
 public final class CameraService {
-    public static final tomaszkopacz.meetbam.service.CameraService INSTANCE = null;
+    private final android.hardware.camera2.CameraManager cameraManager = null;
+    private java.lang.String cameraID;
+    private android.hardware.camera2.CameraDevice cameraDevice;
+    private final int cameraFacing = 1;
+    private android.util.Size previewSize;
+    private android.hardware.camera2.CaptureRequest.Builder captureRequestBuilder;
+    private android.hardware.camera2.CaptureRequest captureRequest;
+    private android.hardware.camera2.CameraCaptureSession cameraCaptureSession;
+    private android.os.HandlerThread backgroundThread;
+    private android.os.Handler backgroundHandler;
+    private final android.view.TextureView.SurfaceTextureListener surfaceTextureListener = null;
+    private final android.hardware.camera2.CameraDevice.StateCallback stateCallback = null;
+    private final android.content.Context context = null;
+    private final android.view.TextureView textureView = null;
     
-    @org.jetbrains.annotations.NotNull()
-    public final android.hardware.Camera getCameraInstance() {
-        return null;
+    public final void start() {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final android.content.Intent getCameraIntent(@org.jetbrains.annotations.NotNull()
-    java.io.File file) {
-        return null;
+    public final void stop() {
     }
     
-    private CameraService() {
+    private final void openBackgroundThread() {
+    }
+    
+    private final void closeBackgroundThread() {
+    }
+    
+    private final void setUpCamera() {
+    }
+    
+    private final void openCamera() {
+    }
+    
+    private final void closeCamera() {
+    }
+    
+    private final void createPreviewSession() {
+    }
+    
+    public CameraService(@org.jetbrains.annotations.NotNull()
+    android.content.Context context, @org.jetbrains.annotations.NotNull()
+    android.view.TextureView textureView) {
         super();
-    }
-    
-    @kotlin.Metadata(mv = {1, 1, 10}, bv = {1, 0, 2}, k = 1, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\u0018\u00002\u00020\u00012\u00020\u0002B\u0015\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\u0007J*\u0010\b\u001a\u00020\t2\b\u0010\n\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\rH\u0016J\u0012\u0010\u0010\u001a\u00020\t2\b\u0010\n\u001a\u0004\u0018\u00010\u000bH\u0016J\u0012\u0010\u0011\u001a\u00020\t2\b\u0010\n\u001a\u0004\u0018\u00010\u000bH\u0016R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0012"}, d2 = {"Ltomaszkopacz/meetbam/service/CameraService$CameraPreview;", "Landroid/view/SurfaceView;", "Landroid/view/SurfaceHolder$Callback;", "context", "Landroid/content/Context;", "camera", "Landroid/hardware/Camera;", "(Landroid/content/Context;Landroid/hardware/Camera;)V", "surfaceChanged", "", "holder", "Landroid/view/SurfaceHolder;", "format", "", "width", "height", "surfaceCreated", "surfaceDestroyed", "app_debug"})
-    public static final class CameraPreview extends android.view.SurfaceView implements android.view.SurfaceHolder.Callback {
-        private final android.hardware.Camera camera = null;
-        private java.util.HashMap _$_findViewCache;
-        
-        @java.lang.Override()
-        public void surfaceCreated(@org.jetbrains.annotations.Nullable()
-        android.view.SurfaceHolder holder) {
-        }
-        
-        @java.lang.Override()
-        public void surfaceDestroyed(@org.jetbrains.annotations.Nullable()
-        android.view.SurfaceHolder holder) {
-        }
-        
-        @java.lang.Override()
-        public void surfaceChanged(@org.jetbrains.annotations.Nullable()
-        android.view.SurfaceHolder holder, int format, int width, int height) {
-        }
-        
-        public CameraPreview(@org.jetbrains.annotations.NotNull()
-        android.content.Context context, @org.jetbrains.annotations.NotNull()
-        android.hardware.Camera camera) {
-            super(null);
-        }
     }
 }

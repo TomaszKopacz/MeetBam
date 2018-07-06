@@ -1,50 +1,188 @@
 package tomaszkopacz.meetbam.service
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
-import android.hardware.Camera
-import android.net.Uri
-import android.provider.MediaStore
-import android.view.SurfaceHolder
-import android.view.SurfaceView
-import java.io.File
+import android.content.pm.PackageManager
+import android.graphics.SurfaceTexture
+import android.hardware.camera2.*
+import android.os.Handler
+import android.os.HandlerThread
+import android.support.v4.app.ActivityCompat
+import android.util.Size
+import android.view.Surface
+import android.view.TextureView
+import java.util.*
 
-object CameraService {
+class CameraService(private val context: Context, private val textureView: TextureView){
 
-    fun getCameraInstance() : Camera {
-        return Camera.open()
+    private val cameraManager: CameraManager
+            = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+
+    private var cameraID: String? = null
+    private var cameraDevice: CameraDevice? = null
+
+    private val cameraFacing = CameraCharacteristics.LENS_FACING_BACK
+    private var previewSize: Size? = null
+    private var captureRequestBuilder: CaptureRequest.Builder? = null
+    private var captureRequest: CaptureRequest? = null
+    private var cameraCaptureSession: CameraCaptureSession? = null
+
+    private var backgroundThread: HandlerThread? = null
+    private var backgroundHandler: Handler? = null
+
+
+    /*==============================================================================================
+                                        VIEW LISTENER
+     =============================================================================================*/
+
+    private val surfaceTextureListener = object : TextureView.SurfaceTextureListener{
+        override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture?, width: Int, height: Int) {
+        }
+
+        override fun onSurfaceTextureUpdated(surface: SurfaceTexture?) {
+        }
+
+        override fun onSurfaceTextureDestroyed(surface: SurfaceTexture?): Boolean {
+            return false
+        }
+
+        override fun onSurfaceTextureAvailable(surface: SurfaceTexture?, width: Int, height: Int) {
+            setUpCamera()
+            openCamera()
+        }
     }
 
-    @Suppress("DEPRECATION")
-    @SuppressLint("ViewConstructor")
-    class CameraPreview(context: Context, private val camera: Camera)
-        : SurfaceView(context), SurfaceHolder.Callback {
+    /*==============================================================================================
+                                       CAMERA CALLBACK
+     =============================================================================================*/
 
-        init {
-            val holder = holder
-            holder.addCallback(this)
-            holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS)
+    private val stateCallback: CameraDevice.StateCallback = object : CameraDevice.StateCallback(){
+        override fun onOpened(camera: CameraDevice?) {
+            cameraDevice = camera
+            createPreviewSession()
         }
 
-        override fun surfaceCreated(holder: SurfaceHolder?) {
-            camera.setDisplayOrientation(90)
-            camera.setPreviewDisplay(holder)
-            camera.startPreview()
+        override fun onDisconnected(camera: CameraDevice?) {
+            cameraDevice!!.close()
+            cameraDevice = null
         }
 
-        override fun surfaceDestroyed(holder: SurfaceHolder?) {
+        override fun onError(camera: CameraDevice?, error: Int) {
+            cameraDevice!!.close()
+            cameraDevice = null
         }
 
-        override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+    }
+
+    /*==============================================================================================
+                                            PUBLIC METHODS
+     =============================================================================================*/
+
+    fun start(){
+        openBackgroundThread()
+        if (textureView.isAvailable){
+            setUpCamera()
+            openCamera()
+
+        } else {
+            textureView.surfaceTextureListener = surfaceTextureListener
         }
     }
 
-    fun getCameraIntent(file: File): Intent {
-        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        val uri = Uri.fromFile(file)
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri!!)
+    fun stop(){
+        closeCamera()
+        closeBackgroundThread()
+    }
 
-        return cameraIntent
+    /*==============================================================================================
+                                            PRIVATE METHODS
+     =============================================================================================*/
+
+    private fun openBackgroundThread(){
+        backgroundThread = HandlerThread("camera_background_thread")
+        backgroundThread!!.start()
+        backgroundHandler = android.os.Handler(backgroundThread!!.looper)
+    }
+
+    private fun closeBackgroundThread(){
+        if (backgroundHandler != null){
+            backgroundThread!!.quitSafely()
+            backgroundThread = null
+            backgroundHandler = null
+        }
+    }
+
+    private fun setUpCamera(){
+        try {
+            for (cameraID in cameraManager.cameraIdList){
+                val cameraCharacteristic: CameraCharacteristics
+                        = cameraManager.getCameraCharacteristics(cameraID)
+
+                if (cameraCharacteristic.get(CameraCharacteristics.LENS_FACING) == cameraFacing){
+                    val config = cameraCharacteristic.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP)
+                    val previewSize: Size = config!!.getOutputSizes(SurfaceTexture::class.java)[0]
+
+                    this.cameraID = cameraID
+                    this.previewSize = previewSize
+                }
+            }
+
+        } catch (e: Exception){ }
+    }
+
+    private fun openCamera(){
+        try {
+            if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.CAMERA)
+                    == PackageManager.PERMISSION_GRANTED)
+                cameraManager.openCamera(cameraID, stateCallback, backgroundHandler)
+
+        } catch (e: Exception){ }
+    }
+
+    private fun closeCamera(){
+        if (cameraCaptureSession != null){
+            cameraCaptureSession!!.close()
+            cameraCaptureSession = null
+        }
+
+        if (cameraDevice != null){
+            cameraDevice!!.close()
+            cameraDevice = null
+        }
+    }
+
+    private fun createPreviewSession(){
+        try {
+            val surfaceTexture = textureView.surfaceTexture
+            surfaceTexture.setDefaultBufferSize(previewSize!!.width, previewSize!!.height)
+            val previewSurface = Surface(surfaceTexture)
+            captureRequestBuilder = cameraDevice!!
+                    .createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW)
+            captureRequestBuilder!!.addTarget(previewSurface)
+
+            cameraDevice!!.createCaptureSession(Collections.singletonList(previewSurface),
+                    object : CameraCaptureSession.StateCallback(){
+                        override fun onConfigureFailed(session: CameraCaptureSession?) {
+                        }
+
+                        override fun onConfigured(session: CameraCaptureSession?) {
+                            if (cameraDevice == null)
+                                return
+
+                            try {
+                                captureRequest = captureRequestBuilder!!.build()
+                                cameraCaptureSession = session
+                                cameraCaptureSession!!.setRepeatingRequest(captureRequest,
+                                        null, backgroundHandler)
+
+                            } catch (e: Exception) {
+
+                            }
+                        }
+
+                    }, backgroundHandler)
+
+        } catch (e: Exception) {
+
+        }
     }
 }
