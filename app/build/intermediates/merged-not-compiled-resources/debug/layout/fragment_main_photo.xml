@@ -19,7 +19,6 @@
             android:layout_width="@dimen/fab_size"
             android:layout_height="@dimen/fab_size"
             android:layout_margin="@dimen/fab_margin"
-            android:background="@drawable/ic_photo"
             android:alpha="0.4"
             android:layout_gravity="center|bottom"/>
     </FrameLayout>

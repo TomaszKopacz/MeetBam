@@ -5,32 +5,66 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="FIELD_TYPE_CHANGE"
     plugin-version="3.1.3"
-    timestamp="1530878183121"
+    timestamp="1530891233654"
     token="4634739316577334448"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2292" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="63" />
     <task
         name="verifier"
-        duration="0" />
+        duration="13" />
 
+    <artifact
+        location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
     <artifact
         location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1530877911258"
+        timestamp="1530890961462"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
         <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
@@ -38,64 +72,20 @@
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1530878052773"
+        ir-eligibility="FIELD_TYPE_CHANGE"
+        timestamp="1530891233654"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
         <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1530878183121"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />

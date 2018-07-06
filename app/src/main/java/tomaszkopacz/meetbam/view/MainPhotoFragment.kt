@@ -28,7 +28,7 @@ class MainPhotoFragment : Fragment() {
 
         presenter = MainActivityPresenter(activity as MainActivity)
         cameraService = CameraService(context!!, photo_textureview)
-        camera_button.setOnClickListener {}
+        camera_button.setOnClickListener {presenter.takePhoto(cameraService)}
     }
 
     override fun onResume() {
