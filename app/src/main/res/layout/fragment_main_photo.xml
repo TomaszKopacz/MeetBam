@@ -56,6 +56,13 @@
                     android:textColor="@color/colorAccentMeetBam"
                     android:visibility="invisible"/>
             </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/photo_imageview"
+                android:layout_width="@dimen/photo_width"
+                android:layout_height="@dimen/photo_height"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/photo_margin"/>
         </LinearLayout>
 
         <LinearLayout

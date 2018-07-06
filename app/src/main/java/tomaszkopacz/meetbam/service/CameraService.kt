@@ -92,7 +92,6 @@ class CameraService(private val context: Context, private val textureView: Textu
     }
 
     fun takePhoto(image: File){
-        lock()
         var fos: FileOutputStream? = null
 
         try {
@@ -103,7 +102,6 @@ class CameraService(private val context: Context, private val textureView: Textu
 
         } finally {
             fos!!.close()
-            unlock()
         }
     }
 
@@ -201,26 +199,6 @@ class CameraService(private val context: Context, private val textureView: Textu
                     }, backgroundHandler)
 
         } catch (e: Exception) {
-
-        }
-    }
-
-    private fun lock(){
-        try {
-            cameraCaptureSession!!.capture(captureRequestBuilder!!.build(),
-                    null, backgroundHandler)
-
-        } catch (e: Exception) {
-
-        }
-    }
-
-    private fun unlock(){
-        try {
-            cameraCaptureSession!!.setRepeatingRequest(captureRequestBuilder!!.build(),
-                    null, backgroundHandler)
-
-        } catch (e: Exception){
 
         }
     }
