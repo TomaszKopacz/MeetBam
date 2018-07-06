@@ -47,7 +47,6 @@
             android:textSize="24sp"
             android:layout_gravity="center"
             android:layout_margin="@dimen/component_margin"
-            android:text="@string/search"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
         <Button
@@ -58,7 +57,6 @@
             android:textColor="@android:color/darker_gray"
             android:layout_gravity="center"
             android:layout_margin="@dimen/component_margin"
-            android:text="@string/commit"
             android:clickable="false"
             style="@style/Widget.AppCompat.Button.Colored"/>
     </LinearLayout>

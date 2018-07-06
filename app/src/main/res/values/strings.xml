@@ -26,10 +26,9 @@
     <string name="failure_login_error">Login failed!</string>
 
     <!-- Main Activity -->
-    <string name="capture_photo">CAPTURE</string>
+    <string name="description_hint">Describe a photo...</string>
     <string name="paired_user">%1$s %2$s</string>
-    <string name="search">SEARCH</string>
-    <string name="commit">OK</string>
+
 
     <!-- Account Activity -->
     <string name="logged_user">%1$s %2$s</string>

@@ -33,8 +33,7 @@ class CommitPhotoDialog(context: Context, internal var presenter: CommitPhotoDia
 
     fun notifyUserPaired(user: User){
         discover_progressbar.visibility = View.GONE
-        found_person_textview.text = context
-                .getString(R.string.paired_user, user.name, user.surname)
+        found_person_textview.text = ""
 
         commit_btn.isClickable = true
         commit_btn.setTextColor(Color.BLACK)

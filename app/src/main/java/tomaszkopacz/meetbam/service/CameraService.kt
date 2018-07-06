@@ -5,17 +5,14 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.SurfaceTexture
 import android.hardware.camera2.*
-import android.os.Environment
 import android.os.Handler
 import android.os.HandlerThread
 import android.support.v4.app.ActivityCompat
 import android.util.Size
 import android.view.Surface
 import android.view.TextureView
-import tomaszkopacz.meetbam.R
 import java.io.File
 import java.io.FileOutputStream
-import java.text.SimpleDateFormat
 import java.util.*
 
 class CameraService(private val context: Context, private val textureView: TextureView){
@@ -94,12 +91,12 @@ class CameraService(private val context: Context, private val textureView: Textu
         }
     }
 
-    fun takePhoto(){
+    fun takePhoto(image: File){
         lock()
         var fos: FileOutputStream? = null
 
         try {
-            fos = FileOutputStream(createImage(getImageGallery()))
+            fos = FileOutputStream(image)
             textureView.bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
 
         } catch (e: Exception) {
@@ -206,25 +203,6 @@ class CameraService(private val context: Context, private val textureView: Textu
         } catch (e: Exception) {
 
         }
-    }
-
-    private fun getImageGallery() : File{
-        val storageDir
-                = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
-        val galleryFolder = File(storageDir, context.resources.getString(R.string.app_name))
-
-        if (!galleryFolder.exists()){
-            galleryFolder.mkdirs()
-        }
-
-        return galleryFolder
-    }
-
-    private fun createImage(galleryFolder: File): File{
-        val uniqueFileName = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
-                .format(Date())
-
-        return File.createTempFile(uniqueFileName, ".jpg", galleryFolder)
     }
 
     private fun lock(){
