@@ -23,4 +23,10 @@
         <item name="colorAccent">@color/colorAccentMeetBam</item>
         <item name="android:colorForeground">@android:color/black</item>
     </style>
+    
+    <style name="FlatButtonMeetBam" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="colorControlHighlight">@color/colorAccentMeetBam</item>
+        <item name="colorAccent">@color/colorPrimaryMeetBam</item>
+    </style>
 </resources>

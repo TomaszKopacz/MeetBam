@@ -14,6 +14,8 @@ import tomaszkopacz.meetbam.service.CameraService
 import java.io.File
 
 
+
+
 class MainPhotoFragment : Fragment() {
 
     private lateinit var presenter: MainPhotoFragmentPresenter
@@ -21,7 +23,8 @@ class MainPhotoFragment : Fragment() {
 
     companion object {
         const val MAKE_PHOTO_LAYOUT = 1
-        const val ACCEPT_PHOTO_LAYOUT = 2
+        const val PAIR_LAYOUT = 2
+        const val ACCEPT_PHOTO_LAYOUT = 3
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +38,10 @@ class MainPhotoFragment : Fragment() {
 
         presenter = MainPhotoFragmentPresenter(this)
         cameraService = CameraService(context!!, photo_textureview)
-        camera_button.setOnClickListener {presenter.takePhoto(cameraService)}
+
+        camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
+        dismiss_button.setOnClickListener {presenter.dismissPhoto()}
+        pair_button.setOnClickListener {presenter.pair()}
     }
 
     override fun onResume() {
@@ -57,9 +63,21 @@ class MainPhotoFragment : Fragment() {
                 photo_imageview.visibility = View.INVISIBLE
                 dismiss_button.visibility = View.INVISIBLE
                 pair_button.visibility = View.INVISIBLE
-                accept_button.visibility = View.INVISIBLE
+                accept_button.visibility = View.GONE
 
                 camera_button.visibility = View.VISIBLE
+            }
+
+            PAIR_LAYOUT -> {
+                paired_user_textview.visibility = View.VISIBLE
+                description_inputlayout.visibility = View.VISIBLE
+                decription_edittext.visibility = View.VISIBLE
+                photo_imageview.visibility = View.VISIBLE
+                dismiss_button.visibility = View.VISIBLE
+                pair_button.visibility = View.VISIBLE
+                accept_button.visibility = View.GONE
+
+                camera_button.visibility = View.INVISIBLE
             }
 
             ACCEPT_PHOTO_LAYOUT -> {

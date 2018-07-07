@@ -15,13 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <android.support.design.widget.FloatingActionButton
+        <ImageButton
             android:id="@+id/camera_button"
             android:layout_width="@dimen/footer_height"
             android:layout_height="@dimen/footer_height"
             android:layout_margin="@dimen/footer_margin"
-            android:alpha="0.5"
-            app:borderWidth="5dp"
+            android:src="@drawable/photo"
+            android:background="@android:color/transparent"
             android:layout_gravity="center|bottom"
             android:visibility="visible"/>
 
@@ -73,41 +73,38 @@
             android:gravity="center"
             android:layout_margin="@dimen/footer_margin">
 
-            <Button
+            <ImageButton
                 android:id="@+id/dismiss_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="DISMISS"
+                android:layout_margin="@dimen/footer_item_margin"
+                android:src="@drawable/delete"
                 android:alpha="0.7"
-                android:textSize="@dimen/footer_text_size"
-                android:layout_margin="@dimen/item_margin"
-                android:textColor="@color/colorAccentMeetBam"
-                android:visibility="invisible"/>
+                android:background="@drawable/button_delete"
+                android:visibility="invisible"
+                android:padding="@dimen/footer_item_padding"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/pair_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:textSize="@dimen/footer_text_size"
-                android:text="PAIR"
+                android:layout_margin="@dimen/footer_item_margin"
+                android:visibility="invisible"
+                android:background="@drawable/button_pair"
+                android:src="@drawable/pair"
                 android:alpha="0.7"
-                android:textColor="@color/colorAccentMeetBam"
-                android:layout_margin="@dimen/item_margin"
-                android:visibility="invisible"/>
+                android:padding="@dimen/footer_item_padding"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/accept_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="ACCEPT"
+                android:layout_margin="@dimen/footer_item_margin"
+                android:visibility="gone"
                 android:alpha="0.7"
-                android:textSize="@dimen/footer_text_size"
-                android:textColor="@color/colorAccentMeetBam"
-                android:layout_margin="@dimen/item_margin"
-                android:visibility="invisible"/>
+                android:background="@drawable/button_accept"
+                android:src="@drawable/accept"
+                android:padding="@dimen/footer_item_padding" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

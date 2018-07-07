@@ -164,6 +164,9 @@
     <color name="colorPrimaryDarkMeetBam">#d32f2f</color>
     <color name="colorPrimaryLight">#D7CCC8</color>
     <color name="colorPrimaryMeetBam">#f44336</color>
+    <color name="color_shadow_accept">#f4ff81</color>
+    <color name="color_shadow_delete">#ff8a80</color>
+    <color name="color_shadow_pair">#8c9eff</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -766,8 +769,10 @@
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
     <dimen name="footer_height">80dp</dimen>
+    <dimen name="footer_item_margin">15dp</dimen>
+    <dimen name="footer_item_padding">10dp</dimen>
     <dimen name="footer_margin">16dp</dimen>
-    <dimen name="footer_text_size">20sp</dimen>
+    <dimen name="footer_text_size">16sp</dimen>
     <dimen name="header_margin">16dp</dimen>
     <dimen name="header_text_size">20sp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
@@ -2048,6 +2053,11 @@
     </style>
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <style name="FlatButtonMeetBam" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="colorControlHighlight">@color/colorAccentMeetBam</item>
+        <item name="colorAccent">@color/colorPrimaryMeetBam</item>
     </style>
     <style name="MeetBam" parent="AppTheme.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryMeetBam</item>

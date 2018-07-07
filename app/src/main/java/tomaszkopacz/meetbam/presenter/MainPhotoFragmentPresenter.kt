@@ -14,14 +14,19 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         val image = createImage(getImageGallery())
         service.takePhoto(image)
 
-        fragment.setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
+        fragment.setLayout(MainPhotoFragment.PAIR_LAYOUT)
         fragment.loadPhoto(image)
     }
 
     fun dismissPhoto() {
+        /*
+             REMOVE IMAGE FROM DIRECTORY
+         */
+        fragment.setLayout(MainPhotoFragment.MAKE_PHOTO_LAYOUT)
     }
 
     fun pair() {
+        fragment.setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
     }
 
     fun acceptPhoto() {

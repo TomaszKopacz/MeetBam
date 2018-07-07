@@ -5,11 +5,15 @@
     <color name="colorAccent">#FFC107</color>
     <color name="colorPrimaryLight">#D7CCC8</color>
     <color name="textColorPrimary">#FFFFFF</color>
+    <color name="background_material_light">#ffffff</color>
+
     <color name="colorPrimaryMeetBam">#f44336</color>
     <color name="colorPrimaryDarkMeetBam">#d32f2f</color>
     <color name="colorAccentMeetBam">#f44336</color>
-    <color name="background_material_light">#ffffff</color>
     <color name="background_material_lightMeetBam">#ffffff</color>
     <color name="foreground_material_lightMeetBam">#212121</color>
 
+    <color name="color_shadow_delete">#ff8a80</color>
+    <color name="color_shadow_pair">#8c9eff</color>
+    <color name="color_shadow_accept">#f4ff81</color>
 </resources>
