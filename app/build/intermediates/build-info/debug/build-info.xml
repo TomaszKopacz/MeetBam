@@ -5,9 +5,8 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.1.3"
-    timestamp="1531161929849"
+    timestamp="1531162194727"
     token="4634739316577334448"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -19,14 +18,11 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="102" />
+        duration="0" />
     <task
         name="verifier"
-        duration="19" />
+        duration="0" />
 
-    <artifact
-        location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
     <artifact
         location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
@@ -98,9 +94,6 @@
         <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
@@ -110,6 +103,11 @@
         <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1531162194727"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="T:\Workspace\AndroidStudioProjects\MeetBam\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />

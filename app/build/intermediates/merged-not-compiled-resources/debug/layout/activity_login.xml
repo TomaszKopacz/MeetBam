@@ -84,7 +84,7 @@
                 <Button
                     android:id="@+id/sign_in_button"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/footer_item_margin"
@@ -174,7 +174,7 @@
                 <Button
                     android:id="@+id/sign_up_button"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/footer_item_margin"
