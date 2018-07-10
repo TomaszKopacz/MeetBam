@@ -2,9 +2,11 @@ package tomaszkopacz.meetbam.presenter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import net.cachapa.expandablelayout.ExpandableLayout
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.service.LoginService
@@ -57,6 +59,10 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     }
 
     override fun onItemClick(view: View) {
+
+        val e: ExpandableLayout = view.findViewById(R.id.main_expandable)
+        e.toggle()
+
         //int position = fragment.getPostsRecView().getChildAdapterPosition(view);
         //posts.remove(position);
         //adapter.notifyItemRemoved(position);

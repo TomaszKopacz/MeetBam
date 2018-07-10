@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jul 10 22:41:54 CEST 2018
+#Tue Jul 10 23:38:23 CEST 2018
 1.base=T\:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
 2.path=classes.dex
 0.baseType=DIRECTORY

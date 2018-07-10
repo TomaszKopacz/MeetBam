@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="2dp"
-    card_view:cardBackgroundColor="#FEFEFE"
-    card_view:cardCornerRadius="5dp"
-    card_view:cardElevation="10dp">
+    android:layout_margin="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,30 +19,40 @@
             android:layout_marginTop="8dp" />
 
         <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/main_expandable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/name1_textview"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/name2_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/name1_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/post_time_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textColor="#888"
-                android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/name2_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/post_time_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#888"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
         </net.cachapa.expandablelayout.ExpandableLayout>
 
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+</RelativeLayout>

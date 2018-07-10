@@ -21,6 +21,10 @@ class PostAdapter(private val presenter: RecyclerViewPresenter)
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.post_item, parent, false)
 
+        view.setOnClickListener{
+            presenter.onItemClick(view)
+        }
+
         return PostViewHolder(view)
     }
 
