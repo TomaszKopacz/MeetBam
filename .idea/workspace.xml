@@ -9,9 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d228ade-e6b5-4f2c-8571-fb0a6907584e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/post_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/post_item.xml" />
-    </list>
+    <list default="true" id="4d228ade-e6b5-4f2c-8571-fb0a6907584e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,8 +84,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="45" column="34" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="116">
+              <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -2902,7 +2900,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531256633078" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531256698116" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2950,7 +2948,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531256633079" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531256698116" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3112,7 +3110,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531256633080" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531256698119" />
       </method>
     </configuration>
     <configuration default="false" name="MainActivityTest" type="AndroidJUnit" factoryName="Android JUnit">
@@ -3326,7 +3324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3337,7 +3334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3348,9 +3344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#719#741#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3389,7 +3382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3475,7 +3467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3499,7 +3490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3510,7 +3500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3521,7 +3510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3532,7 +3520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3575,33 +3562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="98" column="52" lean-forward="false" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
-          <folding>
-            <element signature="e#1370#1392#0" expanded="false" />
-            <element signature="e#1418#1447#0" expanded="false" />
-            <element signature="e#1477#1502#0" expanded="false" />
-            <element signature="e#2467#2487#0" expanded="false" />
-            <element signature="e#2690#2712#0" expanded="false" />
-            <element signature="e#3209#3232#0" expanded="false" />
-            <element signature="e#3431#3453#0" expanded="false" />
-            <element signature="e#3887#3914#0" expanded="false" />
-            <element signature="e#3948#3972#0" expanded="false" />
-            <element signature="e#4435#4457#0" expanded="false" />
-            <element signature="e#4483#4512#0" expanded="false" />
-            <element signature="e#4542#4567#0" expanded="false" />
-            <element signature="e#5498#5517#0" expanded="false" />
-            <element signature="e#5659#5681#0" expanded="false" />
-            <element signature="e#6178#6200#0" expanded="false" />
-            <element signature="e#6342#6364#0" expanded="false" />
-            <element signature="e#6859#6879#0" expanded="false" />
-            <element signature="e#7082#7104#0" expanded="false" />
-            <element signature="e#7602#7625#0" expanded="false" />
-            <element signature="e#7824#7846#0" expanded="false" />
-            <element signature="e#8279#8306#0" expanded="false" />
-            <element signature="e#8340#8364#0" expanded="false" />
-            <element signature="e#8861#8883#0" expanded="false" />
-            <element signature="e#8905#8923#0" expanded="false" />
-            <element signature="e#9036#9061#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3686,7 +3646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
           <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3695,8 +3654,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="45" column="34" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="116">
+          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
           <folding />
         </state>
       </provider>
