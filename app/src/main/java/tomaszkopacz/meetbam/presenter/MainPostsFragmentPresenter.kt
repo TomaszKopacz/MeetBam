@@ -9,7 +9,6 @@ import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.service.PostAdapter
-import tomaszkopacz.meetbam.service.PostViewHolder
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.MainPostsFragment
 import java.util.*
@@ -18,20 +17,20 @@ import javax.inject.Inject
 class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     : RecyclerViewPresenter{
 
+    private val BASE_URL = "http://meetbam.cba.pl/"
+
     //service
     private var mLoginService = LoginService(fragment.activity!!.applicationContext)
     @Inject lateinit var webService: WebService
 
     //posts
-    private var adapter: PostAdapter = PostAdapter(this)
+    private var adapter = PostAdapter(this)
     private var posts: MutableList<Post> = ArrayList()
 
     init {
         (fragment.activity!!.application as MainApp)
                 .webServiceComponent!!.inject(this)
     }
-
-    private val BASE_URL = "http://meetbam.cba.pl/"
 
     fun downloadPosts() {
         posts.clear()
@@ -41,7 +40,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
 
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
                 posts = response.body() as MutableList<Post>
-                fragment.putPosts(adapter)
+                fragment.putPosts(adapter!!)
                 fragment.refreshDone()
             }
 
@@ -53,7 +52,8 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
 
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val post = posts[position]
-        (holder as PostViewHolder).setContent(fragment.activity!!, post, BASE_URL)
+        holder as PostAdapter.PostViewHolder
+        adapter.setContent(fragment.activity!!, holder, post, BASE_URL)
     }
 
     override fun onItemClick(view: View) {

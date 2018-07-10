@@ -572,6 +572,10 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shadow.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\foldablelayout-0.0.1.aar\\f39ef80bc9fcb0252f996e18cb512a9b\\res\\drawable\\shadow.xml"
+    },
+    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
@@ -1782,6 +1786,10 @@
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_foldable_layout.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\foldablelayout-0.0.1.aar\\f39ef80bc9fcb0252f996e18cb512a9b\\res\\layout\\foldable_layout.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",

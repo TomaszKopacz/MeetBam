@@ -9,7 +9,6 @@ import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.service.PostAdapter
-import tomaszkopacz.meetbam.service.PostViewHolder
 import tomaszkopacz.meetbam.view.AccountPhotosFragment
 import tomaszkopacz.meetbam.view.MainApp
 import java.util.*
@@ -23,7 +22,7 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
     private val mLoginService = LoginService(fragment.activity!!.applicationContext)
 
     //posts
-    private val adapter = PostAdapter(this)
+    private var adapter = PostAdapter(this)
     private var photos: MutableList<Post>? = ArrayList()
 
     companion object {
@@ -44,8 +43,8 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
 
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
 
-                photos = response.body() as MutableList<Post>?
-                fragment.putPhotos(adapter)
+                photos = response.body() as MutableList<Post>
+                fragment.putPhotos(adapter!!)
             }
 
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
@@ -56,9 +55,8 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
 
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val post = photos!![position]
-
-        holder as PostViewHolder
-        holder.setContent(fragment.context!!, post, BASE_URL)
+        holder as PostAdapter.PostViewHolder
+        adapter.setContent(fragment.context!!, holder, post, BASE_URL)
     }
 
     override fun onItemClick(view: View) {

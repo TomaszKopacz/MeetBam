@@ -10,7 +10,6 @@ import tomaszkopacz.meetbam.entity.UserResult
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.service.UserAdapter
-import tomaszkopacz.meetbam.service.UserViewHolder
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.StatsLocalFragment
 import java.util.*
@@ -49,7 +48,7 @@ class StatsLocalFragmentPresenter(private val fragment: StatsLocalFragment)
 
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val result = results!![position]
-        holder as UserViewHolder
+        holder as UserAdapter.UserViewHolder
         holder.username.text =
                 fragment.getString(R.string.user_at_position,
                         position + 1, result.name, result.surname)

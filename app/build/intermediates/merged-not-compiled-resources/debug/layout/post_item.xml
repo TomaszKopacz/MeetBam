@@ -27,7 +27,7 @@
             android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/post_photo_imageview"
+            android:id="@+id/post_imageview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp" />

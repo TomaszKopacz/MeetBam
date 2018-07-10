@@ -7,6 +7,7 @@ INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidMan
 MERGED from [com.android.support:design:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bbf311160fbfc099fae86dda0490d845\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\82e6727ad7e8703931ed82c1f3705cd3\AndroidManifest.xml:17:1-22:12
 MERGED from [net.cachapa.expandablelayout:expandablelayout:2.9.2] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\expandablelayout-2.9.2.aar\26e0f43d65540ce7d8b4e8fddeb10bda\AndroidManifest.xml:2:1-12:12
+MERGED from [com.vincentbrison.openlibraries.android:foldablelayout:0.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\foldablelayout-0.0.1.aar\f39ef80bc9fcb0252f996e18cb512a9b\AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.gms:play-services-location:15.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.1.aar\acc8030904fae8a5ccdb10f583e1c0c6\AndroidManifest.xml:2:1-9:12
 MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\637d654f76b2ca24aa830fc74db26200\AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e5b77b6f3535cb56fc661f29d75be0d7\AndroidManifest.xml:17:1-22:12
@@ -93,6 +94,8 @@ ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManife
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:16:19-63
 application
 ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:18:5-86:19
+MERGED from [com.vincentbrison.openlibraries.android:foldablelayout:0.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\foldablelayout-0.0.1.aar\f39ef80bc9fcb0252f996e18cb512a9b\AndroidManifest.xml:26:5-30:19
+MERGED from [com.vincentbrison.openlibraries.android:foldablelayout:0.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\foldablelayout-0.0.1.aar\f39ef80bc9fcb0252f996e18cb512a9b\AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.gms:play-services-location:15.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.1.aar\acc8030904fae8a5ccdb10f583e1c0c6\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:15.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.1.aar\acc8030904fae8a5ccdb10f583e1c0c6\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-maps:15.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-maps-15.0.1.aar\0fbf1c6678c1103b910adea51c7bb4fb\AndroidManifest.xml:30:5-20
@@ -111,6 +114,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\to
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:24:9-35
 	android:label
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:22:9-32
+		REJECTED from [com.vincentbrison.openlibraries.android:foldablelayout:0.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\foldablelayout-0.0.1.aar\f39ef80bc9fcb0252f996e18cb512a9b\AndroidManifest.xml:28:9-41
 	android:roundIcon
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:23:9-54
 	android:icon
@@ -211,6 +215,8 @@ MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\tomas\.gradle\cac
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\82e6727ad7e8703931ed82c1f3705cd3\AndroidManifest.xml:20:5-44
 MERGED from [net.cachapa.expandablelayout:expandablelayout:2.9.2] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\expandablelayout-2.9.2.aar\26e0f43d65540ce7d8b4e8fddeb10bda\AndroidManifest.xml:8:5-10:41
 MERGED from [net.cachapa.expandablelayout:expandablelayout:2.9.2] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\expandablelayout-2.9.2.aar\26e0f43d65540ce7d8b4e8fddeb10bda\AndroidManifest.xml:8:5-10:41
+MERGED from [com.vincentbrison.openlibraries.android:foldablelayout:0.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\foldablelayout-0.0.1.aar\f39ef80bc9fcb0252f996e18cb512a9b\AndroidManifest.xml:22:5-24:41
+MERGED from [com.vincentbrison.openlibraries.android:foldablelayout:0.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\foldablelayout-0.0.1.aar\f39ef80bc9fcb0252f996e18cb512a9b\AndroidManifest.xml:22:5-24:41
 MERGED from [com.google.android.gms:play-services-location:15.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.1.aar\acc8030904fae8a5ccdb10f583e1c0c6\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:15.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.1.aar\acc8030904fae8a5ccdb10f583e1c0c6\AndroidManifest.xml:5:5-44
 MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\637d654f76b2ca24aa830fc74db26200\AndroidManifest.xml:5:5-43

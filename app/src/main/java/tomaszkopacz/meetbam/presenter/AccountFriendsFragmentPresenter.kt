@@ -10,7 +10,6 @@ import tomaszkopacz.meetbam.entity.User
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.service.UserAdapter
-import tomaszkopacz.meetbam.service.UserViewHolder
 import tomaszkopacz.meetbam.view.AccountFriendsFragment
 import tomaszkopacz.meetbam.view.MainApp
 import java.util.*
@@ -54,7 +53,7 @@ class AccountFriendsFragmentPresenter(private val fragment: AccountFriendsFragme
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val user = users!![position]
 
-        holder as UserViewHolder
+        holder as UserAdapter.UserViewHolder
         holder.username.text = fragment.getString(R.string.custom_user, user.name, user.surname)
     }
 
