@@ -3,6 +3,7 @@ package tomaszkopacz.meetbam.view
 import android.app.Application
 import tomaszkopacz.meetbam.di.DaggerWebServiceComponent
 import tomaszkopacz.meetbam.di.WebServiceComponent
+import tomaszkopacz.meetbam.service.TypefaceUtil
 
 class MainApp : Application() {
 
@@ -12,5 +13,9 @@ class MainApp : Application() {
     override fun onCreate() {
         super.onCreate()
         webServiceComponent = DaggerWebServiceComponent.builder().build()
+        TypefaceUtil.overrideFont(
+                this,
+                "SERIF",
+                "Comfortaa_Regular.ttf")
     }
 }

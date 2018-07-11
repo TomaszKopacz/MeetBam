@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Wed Jul 11 23:28:15 CEST 2018
+1.base=T\:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\assets\\debug
+2.path=Comfortaa_Regular.ttf
+0.baseType=DIRECTORY
+2.base=T\:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\assets\\debug
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=ASSET
+0.path=Comfortaa_Thin.ttf
+0.set=ASSET
+0.base=T\:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\assets\\debug
+2.baseType=DIRECTORY
+1.path=Comfortaa_Bold.ttf
