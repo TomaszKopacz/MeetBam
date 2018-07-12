@@ -16,14 +16,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
             android:layout_margin="@dimen/header_margin"
-            android:text="MeetBam"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/header_text_size"/>
+            android:layout_gravity="center"
+            android:src="@drawable/logo"/>
 
         <Button
             android:id="@+id/sign_in_view_button"
