@@ -62,6 +62,10 @@ class StatsGlobalFragmentPresenter(private val fragment: StatsGlobalFragment)
 
     }
 
+    override fun onLongItemClick(view: View) {
+
+    }
+
     override fun itemCount(): Int{
         return results!!.size
     }

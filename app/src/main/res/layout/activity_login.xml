@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
-            android:layout_margin="@dimen/header_margin"
+            android:layout_margin="@dimen/large_margin"
             android:layout_gravity="center"
             android:src="@drawable/logo"/>
 
@@ -29,7 +29,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/header_margin"
+            android:layout_margin="@dimen/little_margin"
             android:text="@string/sign_in_view_button"
             android:textSize="@dimen/normal_text_size"
             android:textColor="@color/colorText"
@@ -59,7 +59,8 @@
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:layout_margin="@dimen/header_margin"/>
+                        android:textSize="@dimen/normal_text_size"
+                        android:layout_margin="@dimen/little_margin"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -75,7 +76,8 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:layout_margin="@dimen/header_margin"/>
+                        android:layout_margin="@dimen/little_margin"
+                        android:textSize="@dimen/normal_text_size"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -85,7 +87,7 @@
                     android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/footer_item_margin"
+                    android:layout_margin="@dimen/normal_margin"
                     android:text="@string/action_sign_in"
                     android:textColor="@color/colorText"/>
             </LinearLayout>
@@ -98,11 +100,11 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/header_margin"
+            android:layout_margin="@dimen/little_margin"
             android:text="@string/sign_up_view_button"
             android:textSize="@dimen/normal_text_size"
             android:textColor="@color/colorText"
-            android:gravity="left"/>
+            android:gravity="start"/>
 
         <net.cachapa.expandablelayout.ExpandableLayout
             android:id="@+id/sign_up_expandable"
@@ -125,7 +127,8 @@
                         android:hint="@string/hint_name"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:layout_margin="@dimen/header_margin"/>
+                        android:layout_margin="@dimen/little_margin"
+                        android:textSize="@dimen/normal_text_size"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -138,7 +141,8 @@
                         android:hint="@string/hint_surname"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:layout_margin="@dimen/header_margin"/>
+                        android:layout_margin="@dimen/little_margin"
+                        android:textSize="@dimen/normal_text_size"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -152,7 +156,8 @@
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:layout_margin="@dimen/header_margin"/>
+                        android:layout_margin="@dimen/little_margin"
+                        android:textSize="@dimen/normal_text_size"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -166,7 +171,8 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:layout_margin="@dimen/header_margin"/>
+                        android:layout_margin="@dimen/little_margin"
+                        android:textSize="@dimen/normal_text_size"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
@@ -175,7 +181,8 @@
                     android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/footer_item_margin"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:textSize="@dimen/normal_text_size"
                     android:text="@string/sign_up_button"
                     android:textColor="@color/colorText"/>
             </LinearLayout>
@@ -189,7 +196,7 @@
         style="?android:attr/borderlessButtonStyle"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_gravity="bottom|center"
-        android:layout_margin="@dimen/header_margin"
+        android:layout_margin="@dimen/large_margin"
         android:text="@string/login_fb"
         android:textColor="@color/colorSecondaryText"
         android:gravity="center"

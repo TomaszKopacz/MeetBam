@@ -1,7 +1,16 @@
 package tomaszkopacz.meetbam.presenter
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.view.ViewGroup
+import android.view.Window
+import android.widget.ImageView
+import android.widget.RelativeLayout
+import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.fragment_main_posts.*
 import net.cachapa.expandablelayout.ExpandableLayout
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,9 +26,11 @@ import java.util.*
 import javax.inject.Inject
 
 class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
-    : RecyclerViewPresenter{
+    : RecyclerViewPresenter {
 
-    private val BASE_URL = "http://meetbam.cba.pl/"
+    companion object {
+        private val BASE_URL = "http://meetbam.cba.pl/"
+    }
 
     //service
     private var mLoginService = LoginService(fragment.activity!!.applicationContext)
@@ -42,7 +53,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
 
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
                 posts = response.body() as MutableList<Post>
-                fragment.putPosts(adapter!!)
+                fragment.putPosts(adapter)
                 fragment.refreshDone()
             }
 
@@ -59,13 +70,26 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     }
 
     override fun onItemClick(view: View) {
-
         val e: ExpandableLayout = view.findViewById(R.id.main_expandable)
         e.toggle()
+    }
 
-        //int position = fragment.getPostsRecView().getChildAdapterPosition(view);
-        //posts.remove(position);
-        //adapter.notifyItemRemoved(position);
+    override fun onLongItemClick(view: View) {
+        val dialog = Dialog(fragment.activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window.attributes.windowAnimations = R.style.DialogMeetBam
+
+        val position = fragment.posts_recview.getChildAdapterPosition(view)
+        val post = posts[position]
+        val imageView = ImageView(fragment.activity)
+        Glide.with(fragment.activity).load(BASE_URL + post.photo_dir).into(imageView)
+
+        dialog.addContentView(imageView, RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT))
+
+        dialog.show()
     }
 
     override fun itemCount(): Int {
@@ -73,7 +97,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     }
 
 
-    fun refresh(){
+    fun refresh() {
         downloadPosts()
     }
 }

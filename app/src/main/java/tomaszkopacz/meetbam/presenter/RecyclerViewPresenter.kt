@@ -7,5 +7,6 @@ interface RecyclerViewPresenter {
 
     fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int)
     fun onItemClick(view: View)
+    fun onLongItemClick(view: View)
     fun itemCount(): Int
 }

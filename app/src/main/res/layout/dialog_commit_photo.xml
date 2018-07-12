@@ -10,7 +10,7 @@
         android:layout_width="180dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/component_margin"/>
+        android:layout_margin="@dimen/normal_margin"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
             android:textSize="20sp"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
-            android:layout_margin="@dimen/component_margin" />
+            android:layout_margin="@dimen/normal_margin" />
 
         <ProgressBar
             android:id="@+id/discover_progressbar"
@@ -46,7 +46,7 @@
             android:layout_height="80dp"
             android:textSize="24sp"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/component_margin"
+            android:layout_margin="@dimen/normal_margin"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
         <Button
@@ -56,7 +56,7 @@
             android:textSize="24sp"
             android:textColor="@android:color/darker_gray"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/component_margin"
+            android:layout_margin="@dimen/normal_margin"
             android:clickable="false"
             style="@style/Widget.AppCompat.Button.Colored"/>
     </LinearLayout>

@@ -964,6 +964,10 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
+        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
     },
@@ -1516,6 +1520,10 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_from_left.xml.flat",
+        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\debug\\res\\anim\\slide_from_left.xml"
+    },
+    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
@@ -1614,6 +1622,10 @@
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_to_right.xml.flat",
+        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\debug\\res\\anim\\slide_to_right.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -2006,10 +2018,6 @@
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable_picture.jpg.flat",
-        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\drawable\\picture.jpg"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_48dp.png.flat",

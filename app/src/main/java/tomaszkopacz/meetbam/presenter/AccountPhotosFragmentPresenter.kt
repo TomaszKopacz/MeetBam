@@ -63,6 +63,10 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
 
     }
 
+    override fun onLongItemClick(view: View) {
+
+    }
+
     override fun itemCount(): Int {
         return photos!!.size
     }

@@ -61,6 +61,10 @@ class AccountFriendsFragmentPresenter(private val fragment: AccountFriendsFragme
 
     }
 
+    override fun onLongItemClick(view: View) {
+
+    }
+
     override fun itemCount(): Int {
         return users!!.size
     }

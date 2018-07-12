@@ -25,6 +25,11 @@ class PostAdapter(private val presenter: RecyclerViewPresenter)
             presenter.onItemClick(view)
         }
 
+        view.setOnLongClickListener{
+            presenter.onLongItemClick(view)
+            true
+        }
+
         return PostViewHolder(view)
     }
 

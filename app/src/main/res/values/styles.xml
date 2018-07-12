@@ -10,9 +10,15 @@
 
     </style>
     
+    <!-- Flat button-->
     <style name="FlatButtonMeetBam" parent="Theme.AppCompat.Light">
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
         <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    
+    <!-- Dialog -->
+    <style name="DialogMeetBam">
+        <item name="android:windowExitAnimation">@anim/slide_to_right</item>
     </style>
 </resources>
