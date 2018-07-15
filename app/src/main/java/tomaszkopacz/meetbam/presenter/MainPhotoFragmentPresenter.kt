@@ -2,7 +2,7 @@ package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
 import tomaszkopacz.meetbam.R
-import tomaszkopacz.meetbam.service.CameraService
+import tomaszkopacz.meetbam.service.CameraService2
 import tomaszkopacz.meetbam.view.MainPhotoFragment
 import java.io.File
 import java.text.SimpleDateFormat
@@ -10,12 +10,11 @@ import java.util.*
 
 class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
-    fun takePhoto(service: CameraService) {
-        val image = createImage(getImageGallery())
-        service.takePhoto(image)
+    var currentImageFile : File? = null
 
-        fragment.setLayout(MainPhotoFragment.PAIR_LAYOUT)
-        fragment.loadPhoto(image)
+    fun takePhoto(service: CameraService2) {
+        currentImageFile = createImageFile(getImageGallery())
+        service.takePicture(currentImageFile!!, fragment.context!!, photoListener)
     }
 
     fun dismissPhoto() {
@@ -33,7 +32,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
     }
 
 
-    private fun createImage(galleryFolder: File): File {
+    private fun createImageFile(galleryFolder: File): File {
         val uniqueFileName = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
                 .format(Date())
 
@@ -50,5 +49,21 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         }
 
         return galleryFolder
+    }
+
+    private val photoListener = object : CameraService2.PhotoStateListener {
+        override fun onPhotoInProgress() {
+            fragment.showProgress()
+        }
+
+        override fun onPhotoTaken() {
+            fragment.setLayout(MainPhotoFragment.PAIR_LAYOUT)
+            fragment.stopProgress()
+            fragment.loadPhoto(currentImageFile!!)
+        }
+
+        override fun onError() {
+
+        }
     }
 }

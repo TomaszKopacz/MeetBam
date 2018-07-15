@@ -187,7 +187,6 @@
     <orderEntry type="library" name="com.android.support:design-27.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="org.codehaus.plexus:plexus-interpolation:1.11@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="org.apache.maven:maven-repository-metadata:2.2.1@jar" level="project" />
-    <orderEntry type="library" name="com.vincentbrison.openlibraries.android:foldablelayout-0.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:recyclerview-v7-27.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:monitor-1.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="org.robolectric:shadowapi:3.7.1@jar" level="project" />
@@ -223,6 +222,7 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.7@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:rules-1.0.2" level="project" />
     <orderEntry type="library" name="com.squareup.okio:okio:1.13.0@jar" level="project" />
+    <orderEntry type="library" name="com.github.jorgecastilloprz:fabprogresscircle-1.01" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-intents-3.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="org.apache.maven.wagon:wagon-file:1.0-beta-6@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.thoughtworks.xstream:xstream:1.4.8@jar" level="project" />

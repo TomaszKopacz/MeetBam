@@ -36,9 +36,9 @@
     <string name="login_fb">Login with Facebook</string>
 
     <!-- Main Activity -->
-    <string name="description_hint">Describe a photo...</string>
+    <string name="camera_button_text">PHOTO</string>
+    <string name="description_hint">Describe a photo…</string>
     <string name="paired_user">%1$s %2$s</string>
-
 
     <!-- Account Activity -->
     <string name="logged_user">%1$s %2$s</string>

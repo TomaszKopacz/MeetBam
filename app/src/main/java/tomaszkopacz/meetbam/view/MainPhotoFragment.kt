@@ -1,6 +1,7 @@
 package tomaszkopacz.meetbam.view
 
 
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -10,16 +11,15 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_main_photo.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter
-import tomaszkopacz.meetbam.service.CameraService
+import tomaszkopacz.meetbam.service.CameraService2
+import tomaszkopacz.meetbam.service.CameraService2.Companion.REQUEST_CAMERA_PERMISSION
 import java.io.File
-
-
 
 
 class MainPhotoFragment : Fragment() {
 
     private lateinit var presenter: MainPhotoFragmentPresenter
-    private lateinit var cameraService: CameraService
+    private lateinit var cameraService: CameraService2
 
     companion object {
         const val MAKE_PHOTO_LAYOUT = 1
@@ -37,11 +37,11 @@ class MainPhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         presenter = MainPhotoFragmentPresenter(this)
-        cameraService = CameraService(context!!, photo_textureview)
+        cameraService = CameraService2(context!!, photo_textureview)
 
         camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
-        dismiss_button.setOnClickListener {presenter.dismissPhoto()}
-        pair_button.setOnClickListener {presenter.pair()}
+//        dismiss_button.setOnClickListener {presenter.dismissPhoto()}
+//        pair_button.setOnClickListener {presenter.pair()}
     }
 
     override fun onResume() {
@@ -54,44 +54,60 @@ class MainPhotoFragment : Fragment() {
         cameraService.stop()
     }
 
-    fun setLayout(layout: Int){
-        when (layout){
-            MAKE_PHOTO_LAYOUT -> {
-                paired_user_textview.visibility = View.INVISIBLE
-                description_inputlayout.visibility = View.INVISIBLE
-                decription_edittext.visibility = View.INVISIBLE
-                photo_imageview.visibility = View.INVISIBLE
-                dismiss_button.visibility = View.INVISIBLE
-                pair_button.visibility = View.INVISIBLE
-                accept_button.visibility = View.GONE
-
-                camera_button.visibility = View.VISIBLE
-            }
-
-            PAIR_LAYOUT -> {
-                paired_user_textview.visibility = View.VISIBLE
-                description_inputlayout.visibility = View.VISIBLE
-                decription_edittext.visibility = View.VISIBLE
-                photo_imageview.visibility = View.VISIBLE
-                dismiss_button.visibility = View.VISIBLE
-                pair_button.visibility = View.VISIBLE
-                accept_button.visibility = View.GONE
-
-                camera_button.visibility = View.INVISIBLE
-            }
-
-            ACCEPT_PHOTO_LAYOUT -> {
-                paired_user_textview.visibility = View.VISIBLE
-                description_inputlayout.visibility = View.VISIBLE
-                decription_edittext.visibility = View.VISIBLE
-                photo_imageview.visibility = View.VISIBLE
-                dismiss_button.visibility = View.VISIBLE
-                pair_button.visibility = View.VISIBLE
-                accept_button.visibility = View.VISIBLE
-
-                camera_button.visibility = View.INVISIBLE
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        if (requestCode == REQUEST_CAMERA_PERMISSION) {
+            if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                activity!!.finish()
             }
         }
+    }
+
+    fun showProgress(){
+        photo_progress_bar.visibility = View.VISIBLE
+    }
+
+    fun stopProgress(){
+        photo_progress_bar.visibility = View.GONE
+    }
+
+    fun setLayout(layout: Int){
+//        when (layout){
+//            MAKE_PHOTO_LAYOUT -> {
+//                paired_user_textview.visibility = View.INVISIBLE
+//                description_inputlayout.visibility = View.INVISIBLE
+//                decription_edittext.visibility = View.INVISIBLE
+//                photo_imageview.visibility = View.INVISIBLE
+//                dismiss_button.visibility = View.INVISIBLE
+//                pair_button.visibility = View.INVISIBLE
+//                accept_button.visibility = View.GONE
+//
+//                camera_button.visibility = View.VISIBLE
+//            }
+//
+//            PAIR_LAYOUT -> {
+//                paired_user_textview.visibility = View.VISIBLE
+//                description_inputlayout.visibility = View.VISIBLE
+//                decription_edittext.visibility = View.VISIBLE
+//                photo_imageview.visibility = View.VISIBLE
+//                dismiss_button.visibility = View.VISIBLE
+//                pair_button.visibility = View.VISIBLE
+//                accept_button.visibility = View.GONE
+//
+//                camera_button.visibility = View.INVISIBLE
+//            }
+//
+//            ACCEPT_PHOTO_LAYOUT -> {
+//                paired_user_textview.visibility = View.VISIBLE
+//                description_inputlayout.visibility = View.VISIBLE
+//                decription_edittext.visibility = View.VISIBLE
+//                photo_imageview.visibility = View.VISIBLE
+//                dismiss_button.visibility = View.VISIBLE
+//                pair_button.visibility = View.VISIBLE
+//                accept_button.visibility = View.VISIBLE
+//
+//                camera_button.visibility = View.INVISIBLE
+//            }
+//        }
     }
 
     fun loadPhoto(directory: File){
