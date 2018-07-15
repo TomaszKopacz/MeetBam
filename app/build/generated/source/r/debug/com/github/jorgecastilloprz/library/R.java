@@ -23,23 +23,23 @@ public final class R {
         public static final int white = 0x7f05007d;
     }
     public static final class dimen {
-        public static final int fab_content_size = 0x7f06007d;
-        public static final int fab_size_mini = 0x7f06007e;
-        public static final int fab_size_normal = 0x7f06007f;
-        public static final int fab_translation_z_pressed = 0x7f060080;
-        public static final int futuresimple_fab_shadow_offset = 0x7f060085;
-        public static final int half_fab_content_size = 0x7f060086;
-        public static final int progress_arc_stroke_width = 0x7f0600ac;
+        public static final int fab_content_size = 0x7f06007c;
+        public static final int fab_size_mini = 0x7f06007d;
+        public static final int fab_size_normal = 0x7f06007e;
+        public static final int fab_translation_z_pressed = 0x7f06007f;
+        public static final int futuresimple_fab_shadow_offset = 0x7f060084;
+        public static final int half_fab_content_size = 0x7f060085;
+        public static final int progress_arc_stroke_width = 0x7f0600ab;
     }
     public static final class drawable {
         public static final int ic_done = 0x7f070082;
         public static final int oval_complete = 0x7f070093;
     }
     public static final class id {
-        public static final int completeFabIcon = 0x7f08003b;
-        public static final int completeFabRoot = 0x7f08003c;
-        public static final int mini = 0x7f08007e;
-        public static final int normal = 0x7f080086;
+        public static final int completeFabIcon = 0x7f08003d;
+        public static final int completeFabRoot = 0x7f08003e;
+        public static final int mini = 0x7f080082;
+        public static final int normal = 0x7f08008a;
     }
     public static final class integer {
         public static final int default_cycle_duration = 0x7f090006;
@@ -49,7 +49,7 @@ public final class R {
     }
     public static final class string {
         public static final int app_name = 0x7f0d0023;
-        public static final int child_count_error = 0x7f0d0028;
+        public static final int child_count_error = 0x7f0d0029;
     }
     public static final class styleable {
         public static final int[] FABProgressCircle = { 0x7f03002a, 0x7f03002b, 0x7f030064, 0x7f0300b5, 0x7f030150, 0x7f030153 };

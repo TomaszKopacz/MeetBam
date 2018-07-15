@@ -717,7 +717,6 @@
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
-    <dimen name="camera_button_size">85dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -902,8 +901,9 @@
     <string name="action_user">User</string>
     <string name="app_name">MeetBam</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="back_text">BACK</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="camera_button_text">PHOTO</string>
+    <string name="camera_button_text">TAKE A PHOTO</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="child_count_error">FABProgressCircle layout must only contain one child.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -938,6 +938,9 @@
     <string name="mail_empty_error">Mail cannot be empty</string>
     <string name="mail_invalid_error">Mail is invalid</string>
     <string name="no_such_user_error">User does not exist!</string>
+    <string name="ok_text">OK</string>
+    <string name="pair_text">PAIR</string>
+    <string name="paired_to_text">YOU AND %1$s %2$s</string>
     <string name="paired_user">%1$s %2$s</string>
     <string name="password_empty_error">Password cannot be empty</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>

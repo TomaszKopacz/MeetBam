@@ -23,7 +23,6 @@ class MainPhotoFragment : Fragment() {
 
     companion object {
         const val MAKE_PHOTO_LAYOUT = 1
-        const val PAIR_LAYOUT = 2
         const val ACCEPT_PHOTO_LAYOUT = 3
     }
 
@@ -40,7 +39,7 @@ class MainPhotoFragment : Fragment() {
         cameraService = CameraService2(context!!, photo_textureview)
 
         camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
-//        dismiss_button.setOnClickListener {presenter.dismissPhoto()}
+        back_button.setOnClickListener {presenter.dismissPhoto()}
 //        pair_button.setOnClickListener {presenter.pair()}
     }
 
@@ -71,43 +70,17 @@ class MainPhotoFragment : Fragment() {
     }
 
     fun setLayout(layout: Int){
-//        when (layout){
-//            MAKE_PHOTO_LAYOUT -> {
-//                paired_user_textview.visibility = View.INVISIBLE
-//                description_inputlayout.visibility = View.INVISIBLE
-//                decription_edittext.visibility = View.INVISIBLE
-//                photo_imageview.visibility = View.INVISIBLE
-//                dismiss_button.visibility = View.INVISIBLE
-//                pair_button.visibility = View.INVISIBLE
-//                accept_button.visibility = View.GONE
-//
-//                camera_button.visibility = View.VISIBLE
-//            }
-//
-//            PAIR_LAYOUT -> {
-//                paired_user_textview.visibility = View.VISIBLE
-//                description_inputlayout.visibility = View.VISIBLE
-//                decription_edittext.visibility = View.VISIBLE
-//                photo_imageview.visibility = View.VISIBLE
-//                dismiss_button.visibility = View.VISIBLE
-//                pair_button.visibility = View.VISIBLE
-//                accept_button.visibility = View.GONE
-//
-//                camera_button.visibility = View.INVISIBLE
-//            }
-//
-//            ACCEPT_PHOTO_LAYOUT -> {
-//                paired_user_textview.visibility = View.VISIBLE
-//                description_inputlayout.visibility = View.VISIBLE
-//                decription_edittext.visibility = View.VISIBLE
-//                photo_imageview.visibility = View.VISIBLE
-//                dismiss_button.visibility = View.VISIBLE
-//                pair_button.visibility = View.VISIBLE
-//                accept_button.visibility = View.VISIBLE
-//
-//                camera_button.visibility = View.INVISIBLE
-//            }
-//        }
+        when (layout){
+            MAKE_PHOTO_LAYOUT -> {
+                accept_photo_layout.visibility = View.INVISIBLE
+                camera_button.visibility = View.VISIBLE
+            }
+
+            ACCEPT_PHOTO_LAYOUT -> {
+                accept_photo_layout.visibility = View.VISIBLE
+                camera_button.visibility = View.INVISIBLE
+            }
+        }
     }
 
     fun loadPhoto(directory: File){

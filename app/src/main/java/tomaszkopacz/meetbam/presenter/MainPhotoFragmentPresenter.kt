@@ -57,7 +57,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         }
 
         override fun onPhotoTaken() {
-            fragment.setLayout(MainPhotoFragment.PAIR_LAYOUT)
+            fragment.setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
             fragment.stopProgress()
             fragment.loadPhoto(currentImageFile!!)
         }
