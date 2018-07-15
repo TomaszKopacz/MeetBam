@@ -1,6 +1,5 @@
 package tomaszkopacz.meetbam.view
 
-
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -14,7 +13,6 @@ import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter
 import tomaszkopacz.meetbam.service.CameraService2
 import tomaszkopacz.meetbam.service.CameraService2.Companion.REQUEST_CAMERA_PERMISSION
 import java.io.File
-
 
 class MainPhotoFragment : Fragment() {
 
@@ -73,11 +71,13 @@ class MainPhotoFragment : Fragment() {
         when (layout){
             MAKE_PHOTO_LAYOUT -> {
                 accept_photo_layout.visibility = View.INVISIBLE
+                photo_imageview.visibility = View.INVISIBLE
                 camera_button.visibility = View.VISIBLE
             }
 
             ACCEPT_PHOTO_LAYOUT -> {
                 accept_photo_layout.visibility = View.VISIBLE
+                photo_imageview.visibility = View.VISIBLE
                 camera_button.visibility = View.INVISIBLE
             }
         }

@@ -59,6 +59,16 @@ class CameraService2(private val context: Context, private val textureView: Text
 
     fun stop() {
         stopBackgroundThread()
+
+        if (cameraCaptureSession != null){
+            cameraCaptureSession!!.close()
+            cameraCaptureSession = null
+        }
+
+        if (cameraDevice != null){
+            cameraDevice!!.close()
+            cameraDevice = null
+        }
     }
 
     fun takePicture(file: File, context: Context, listener: PhotoStateListener) {
@@ -127,11 +137,11 @@ class CameraService2(private val context: Context, private val textureView: Text
 
         override fun onDisconnected(camera: CameraDevice?) {
             cameraDevice!!.close()
+            cameraDevice = null
         }
 
         override fun onError(camera: CameraDevice?, error: Int) {
-            cameraDevice!!.close()
-            cameraDevice = null
+
         }
     }
 
@@ -200,5 +210,4 @@ class CameraService2(private val context: Context, private val textureView: Text
         fun onPhotoTaken()
         fun onError()
     }
-
 }
