@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_account_friends.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.AccountFriendsFragmentPresenter
-import tomaszkopacz.meetbam.service.UserAdapter
 
 class AccountFriendsFragment : Fragment() {
 

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_stats.*
 import tomaszkopacz.meetbam.R
-import tomaszkopacz.meetbam.service.ViewPagerAdapter
 
 class StatsActivity : AppCompatActivity() {
 

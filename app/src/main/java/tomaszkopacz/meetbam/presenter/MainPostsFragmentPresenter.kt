@@ -18,10 +18,9 @@ import retrofit2.Response
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.WebService
-import tomaszkopacz.meetbam.service.LoginService
-import tomaszkopacz.meetbam.service.PostAdapter
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.MainPostsFragment
+import tomaszkopacz.meetbam.view.PostAdapter
 import java.util.*
 import javax.inject.Inject
 
@@ -33,7 +32,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     }
 
     //service
-    private var mLoginService = LoginService(fragment.activity!!.applicationContext)
+    val app = fragment.activity!!.application as MainApp
     @Inject lateinit var webService: WebService
 
     //posts
@@ -48,7 +47,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     fun downloadPosts() {
         posts.clear()
 
-        val call = webService.getFriendsPosts(mLoginService.getLoggedUser().mail!!)
+        val call = webService.getFriendsPosts(app.getLoggedUser().mail!!)
         call.enqueue(object : Callback<List<Post>> {
 
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {

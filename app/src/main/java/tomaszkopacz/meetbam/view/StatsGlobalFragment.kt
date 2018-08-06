@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_stats_global.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter
-import tomaszkopacz.meetbam.service.UserAdapter
 
 class StatsGlobalFragment : Fragment() {
 

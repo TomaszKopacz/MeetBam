@@ -17,10 +17,10 @@ public final class R {
     }
     public static final class color {
         public static final int blue = 0x7f05001e;
-        public static final int fab_orange_bright = 0x7f050051;
-        public static final int fab_orange_dark = 0x7f050052;
-        public static final int fab_orange_light = 0x7f050053;
-        public static final int white = 0x7f05007d;
+        public static final int fab_orange_bright = 0x7f05004e;
+        public static final int fab_orange_dark = 0x7f05004f;
+        public static final int fab_orange_light = 0x7f050050;
+        public static final int white = 0x7f05007a;
     }
     public static final class dimen {
         public static final int fab_content_size = 0x7f06007c;
@@ -32,8 +32,8 @@ public final class R {
         public static final int progress_arc_stroke_width = 0x7f0600ab;
     }
     public static final class drawable {
-        public static final int ic_done = 0x7f070082;
-        public static final int oval_complete = 0x7f070093;
+        public static final int ic_done = 0x7f070079;
+        public static final int oval_complete = 0x7f07008a;
     }
     public static final class id {
         public static final int completeFabIcon = 0x7f08003d;

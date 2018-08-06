@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.fragment_stats_local.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.presenter.StatsLocalFragmentPresenter
-import tomaszkopacz.meetbam.service.UserAdapter
 import javax.inject.Inject
 
 class StatsLocalFragment : Fragment() {

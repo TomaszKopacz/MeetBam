@@ -64,7 +64,7 @@
                     android:id="@+id/decription_edittext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/description_hint"
+                    android:hint="@string/description_hint_text"
                     android:textSize="@dimen/normal_text_size"
                     android:textColor="@android:color/white"
                     android:layout_margin="@dimen/little_margin"/>

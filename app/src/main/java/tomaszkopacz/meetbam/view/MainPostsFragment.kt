@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_main_posts.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter
-import tomaszkopacz.meetbam.service.PostAdapter
 
 class MainPostsFragment : Fragment() {
 

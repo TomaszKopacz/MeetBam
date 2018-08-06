@@ -10,14 +10,14 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_main_photo.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter
-import tomaszkopacz.meetbam.service.CameraService2
-import tomaszkopacz.meetbam.service.CameraService2.Companion.REQUEST_CAMERA_PERMISSION
+import tomaszkopacz.meetbam.router.CameraRouter
+import tomaszkopacz.meetbam.router.CameraRouter.Companion.REQUEST_CAMERA_PERMISSION
 import java.io.File
 
 class MainPhotoFragment : Fragment() {
 
     private lateinit var presenter: MainPhotoFragmentPresenter
-    private lateinit var cameraService: CameraService2
+    private lateinit var cameraService: CameraRouter
 
     companion object {
         const val MAKE_PHOTO_LAYOUT = 1
@@ -34,7 +34,7 @@ class MainPhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         presenter = MainPhotoFragmentPresenter(this)
-        cameraService = CameraService2(context!!, photo_textureview)
+        cameraService = CameraRouter(context!!, photo_textureview)
 
         camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
         back_button.setOnClickListener {presenter.dismissPhoto()}

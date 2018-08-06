@@ -2,13 +2,14 @@ package tomaszkopacz.meetbam.presenter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import kotlinx.android.synthetic.main.user_item.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.UserResult
 import tomaszkopacz.meetbam.interactor.WebService
-import tomaszkopacz.meetbam.service.UserAdapter
+import tomaszkopacz.meetbam.view.UserAdapter
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.StatsGlobalFragment
 import java.util.*
@@ -51,11 +52,11 @@ class StatsGlobalFragmentPresenter(private val fragment: StatsGlobalFragment)
         val result = results!![position]
 
         holder as UserAdapter.UserViewHolder
-        holder.username.text =
+        holder.itemView.username.text =
                 fragment.getString(R.string.user_at_position,
                         position + 1, result.name, result.surname)
 
-        holder.result.text = fragment.getString(R.string.posts_number, result.result)
+        holder.itemView.result.text = fragment.getString(R.string.posts_number, result.result)
     }
 
     override fun onItemClick(view: View) {

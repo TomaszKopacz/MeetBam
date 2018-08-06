@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_account_photos.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.AccountPhotosFragmentPresenter
-import tomaszkopacz.meetbam.service.PostAdapter
 
 class AccountPhotosFragment : Fragment() {
 

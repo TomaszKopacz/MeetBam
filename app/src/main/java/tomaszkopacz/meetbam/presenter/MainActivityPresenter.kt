@@ -1,16 +1,17 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.content.Intent
-import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.view.LoginActivity
 import tomaszkopacz.meetbam.view.MainActivity
+import tomaszkopacz.meetbam.view.MainApp
 
 
 class MainActivityPresenter(private val activity: MainActivity) {
 
-    private var mLoginService = LoginService(activity.applicationContext)
+    val app = activity.application as MainApp
+
     fun logout() {
-        mLoginService.logout()
+        app.logout()
 
         val intent = Intent(activity, LoginActivity::class.java)
         activity.startActivity(intent)

@@ -9,9 +9,4 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
-
-    <!-- round buttons -->
-    <color name="color_shadow_delete">#ff8a80</color>
-    <color name="color_shadow_pair">#8c9eff</color>
-    <color name="color_shadow_accept">#f4ff81</color>
 </resources>

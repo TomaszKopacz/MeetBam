@@ -2,16 +2,16 @@ package tomaszkopacz.meetbam.presenter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import kotlinx.android.synthetic.main.user_item.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.User
 import tomaszkopacz.meetbam.interactor.WebService
-import tomaszkopacz.meetbam.service.LoginService
-import tomaszkopacz.meetbam.service.UserAdapter
 import tomaszkopacz.meetbam.view.AccountFriendsFragment
 import tomaszkopacz.meetbam.view.MainApp
+import tomaszkopacz.meetbam.view.UserAdapter
 import java.util.*
 import javax.inject.Inject
 
@@ -19,9 +19,8 @@ class AccountFriendsFragmentPresenter(private val fragment: AccountFriendsFragme
     : RecyclerViewPresenter {
 
     //service
+    val app = fragment.activity!!.application as MainApp
     @Inject lateinit var webService: WebService
-
-    private val mLoginService = LoginService(fragment.activity!!.applicationContext)
 
     //friends
     private val adapter = UserAdapter(this)
@@ -36,7 +35,7 @@ class AccountFriendsFragmentPresenter(private val fragment: AccountFriendsFragme
 
         users!!.clear()
 
-        val call = webService.getFriends(mLoginService.getLoggedUser().mail!!)
+        val call = webService.getFriends(app.getLoggedUser().mail!!)
         call.enqueue(object : Callback<List<User>> {
 
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
@@ -54,7 +53,7 @@ class AccountFriendsFragmentPresenter(private val fragment: AccountFriendsFragme
         val user = users!![position]
 
         holder as UserAdapter.UserViewHolder
-        holder.username.text = fragment.getString(R.string.custom_user, user.name, user.surname)
+        holder.itemView.username.text = fragment.getString(R.string.custom_user, user.name, user.surname)
     }
 
     override fun onItemClick(view: View) {

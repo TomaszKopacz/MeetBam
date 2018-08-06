@@ -2,7 +2,7 @@ package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
 import tomaszkopacz.meetbam.R
-import tomaszkopacz.meetbam.service.CameraService2
+import tomaszkopacz.meetbam.router.CameraRouter
 import tomaszkopacz.meetbam.view.MainPhotoFragment
 import java.io.File
 import java.text.SimpleDateFormat
@@ -12,7 +12,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     var currentImageFile : File? = null
 
-    fun takePhoto(service: CameraService2) {
+    fun takePhoto(service: CameraRouter) {
         currentImageFile = createImageFile(getImageGallery())
         service.takePicture(currentImageFile!!, fragment.context!!, photoListener)
     }
@@ -51,7 +51,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         return galleryFolder
     }
 
-    private val photoListener = object : CameraService2.PhotoStateListener {
+    private val photoListener = object : CameraRouter.PhotoStateListener {
         override fun onPhotoInProgress() {
             fragment.showProgress()
         }

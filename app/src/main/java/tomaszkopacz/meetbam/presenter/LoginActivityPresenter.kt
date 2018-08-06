@@ -10,7 +10,6 @@ import retrofit2.Response
 import tomaszkopacz.meetbam.entity.User
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.router.BluetoothRouter
-import tomaszkopacz.meetbam.service.LoginService
 import tomaszkopacz.meetbam.view.LoginActivity
 import tomaszkopacz.meetbam.view.MainActivity
 import tomaszkopacz.meetbam.view.MainApp
@@ -19,7 +18,7 @@ import javax.inject.Inject
 class LoginActivityPresenter(private val activity: LoginActivity) {
 
     //service
-    var mLoginService = LoginService(activity.applicationContext)
+    val app = activity.application as MainApp
     @Inject lateinit var webService: WebService
 
     companion object {
@@ -40,7 +39,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
     }
 
     fun confirmUserIsSignedIn() {
-        if (mLoginService.isUserLoggedIn())
+        if (app.isUserLoggedIn())
             goToMainActivity()
     }
 
@@ -108,7 +107,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
         val name = user.name
         val surname = user.surname
         val password = user.password
-        mLoginService.login(mail!!, name!!, surname!!, password!!)
+        app.login(mail!!, name!!, surname!!, password!!)
 
         updateUserLoggedOnDevice(mail)
 

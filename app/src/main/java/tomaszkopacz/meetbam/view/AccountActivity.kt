@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_account.*
 import tomaszkopacz.meetbam.R
-import tomaszkopacz.meetbam.service.LoginService
-import tomaszkopacz.meetbam.service.ViewPagerAdapter
 
 class AccountActivity : AppCompatActivity() {
+
+    var app : MainApp? = null
 
     private var mAccountInfoFragment: AccountInfoFragment? = null
     private var mAccountPhotosFragment: AccountPhotosFragment? = null
@@ -30,6 +30,8 @@ class AccountActivity : AppCompatActivity() {
         setSupportActionBar(account_toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
+        app = application as MainApp
+
         setTitle()
         setUpViewPager(account_viewpager)
         account_tabs.setupWithViewPager(account_viewpager)
@@ -48,9 +50,8 @@ class AccountActivity : AppCompatActivity() {
     }
 
     private fun setTitle() {
-        val service = LoginService(applicationContext)
-        val loggedUser = service.getLoggedUser()
-        title = getString(R.string.paired_user, loggedUser.name, loggedUser.surname)
+        val loggedUser = app!!.getLoggedUser()
+        title = getString(R.string.paired_user_text, loggedUser.name, loggedUser.surname)
     }
 
     private fun setUpViewPager(viewPager: ViewPager?) {
