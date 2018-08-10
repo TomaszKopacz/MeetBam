@@ -18,13 +18,12 @@
 
     <!-- Login Activity -->
     <string name="sign_in_view_button">Login to your account</string>
+    <string name="forgot_password_button">Forgot password?</string>
     <string name="sign_up_view_button">Not a member yet?</string>
     <string name="sign_in_button">LOGIN</string>
     <string name="sign_up_button">REGISTER</string>
     <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="hint_name">Name</string>
-    <string name="hint_surname">Surname</string>
+    <string name="hint_password">Password</string>s
     <string name="action_sign_in">Sign in</string>
     <string name="mail_empty_error">Mail cannot be empty</string>
     <string name="password_empty_error">Password cannot be empty</string>
@@ -32,8 +31,11 @@
     <string name="password_too_short_error">Password must have 6 signs at minimum</string>
     <string name="no_such_user_error">User does not exist!</string>
     <string name="wrong_password_error">Password is wrong!</string>
+    <string name="mail_occupied_error">Mail is occupied!</string>
+    <string name="failure_register_error">Registration failed!</string>
     <string name="failure_login_error">Login failed!</string>
     <string name="login_fb">Login with Facebook</string>
+    <string name="register_fb">Sign up with Facebook</string>
 
     <!-- Main Activity -->
     <string name="camera_button_text">TAKE A PHOTO</string>
@@ -58,4 +60,7 @@
     <!-- Post View -->
     <string name="post_user">%1$s %2$s</string>
     <string name="post_time">%1$s</string>
+    
+    <!-- ImageView content descriptions -->
+    <string name="logo">Meetbam logo</string>
 </resources>

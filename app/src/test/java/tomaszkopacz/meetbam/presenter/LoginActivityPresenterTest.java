@@ -37,7 +37,7 @@ public class LoginActivityPresenterTest {
         String mail = "";
         String password = "123456";
 
-        int result = presenter.submitInput(mail, password);
+        int result = presenter.submitLoginInput(mail, password);
         assertTrue(result == presenter.Companion.getMAIL_EMPTY());
     }
 
@@ -46,7 +46,7 @@ public class LoginActivityPresenterTest {
         String mail = "metbam@gmail.com";
         String password = "";
 
-        int result = presenter.submitInput(mail, password);
+        int result = presenter.submitLoginInput(mail, password);
         assertTrue(result == presenter.Companion.getPASSWORD_EMPTY());
     }
 
@@ -55,7 +55,7 @@ public class LoginActivityPresenterTest {
         String mail = "meetbam";
         String password = "123456";
 
-        int result = presenter.submitInput(mail, password);
+        int result = presenter.submitLoginInput(mail, password);
         assertTrue(result == presenter.Companion.getMAIL_INVALID());
     }
 
@@ -64,7 +64,7 @@ public class LoginActivityPresenterTest {
         String mail = "meetbam@gmail.com";
         String password = "123";
 
-        int result = presenter.submitInput(mail, password);
+        int result = presenter.submitLoginInput(mail, password);
         assertTrue(result == presenter.Companion.getPASSWORD_TOO_SHORT());
     }
 

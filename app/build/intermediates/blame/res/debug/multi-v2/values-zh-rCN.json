@@ -4,24 +4,7 @@
             "outputFile": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\bc3f2a0cf9f86b9d77d68fbf29e5ba93\\res\\values-zh-rCN\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "157",
-                        "endOffsets": "408"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "2751",
-                        "endColumns": "157",
-                        "endOffsets": "2904"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\594b7fc022f5480879a08c4b181b7078\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a2dfcfd1270d70eae7ea48a8f5c44c22\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\913df7bece81f6f7647e7965180b1526\\res\\values-zh-rCN\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "157",
+                        "endOffsets": "408"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "2751",
+                        "endColumns": "157",
+                        "endOffsets": "2904"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a3df5d093d45a4daaef5f3305d4dee4b\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a6e9299a0700fe44619a746e7dd8ff7b\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\35c4fc20f1ca046321aab97d4b6f747f\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

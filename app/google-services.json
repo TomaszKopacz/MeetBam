@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "154196396758",
+    "firebase_url": "https://meetbam-18796.firebaseio.com",
+    "project_id": "meetbam-18796",
+    "storage_bucket": "meetbam-18796.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154196396758:android:4df4fa54100acc39",
+        "android_client_info": {
+          "package_name": "tomaszkopacz.meetbam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154196396758-ih611omtaji2fr8k22t5eb76mq66tm9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw_rQ0eNaMS_ycDiCXTRfC_L4kH8lLIiI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

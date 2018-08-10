@@ -97,6 +97,6 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
 
 
     fun refresh() {
-        downloadPosts()
+        //downloadPosts()
     }
 }

@@ -165,6 +165,7 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorText">#FFFFFF</color>
+    <color name="colorfb">#3B5998</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -491,18 +492,6 @@
 <enum name="adjust_height" value="2"/>
 
 </attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
-    <declare-styleable name="MapAttrs"><attr name="mapType">
-<enum name="none" value="0"/>
-
-<enum name="normal" value="1"/>
-
-<enum name="satellite" value="2"/>
-
-<enum name="terrain" value="3"/>
-
-<enum name="hybrid" value="4"/>
-
-</attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/><attr format="boolean" name="ambientEnabled"/><attr format="float" name="cameraMinZoomPreference"/><attr format="float" name="cameraMaxZoomPreference"/><attr format="float" name="latLngBoundsSouthWestLatitude"/><attr format="float" name="latLngBoundsSouthWestLongitude"/><attr format="float" name="latLngBoundsNorthEastLatitude"/><attr format="float" name="latLngBoundsNorthEastLongitude"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="alphabeticModifiers">
             <flag name="META" value="0x10000"/>
@@ -922,17 +911,26 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="custom_user">%1$s %2$s</string>
+    <string name="default_web_client_id" translatable="false">154196396758-ih611omtaji2fr8k22t5eb76mq66tm9o.apps.googleusercontent.com</string>
     <string name="description_hint_text">Describe a photo…</string>
     <string name="failure_login_error">Login failed!</string>
+    <string name="failure_register_error">Registration failed!</string>
+    <string name="firebase_database_url" translatable="false">https://meetbam-18796.firebaseio.com</string>
+    <string name="forgot_password_button">Forgot password?</string>
+    <string name="gcm_defaultSenderId" translatable="false">154196396758</string>
+    <string name="google_api_key" translatable="false">AIzaSyBw_rQ0eNaMS_ycDiCXTRfC_L4kH8lLIiI</string>
+    <string name="google_app_id" translatable="false">1:154196396758:android:4df4fa54100acc39</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBw_rQ0eNaMS_ycDiCXTRfC_L4kH8lLIiI</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDhKc7RTvq91oXK42cKguYS5rkrNT3_1BY</string>
+    <string name="google_storage_bucket" translatable="false">meetbam-18796.appspot.com</string>
     <string name="hint_email">Email</string>
-    <string name="hint_name">Name</string>
     <string name="hint_password">Password</string>
-    <string name="hint_surname">Surname</string>
     <string name="logged_user">%1$s %2$s</string>
     <string name="login_fb">Login with Facebook</string>
+    <string name="logo">Meetbam logo</string>
     <string name="mail_empty_error">Mail cannot be empty</string>
     <string name="mail_invalid_error">Mail is invalid</string>
+    <string name="mail_occupied_error">Mail is occupied!</string>
     <string name="no_such_user_error">User does not exist!</string>
     <string name="ok_text">OK</string>
     <string name="pair_text">PAIR</string>
@@ -948,6 +946,8 @@
     <string name="post_time">%1$s</string>
     <string name="post_user">%1$s %2$s</string>
     <string name="posts_number">%1$s posts</string>
+    <string name="project_id" translatable="false">meetbam-18796</string>
+    <string name="register_fb">Sign up with Facebook</string>
     <string name="search_menu_title">Search</string>
     <string name="search_users">Search…</string>
     <string name="sign_in_button">LOGIN</string>

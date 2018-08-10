@@ -19,8 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pagerAdapter: ScreenSliderPagerAdapter
 
     companion object {
-        const val CAMERA_CODE = 1
-        private val NUM_PAGES = 2
+        private const val NUM_PAGES = 2
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

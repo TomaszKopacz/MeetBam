@@ -1,8 +1,8 @@
 package tomaszkopacz.meetbam.view
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 import tomaszkopacz.meetbam.R
@@ -24,75 +24,117 @@ class LoginActivity : AppCompatActivity() {
         presenter = LoginActivityPresenter(this)
         presenter.confirmUserIsSignedIn()
 
-        sign_in_view_button.setOnClickListener{
-            sign_in_expandable.expand()
-            sign_up_expandable.collapse()
-            fb_login_button.visibility = View.VISIBLE
-        }
-
-        sign_up_view_button.setOnClickListener {
-            sign_up_expandable.expand()
-            sign_in_expandable.collapse()
-            fb_login_button.visibility = View.GONE
-        }
-
-        sign_in_button.setOnClickListener {checkInput(LOGIN_LAYOUT)}
-        sign_up_button.setOnClickListener {checkInput(REGISTER_LAYOUT)}
+        sign_in_view_button.setOnClickListener {showLayout(LOGIN_LAYOUT)}
+        sign_up_view_button.setOnClickListener {showLayout(REGISTER_LAYOUT)}
+        sign_in_button.setOnClickListener {beginLogin()}
+        sign_up_button.setOnClickListener {beginRegister()}
     }
 
-    private fun checkInput(state: Int) {
-        when (state) {
+    private fun showLayout(layout: Int){
+        when(layout) {
             LOGIN_LAYOUT -> {
-                val mail = email_text_view.text.toString()
-                val password = password_text_view.text.toString()
-                presenter.submitInput(mail, password)
+                sign_in_expandable.expand()
+                sign_up_expandable.collapse()
+                sign_in_view_button.typeface = Typeface.DEFAULT_BOLD
+                sign_up_view_button.typeface = Typeface.DEFAULT
             }
 
             REGISTER_LAYOUT -> {
-                Toast.makeText(this, "REGISTARTION", Toast.LENGTH_LONG).show()
+                sign_in_expandable.collapse()
+                sign_up_expandable.expand()
+                sign_in_view_button.typeface = Typeface.DEFAULT
+                sign_up_view_button.typeface = Typeface.DEFAULT_BOLD
             }
         }
-
     }
 
-    fun showError(error: Int){
-        email_text_view.error = null
-        password_text_view.error = null
+    private fun beginLogin() {
+        val mail = email_log_textview.text.toString()
+        val password = password_log_textview.text.toString()
+        presenter.submitLoginInput(mail, password)
+    }
+
+    private fun beginRegister() {
+        val mail = email_reg_textview.text.toString()
+        val password = password_reg_textview.text.toString()
+        presenter.submitRegisterInput(mail, password)
+    }
+
+    fun showLoginError(error: Int){
+        email_log_textview.error = null
+        password_log_textview.error = null
 
         when (error){
-            LoginActivityPresenter.MAIL_EMPTY -> {
-                email_text_view.error = getString(R.string.mail_empty_error)
-                email_text_view.requestFocus()
+            LoginActivityPresenter.ERROR_MAIL_EMPTY -> {
+                email_log_textview.error = getString(R.string.mail_empty_error)
+                email_log_textview.requestFocus()
             }
 
-            LoginActivityPresenter.PASSWORD_EMPTY -> {
-                password_text_view.error = getString(R.string.password_empty_error)
-                password_text_view.requestFocus()
+            LoginActivityPresenter.ERROR_PASSWORD_EMPTY -> {
+                password_log_textview.error = getString(R.string.password_empty_error)
+                password_log_textview.requestFocus()
             }
 
-            LoginActivityPresenter.MAIL_INVALID -> {
-                email_text_view.error = getString(R.string.mail_invalid_error)
-                email_text_view.requestFocus()
+            LoginActivityPresenter.ERROR_MAIL_INVALID -> {
+                email_log_textview.error = getString(R.string.mail_invalid_error)
+                email_log_textview.requestFocus()
             }
 
-            LoginActivityPresenter.PASSWORD_TOO_SHORT -> {
-                password_text_view.error = getString(R.string.password_too_short_error)
-                password_text_view.requestFocus()
+            LoginActivityPresenter.ERROR_PASSWORD_TOO_SHORT -> {
+                password_log_textview.error = getString(R.string.password_too_short_error)
+                password_log_textview.requestFocus()
             }
 
-            LoginActivityPresenter.NO_SUCH_MAIL -> {
-                email_text_view.error = getString(R.string.no_such_user_error)
-                email_text_view.requestFocus()
+            LoginActivityPresenter.FAIL_NO_SUCH_MAIL -> {
+                email_log_textview.error = getString(R.string.no_such_user_error)
+                email_log_textview.requestFocus()
             }
 
-            LoginActivityPresenter.PASSWORD_WRONG -> {
-                password_text_view.error = getString(R.string.wrong_password_error)
-                password_text_view.requestFocus()
+            LoginActivityPresenter.FAIL_PASSWORD_WRONG -> {
+                password_log_textview.error = getString(R.string.wrong_password_error)
+                password_log_textview.requestFocus()
             }
 
             LoginActivityPresenter.LOGIN_FAILED ->
                 Toast.makeText(this,
-                        getString(R.string.wrong_password_error), Toast.LENGTH_SHORT).show()
+                        getString(R.string.failure_login_error), Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun showRegisterError(error: Int){
+        email_reg_textview.error = null
+        password_reg_textview.error = null
+
+        when (error){
+            LoginActivityPresenter.ERROR_MAIL_EMPTY -> {
+                email_reg_textview.error = getString(R.string.mail_empty_error)
+                email_reg_textview.requestFocus()
+            }
+
+            LoginActivityPresenter.ERROR_PASSWORD_EMPTY -> {
+                password_reg_textview.error = getString(R.string.password_empty_error)
+                password_reg_textview.requestFocus()
+            }
+
+            LoginActivityPresenter.ERROR_MAIL_INVALID -> {
+                email_reg_textview.error = getString(R.string.mail_invalid_error)
+                email_reg_textview.requestFocus()
+            }
+
+            LoginActivityPresenter.ERROR_PASSWORD_TOO_SHORT -> {
+                password_reg_textview.error = getString(R.string.password_too_short_error)
+                password_reg_textview.requestFocus()
+            }
+
+            LoginActivityPresenter.ERROR_MAIL_OCCUPIED -> {
+                email_reg_textview.error = getString(R.string.mail_occupied_error)
+                email_reg_textview.requestFocus()
+            }
+
+            LoginActivityPresenter.REGISTER_FAILED -> {
+                Toast.makeText(this, R.string.failure_register_error, Toast.LENGTH_LONG)
+                        .show()
+            }
         }
     }
 }

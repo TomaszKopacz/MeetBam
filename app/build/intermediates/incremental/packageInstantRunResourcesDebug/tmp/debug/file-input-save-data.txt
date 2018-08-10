@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 15 15:47:21 CEST 2018
+#Wed Aug 08 23:19:24 CEST 2018
 1.base=T\:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\assets\\debug
 2.path=Comfortaa_Regular.ttf
 0.baseType=DIRECTORY

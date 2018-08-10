@@ -33,7 +33,7 @@ class MainPostsFragment : Fragment() {
         }
 
         prepareRecyclerView()
-        presenter.downloadPosts()
+        //presenter.downloadPosts()
     }
 
     private fun prepareRecyclerView() {

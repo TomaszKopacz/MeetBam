@@ -4,7 +4,7 @@
             "outputFile": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\82e6727ad7e8703931ed82c1f3705cd3\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\594b7fc022f5480879a08c4b181b7078\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.1.1.aar\\88eb1e195331c98407f830634e6fef77\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.1.1.aar\\9b420481fcba8fc3b3eb51a7fc7a824d\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
