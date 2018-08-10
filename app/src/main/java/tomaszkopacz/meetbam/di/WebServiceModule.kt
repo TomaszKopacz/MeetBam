@@ -33,7 +33,7 @@ class WebServiceModule {
 
     @Provides
     @Singleton
-    internal fun provideWebService(retrofit: Retrofit): WebService {
+    fun provideWebService(retrofit: Retrofit): WebService {
         return retrofit.create(WebService::class.java)
     }
 }

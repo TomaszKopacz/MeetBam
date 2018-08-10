@@ -30,7 +30,7 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
 
     init {
         (fragment.activity!!.application as MainApp)
-                .webServiceComponent!!.inject(this)
+                .component!!.inject(this)
     }
 
     fun downloadPostsList() {

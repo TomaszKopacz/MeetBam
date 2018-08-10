@@ -1,23 +1,24 @@
 package tomaszkopacz.meetbam.view
 
 import android.app.Application
-import tomaszkopacz.meetbam.di.DaggerWebServiceComponent
-import tomaszkopacz.meetbam.di.WebServiceComponent
+import tomaszkopacz.meetbam.di.AppComponent
+import tomaszkopacz.meetbam.di.DaggerAppComponent
 import tomaszkopacz.meetbam.entity.User
 import tomaszkopacz.meetbam.service.Preferences
 import tomaszkopacz.meetbam.service.TypefaceUtil
 
 class MainApp : Application() {
 
-    var webServiceComponent: WebServiceComponent? = null
+    var component: AppComponent? = null
         private set
 
     private var prefs: Preferences? = null
 
-
     override fun onCreate() {
         super.onCreate()
-        webServiceComponent = DaggerWebServiceComponent.builder().build()
+
+        component = DaggerAppComponent.builder().build()
+
         TypefaceUtil.overrideFont(
                 this,
                 "SERIF",

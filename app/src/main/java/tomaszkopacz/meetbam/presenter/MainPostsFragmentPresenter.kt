@@ -41,7 +41,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
 
     init {
         (fragment.activity!!.application as MainApp)
-                .webServiceComponent!!.inject(this)
+                .component!!.inject(this)
     }
 
     fun downloadPosts() {

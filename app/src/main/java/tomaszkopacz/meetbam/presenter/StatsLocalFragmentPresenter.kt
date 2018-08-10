@@ -27,7 +27,7 @@ class StatsLocalFragmentPresenter(private val fragment: StatsLocalFragment)
 
     init {
         (fragment.activity!!.application as MainApp)
-                .webServiceComponent!!.inject(this)
+                .component!!.inject(this)
     }
 
     fun downloadResults() {

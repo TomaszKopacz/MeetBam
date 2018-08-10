@@ -9,9 +9,9 @@ import retrofit2.Response
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.UserResult
 import tomaszkopacz.meetbam.interactor.WebService
-import tomaszkopacz.meetbam.view.UserAdapter
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.StatsGlobalFragment
+import tomaszkopacz.meetbam.view.UserAdapter
 import java.util.*
 import javax.inject.Inject
 
@@ -27,7 +27,7 @@ class StatsGlobalFragmentPresenter(private val fragment: StatsGlobalFragment)
 
     init {
         (fragment.activity!!.application as MainApp)
-                .webServiceComponent!!.inject(this)
+                .component!!.inject(this)
     }
 
     fun downloadResults() {

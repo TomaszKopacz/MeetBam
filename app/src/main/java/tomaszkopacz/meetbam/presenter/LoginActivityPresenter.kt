@@ -13,10 +13,8 @@ import javax.inject.Inject
 class LoginActivityPresenter(private val activity: LoginActivity) {
 
     //service
-    private val app = activity.application as MainApp
-    private val auth = FirebaseAuth.getInstance()!!
     @Inject lateinit var webService: WebService
-
+    @Inject lateinit var auth: FirebaseAuth
 
     companion object {
         //input incorrect
@@ -36,7 +34,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
     }
 
     init {
-        (activity.application as MainApp).webServiceComponent!!.inject(this)
+        (activity.application as MainApp).component!!.inject(this)
     }
 
     fun confirmUserIsSignedIn() {
