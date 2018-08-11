@@ -14,6 +14,7 @@ interface AppComponent {
 
     fun inject(presenter: MainActivityPresenter)
     fun inject(presenter: MainPostsFragmentPresenter)
+    fun inject(presenter: MainPhotoFragmentPresenter)
 
     fun inject(presenter: AccountPhotosFragmentPresenter)
     fun inject(presenter: AccountFriendsFragmentPresenter)

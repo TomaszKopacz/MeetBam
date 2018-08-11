@@ -1,34 +1,65 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
+import com.google.firebase.auth.FirebaseAuth
 import tomaszkopacz.meetbam.R
+import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.router.CameraRouter
+import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.MainPhotoFragment
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 
 class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
+    @Inject lateinit var auth: FirebaseAuth
     var currentImageFile : File? = null
+    var currentUserPaired: String? = null
 
-    fun takePhoto(service: CameraRouter) {
+    init {
+        (fragment.activity!!.application as MainApp).component!!.inject(this)
+    }
+
+    fun takePhoto(camera: CameraRouter) {
         currentImageFile = createImageFile(getImageGallery())
-        service.takePicture(currentImageFile!!, fragment.context!!, photoListener)
+        camera.takePicture(currentImageFile!!, fragment.context!!, photoListener)
     }
 
     fun dismissPhoto() {
         /*
              REMOVE IMAGE FROM DIRECTORY
          */
-        fragment.setLayout(MainPhotoFragment.MAKE_PHOTO_LAYOUT)
+        fragment.photoDismissed()
     }
 
     fun pair() {
-        fragment.setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
+        fragment.startPairing()
+        currentUserPaired = "Zbyszek Wodecki"
+        fragment.paired(currentUserPaired!!)
     }
 
     fun acceptPhoto() {
+        fragment.startPostUploading()
+
+        val me = auth.currentUser?.displayName
+        val friend = currentUserPaired
+        val post = Post()
+
+        if (me == null || friend == null) {
+            fragment.uploadFailed()
+            return
+
+        } else {
+            post.name1 = me
+            post.name2 = friend
+            post.photo_dir = "SAMPLE DIR"
+            post.time = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
+                    .format(Date())
+        }
+
+        fragment.uploadDone()
     }
 
 
@@ -53,13 +84,11 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     private val photoListener = object : CameraRouter.PhotoStateListener {
         override fun onPhotoInProgress() {
-            fragment.showProgress()
+            fragment.startTakingPhoto()
         }
 
         override fun onPhotoTaken() {
-            fragment.setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
-            fragment.stopProgress()
-            fragment.loadPhoto(currentImageFile!!)
+            fragment.photoTaken(currentImageFile!!)
         }
 
         override fun onError() {

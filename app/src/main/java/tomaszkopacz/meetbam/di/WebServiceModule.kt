@@ -12,7 +12,7 @@ import javax.inject.Singleton
 class WebServiceModule {
 
     companion object {
-        private val BASE_URL = "http://meetbam.cba.pl"
+        private const val BASE_URL = "http://meetbam.cba.pl"
     }
 
     @Provides

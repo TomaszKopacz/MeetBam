@@ -38,7 +38,8 @@ class MainPhotoFragment : Fragment() {
 
         camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
         back_button.setOnClickListener {presenter.dismissPhoto()}
-//        pair_button.setOnClickListener {presenter.pair()}
+        pair_button.setOnClickListener { presenter.pair()}
+        ok_button.setOnClickListener {presenter.acceptPhoto()}
     }
 
     override fun onResume() {
@@ -59,15 +60,7 @@ class MainPhotoFragment : Fragment() {
         }
     }
 
-    fun showProgress(){
-        photo_progress_bar.visibility = View.VISIBLE
-    }
-
-    fun stopProgress(){
-        photo_progress_bar.visibility = View.GONE
-    }
-
-    fun setLayout(layout: Int){
+    private fun setLayout(layout: Int){
         when (layout){
             MAKE_PHOTO_LAYOUT -> {
                 accept_photo_layout.visibility = View.INVISIBLE
@@ -83,7 +76,46 @@ class MainPhotoFragment : Fragment() {
         }
     }
 
-    fun loadPhoto(directory: File){
+    private fun showProgress(){
+        photo_progress_bar.visibility = View.VISIBLE
+    }
+
+    private fun stopProgress(){
+        photo_progress_bar.visibility = View.GONE
+    }
+
+    fun startTakingPhoto(){
+        showProgress()
+    }
+
+    fun photoTaken(directory: File){
+        setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
+        stopProgress()
         Glide.with(this).load(directory).into(photo_imageview)
+    }
+
+    fun photoDismissed(){
+        setLayout(MainPhotoFragment.MAKE_PHOTO_LAYOUT)
+    }
+
+    fun startPairing(){
+        showProgress()
+    }
+
+    fun paired(pairedUser: String){
+        users_textview.text = getString(R.string.paired_text, pairedUser)
+        stopProgress()
+    }
+
+    fun startPostUploading(){
+        showProgress()
+    }
+
+    fun uploadFailed(){
+        stopProgress()
+    }
+
+    fun uploadDone(){
+        stopProgress()
     }
 }
