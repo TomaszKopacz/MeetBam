@@ -38,18 +38,18 @@ public final class R {
     public static final class id {
         public static final int completeFabIcon = 0x7f08003d;
         public static final int completeFabRoot = 0x7f08003e;
-        public static final int mini = 0x7f080083;
-        public static final int normal = 0x7f08008a;
+        public static final int mini = 0x7f080084;
+        public static final int normal = 0x7f08008b;
     }
     public static final class integer {
         public static final int default_cycle_duration = 0x7f090006;
     }
     public static final class layout {
-        public static final int complete_fab = 0x7f0a0021;
+        public static final int complete_fab = 0x7f0a0022;
     }
     public static final class string {
         public static final int app_name = 0x7f0d0023;
-        public static final int child_count_error = 0x7f0d0029;
+        public static final int child_count_error = 0x7f0d002a;
     }
     public static final class styleable {
         public static final int[] FABProgressCircle = { 0x7f030029, 0x7f03002a, 0x7f03005c, 0x7f0300ad, 0x7f030142, 0x7f030145 };

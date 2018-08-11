@@ -1,13 +1,13 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.content.Intent
-import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.view.LoginActivity
 import tomaszkopacz.meetbam.view.MainActivity
 import tomaszkopacz.meetbam.view.MainApp
+import tomaszkopacz.meetbam.view.PersonalisationActivity
 import javax.inject.Inject
 
 class LoginActivityPresenter(private val activity: LoginActivity) {
@@ -89,7 +89,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
                 .addOnCompleteListener(activity) {
                     when {
                         it.isSuccessful -> {
-                            Toast.makeText(activity, "SUCCESSFULLY REGISTERED!", Toast.LENGTH_LONG).show()
+                            goToPersonalisationActivity()
                         }
 
                         it.exception is FirebaseAuthUserCollisionException -> {
@@ -105,6 +105,12 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
 
     private fun goToMainActivity() {
         val intent = Intent(activity, MainActivity::class.java)
+        activity.startActivity(intent)
+        activity.finish()
+    }
+
+    private fun goToPersonalisationActivity() {
+        val intent = Intent(activity, PersonalisationActivity::class.java)
         activity.startActivity(intent)
         activity.finish()
     }

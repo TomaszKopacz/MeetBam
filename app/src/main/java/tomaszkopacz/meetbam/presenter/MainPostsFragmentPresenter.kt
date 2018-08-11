@@ -10,6 +10,7 @@ import android.view.Window
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_main_posts.*
 import net.cachapa.expandablelayout.ExpandableLayout
 import retrofit2.Call
@@ -34,6 +35,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     //service
     val app = fragment.activity!!.application as MainApp
     @Inject lateinit var webService: WebService
+    @Inject lateinit var auth: FirebaseAuth
 
     //posts
     private var adapter = PostAdapter(this)

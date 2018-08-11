@@ -96,6 +96,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tomaszkopacz.meetbam.view.MainActivity" />
         </activity>
+        <activity android:name="tomaszkopacz.meetbam.view.PersonalisationActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

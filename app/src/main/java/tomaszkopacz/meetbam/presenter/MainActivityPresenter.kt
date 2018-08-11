@@ -7,7 +7,6 @@ import tomaszkopacz.meetbam.view.MainActivity
 import tomaszkopacz.meetbam.view.MainApp
 import javax.inject.Inject
 
-
 class MainActivityPresenter(private val activity: MainActivity) {
 
     @Inject lateinit var auth: FirebaseAuth

@@ -18,6 +18,8 @@ import tomaszkopacz.meetbam.presenter.MainActivityPresenter;
 import tomaszkopacz.meetbam.presenter.MainActivityPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter_MembersInjector;
+import tomaszkopacz.meetbam.presenter.PersonalisationActivityPresenter;
+import tomaszkopacz.meetbam.presenter.PersonalisationActivityPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.StatsLocalFragmentPresenter;
@@ -68,6 +70,11 @@ public final class DaggerAppComponent implements AppComponent {
   }
 
   @Override
+  public void inject(PersonalisationActivityPresenter presenter) {
+    injectPersonalisationActivityPresenter(presenter);
+  }
+
+  @Override
   public void inject(MainActivityPresenter presenter) {
     injectMainActivityPresenter(presenter);
   }
@@ -104,6 +111,13 @@ public final class DaggerAppComponent implements AppComponent {
     return instance;
   }
 
+  private PersonalisationActivityPresenter injectPersonalisationActivityPresenter(
+      PersonalisationActivityPresenter instance) {
+    PersonalisationActivityPresenter_MembersInjector.injectAuth(
+        instance, provideFirebasAuthProvider.get());
+    return instance;
+  }
+
   private MainActivityPresenter injectMainActivityPresenter(MainActivityPresenter instance) {
     MainActivityPresenter_MembersInjector.injectAuth(instance, provideFirebasAuthProvider.get());
     return instance;
@@ -113,6 +127,8 @@ public final class DaggerAppComponent implements AppComponent {
       MainPostsFragmentPresenter instance) {
     MainPostsFragmentPresenter_MembersInjector.injectWebService(
         instance, provideWebServiceProvider.get());
+    MainPostsFragmentPresenter_MembersInjector.injectAuth(
+        instance, provideFirebasAuthProvider.get());
     return instance;
   }
 

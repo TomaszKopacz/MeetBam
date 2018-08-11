@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PersonalisationActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <View
+        android:id="@+id/person_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/person_avatar_imageview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:contentDescription="@string/avatar"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/person_name_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/cardview_shadow_start_color" />
+
+    <EditText
+        android:id="@+id/person_name_edittext"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/person_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/person_surname_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_avatar_imageview" />
+
+    <EditText
+        android:id="@+id/person_surname_edittext"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/person_surname_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/person_mail_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_name_edittext" />
+
+    <TextView
+        android:id="@+id/person_mail_textview"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/person_mail_hint"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_personalisation_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_surname_edittext" />
+
+    <Button
+        android:id="@+id/confirm_personalisation_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/confirm_personalisation"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_mail_textview" />
+
+</android.support.constraint.ConstraintLayout>

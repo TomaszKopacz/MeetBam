@@ -10,6 +10,8 @@ interface AppComponent {
 
     fun inject(presenter: LoginActivityPresenter)
 
+    fun inject(presenter: PersonalisationActivityPresenter)
+
     fun inject(presenter: MainActivityPresenter)
     fun inject(presenter: MainPostsFragmentPresenter)
 

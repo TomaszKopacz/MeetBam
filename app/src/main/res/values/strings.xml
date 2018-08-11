@@ -37,6 +37,14 @@
     <string name="login_fb">Login with Facebook</string>
     <string name="register_fb">Sign up with Facebook</string>
 
+    <!-- Personalisation Activity -->
+    <string name="person_password_hint">Password</string>
+    <string name="person_surname_hint">Surname</string>
+    <string name="person_name_hint">Name</string>
+    <string name="person_mail_hint">Mail</string>
+    <string name="confirm_personalisation">CONFIRM</string>
+
+
     <!-- Main Activity -->
     <string name="camera_button_text">TAKE A PHOTO</string>
     <string name="paired_user_text">%1$s %2$s</string>
@@ -60,7 +68,8 @@
     <!-- Post View -->
     <string name="post_user">%1$s %2$s</string>
     <string name="post_time">%1$s</string>
-    
+
     <!-- ImageView content descriptions -->
     <string name="logo">Meetbam logo</string>
+    <string name="avatar">Avatar</string>
 </resources>

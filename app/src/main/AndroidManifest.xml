@@ -8,9 +8,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.location.gps" />
@@ -24,7 +24,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:label">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -41,7 +40,7 @@
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name=".view.AccountActivity"
             android:label="@string/title_activity_user"
@@ -60,9 +59,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tomaszkopacz.meetbam.view.MainActivity" />
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <activity
             android:name=".view.MapActivity"
             android:label="@string/title_activity_map"
@@ -71,7 +72,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tomaszkopacz.meetbam.view.MainActivity" />
-
         </activity>
         <activity
             android:name=".view.SearchActivity"
@@ -83,6 +83,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tomaszkopacz.meetbam.view.MainActivity" />
         </activity>
+        <activity android:name=".view.PersonalisationActivity"></activity>
     </application>
 
 </manifest>
