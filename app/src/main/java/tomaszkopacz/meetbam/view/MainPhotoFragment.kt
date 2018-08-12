@@ -38,7 +38,7 @@ class MainPhotoFragment : Fragment() {
 
         camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
         back_button.setOnClickListener {presenter.dismissPhoto()}
-        pair_button.setOnClickListener { presenter.pair()}
+        pair_button.setOnClickListener {presenter.pair()}
         ok_button.setOnClickListener {presenter.acceptPhoto()}
     }
 
@@ -102,8 +102,8 @@ class MainPhotoFragment : Fragment() {
         showProgress()
     }
 
-    fun paired(pairedUser: String){
-        users_textview.text = getString(R.string.paired_text, pairedUser)
+    fun paired(loggedUser: String, pairedUser: String){
+        users_textview.text = getString(R.string.paired_text, loggedUser, pairedUser)
         stopProgress()
     }
 

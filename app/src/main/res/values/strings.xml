@@ -47,7 +47,7 @@
     <!-- Main Activity -->
     <string name="camera_button_text">TAKE A PHOTO</string>
     <string name="paired_user_text">%1$s %2$s</string>
-    <string name="paired_text">YOU AND %1$s</string>
+    <string name="paired_text">%1$s &amp; %2$s</string>
     <string name="description_hint_text">Describe a photo…</string>
     <string name="back_text">BACK</string>
     <string name="pair_text">PAIR</string>

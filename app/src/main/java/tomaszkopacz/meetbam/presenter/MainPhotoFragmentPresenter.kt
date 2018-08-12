@@ -1,9 +1,10 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
-import com.google.firebase.auth.FirebaseAuth
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
+import tomaszkopacz.meetbam.interactor.AuthService
+import tomaszkopacz.meetbam.interactor.DatabaseService
 import tomaszkopacz.meetbam.router.CameraRouter
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.MainPhotoFragment
@@ -14,9 +15,11 @@ import javax.inject.Inject
 
 class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
-    @Inject lateinit var auth: FirebaseAuth
-    var currentImageFile : File? = null
-    var currentUserPaired: String? = null
+    @Inject lateinit var authService: AuthService
+    @Inject lateinit var databaseService: DatabaseService
+    private var currentImageFile : File? = null
+    private var loggedUser: String? = null
+    private var pairedUser: String? = null
 
     init {
         (fragment.activity!!.application as MainApp).component!!.inject(this)
@@ -36,27 +39,32 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     fun pair() {
         fragment.startPairing()
-        currentUserPaired = "Zbyszek Wodecki"
-        fragment.paired(currentUserPaired!!)
+        loggedUser = authService.getCurrentUser()!!.displayName
+        pairedUser = "Zbyszek Wodecki"
+        fragment.paired(loggedUser!!, pairedUser!!)
     }
 
     fun acceptPhoto() {
         fragment.startPostUploading()
 
-        val me = auth.currentUser?.displayName
-        val friend = currentUserPaired
-        val post = Post()
+        val me = authService.getCurrentUser()!!.displayName
+        val friend = pairedUser
+        val url = "SAMPLE URL"
+        val time  = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
+                .format(Date())
 
-        if (me == null || friend == null) {
+        if (me == null || friend == null || time.isEmpty() || url.isEmpty()) {
             fragment.uploadFailed()
             return
 
         } else {
+            val post = Post()
             post.name1 = me
             post.name2 = friend
-            post.photo_dir = "SAMPLE DIR"
-            post.time = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
-                    .format(Date())
+            post.photo_dir = url
+            post.time = time
+
+            databaseService.putPost(post)
         }
 
         fragment.uploadDone()

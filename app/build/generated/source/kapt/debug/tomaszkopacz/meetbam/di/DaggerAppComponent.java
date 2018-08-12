@@ -2,11 +2,14 @@
 package tomaszkopacz.meetbam.di;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
 import javax.inject.Provider;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import tomaszkopacz.meetbam.interactor.AuthService;
+import tomaszkopacz.meetbam.interactor.DatabaseService;
 import tomaszkopacz.meetbam.interactor.WebService;
 import tomaszkopacz.meetbam.presenter.AccountFriendsFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.AccountFriendsFragmentPresenter_MembersInjector;
@@ -16,6 +19,8 @@ import tomaszkopacz.meetbam.presenter.LoginActivityPresenter;
 import tomaszkopacz.meetbam.presenter.LoginActivityPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.MainActivityPresenter;
 import tomaszkopacz.meetbam.presenter.MainActivityPresenter_MembersInjector;
+import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter;
+import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.PersonalisationActivityPresenter;
@@ -32,7 +37,13 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<WebService> provideWebServiceProvider;
 
-  private Provider<FirebaseAuth> provideFirebasAuthProvider;
+  private Provider<FirebaseAuth> provideFirebaseAuth$app_debugProvider;
+
+  private Provider<AuthService> provideAuthServiceProvider;
+
+  private Provider<FirebaseDatabase> provideFirebaseDatabase$app_debugProvider;
+
+  private Provider<DatabaseService> provideDatabaseServiceProvider;
 
   private DaggerAppComponent(Builder builder) {
     initialize(builder);
@@ -59,10 +70,24 @@ public final class DaggerAppComponent implements AppComponent {
         DoubleCheck.provider(
             WebServiceModule_ProvideWebServiceFactory.create(
                 builder.webServiceModule, provideRetrofit$app_debugProvider));
-    this.provideFirebasAuthProvider =
+    this.provideFirebaseAuth$app_debugProvider =
         DoubleCheck.provider(
-            FirebaseModule_ProvideFirebasAuthFactory.create(builder.firebaseModule));
+            FirebaseModule_ProvideFirebaseAuth$app_debugFactory.create(builder.firebaseModule));
+    this.provideAuthServiceProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideAuthServiceFactory.create(
+                builder.firebaseModule, provideFirebaseAuth$app_debugProvider));
+    this.provideFirebaseDatabase$app_debugProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideFirebaseDatabase$app_debugFactory.create(builder.firebaseModule));
+    this.provideDatabaseServiceProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideDatabaseServiceFactory.create(
+                builder.firebaseModule, provideFirebaseDatabase$app_debugProvider));
   }
+
+  @Override
+  public void inject(AuthService service) {}
 
   @Override
   public void inject(LoginActivityPresenter presenter) {
@@ -82,6 +107,11 @@ public final class DaggerAppComponent implements AppComponent {
   @Override
   public void inject(MainPostsFragmentPresenter presenter) {
     injectMainPostsFragmentPresenter(presenter);
+  }
+
+  @Override
+  public void inject(MainPhotoFragmentPresenter presenter) {
+    injectMainPhotoFragmentPresenter(presenter);
   }
 
   @Override
@@ -107,19 +137,21 @@ public final class DaggerAppComponent implements AppComponent {
   private LoginActivityPresenter injectLoginActivityPresenter(LoginActivityPresenter instance) {
     LoginActivityPresenter_MembersInjector.injectWebService(
         instance, provideWebServiceProvider.get());
-    LoginActivityPresenter_MembersInjector.injectAuth(instance, provideFirebasAuthProvider.get());
+    LoginActivityPresenter_MembersInjector.injectAuthService(
+        instance, provideAuthServiceProvider.get());
     return instance;
   }
 
   private PersonalisationActivityPresenter injectPersonalisationActivityPresenter(
       PersonalisationActivityPresenter instance) {
     PersonalisationActivityPresenter_MembersInjector.injectAuth(
-        instance, provideFirebasAuthProvider.get());
+        instance, provideFirebaseAuth$app_debugProvider.get());
     return instance;
   }
 
   private MainActivityPresenter injectMainActivityPresenter(MainActivityPresenter instance) {
-    MainActivityPresenter_MembersInjector.injectAuth(instance, provideFirebasAuthProvider.get());
+    MainActivityPresenter_MembersInjector.injectAuthService(
+        instance, provideAuthServiceProvider.get());
     return instance;
   }
 
@@ -128,7 +160,16 @@ public final class DaggerAppComponent implements AppComponent {
     MainPostsFragmentPresenter_MembersInjector.injectWebService(
         instance, provideWebServiceProvider.get());
     MainPostsFragmentPresenter_MembersInjector.injectAuth(
-        instance, provideFirebasAuthProvider.get());
+        instance, provideFirebaseAuth$app_debugProvider.get());
+    return instance;
+  }
+
+  private MainPhotoFragmentPresenter injectMainPhotoFragmentPresenter(
+      MainPhotoFragmentPresenter instance) {
+    MainPhotoFragmentPresenter_MembersInjector.injectAuthService(
+        instance, provideAuthServiceProvider.get());
+    MainPhotoFragmentPresenter_MembersInjector.injectDatabaseService(
+        instance, provideDatabaseServiceProvider.get());
     return instance;
   }
 

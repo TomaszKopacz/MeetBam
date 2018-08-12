@@ -1,8 +1,9 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.content.Intent
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import tomaszkopacz.meetbam.interactor.AuthService
+import tomaszkopacz.meetbam.interactor.LoginListener
+import tomaszkopacz.meetbam.interactor.RegisterListener
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.view.LoginActivity
 import tomaszkopacz.meetbam.view.MainActivity
@@ -14,7 +15,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
 
     //service
     @Inject lateinit var webService: WebService
-    @Inject lateinit var auth: FirebaseAuth
+    @Inject lateinit var authService: AuthService
 
     companion object {
         //input incorrect
@@ -23,7 +24,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
         const val ERROR_MAIL_INVALID = 12
         const val ERROR_PASSWORD_TOO_SHORT = 13
 
-        //login error
+        //loginUser error
         const val LOGIN_FAILED = -1
         const val FAIL_NO_SUCH_MAIL = 14
         const val FAIL_PASSWORD_WRONG = 15
@@ -38,7 +39,7 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
     }
 
     fun confirmUserIsSignedIn() {
-        if (auth.currentUser != null)
+        if (authService.getCurrentUser() != null)
             goToMainActivity()
     }
 
@@ -57,18 +58,17 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
     }
 
     private fun attemptLogin(mail: String, password: String) {
-        auth.signInWithEmailAndPassword(mail, password)
-                .addOnCompleteListener(activity){
-                    when {
-                        it.isSuccessful -> {
-                            goToMainActivity()
-                        }
+        authService.loginUser(mail, password, loginListener)
+    }
 
-                        else -> {
-                            activity.showLoginError(LOGIN_FAILED)
-                        }
-                    }
-                }
+    private val loginListener = object : LoginListener{
+        override fun loginSucceed() {
+            goToMainActivity()
+        }
+
+        override fun loginFailed() {
+            activity.showLoginError(LOGIN_FAILED)
+        }
     }
 
     fun submitRegisterInput(mail: String, password: String) {
@@ -85,22 +85,22 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
     }
 
     private fun attemptRegister(mail: String, password: String) {
-        auth.createUserWithEmailAndPassword(mail, password)
-                .addOnCompleteListener(activity) {
-                    when {
-                        it.isSuccessful -> {
-                            goToPersonalisationActivity()
-                        }
+        authService.registerUser(mail, password, registerListener)
+    }
 
-                        it.exception is FirebaseAuthUserCollisionException -> {
-                            activity.showRegisterError(ERROR_MAIL_OCCUPIED)
-                        }
+    private val registerListener = object : RegisterListener {
+        override fun registerSucceed() {
+            goToPersonalisationActivity()
+        }
 
-                        else -> {
-                            activity.showRegisterError(REGISTER_FAILED)
-                        }
-                    }
-                }
+        override fun mailIsOccupied() {
+            activity.showRegisterError(ERROR_MAIL_OCCUPIED)
+        }
+
+        override fun registerFailed() {
+            activity.showRegisterError(REGISTER_FAILED)
+        }
+
     }
 
     private fun goToMainActivity() {

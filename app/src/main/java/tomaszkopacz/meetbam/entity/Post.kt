@@ -1,5 +1,8 @@
 package tomaszkopacz.meetbam.entity
 
+import com.google.firebase.database.IgnoreExtraProperties
+
+@IgnoreExtraProperties
 class Post {
 
     var name1:      String? = null

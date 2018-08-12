@@ -891,9 +891,9 @@ public final class R {
         public static final int transition_transform = 0x7f0800f8;
         public static final int uniform = 0x7f0800f9;
         public static final int up = 0x7f0800fa;
-        public static final int view_offset_helper = 0x7f080100;
-        public static final int visible = 0x7f080101;
-        public static final int wrap_content = 0x7f080105;
+        public static final int view_offset_helper = 0x7f080101;
+        public static final int visible = 0x7f080102;
+        public static final int wrap_content = 0x7f080106;
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 0x7f090000;
