@@ -1,4 +1,4 @@
-#Sun Aug 12 19:12:41 CEST 2018
+#Mon Aug 13 00:17:54 CEST 2018
 base.0=T\:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
 path.0=classes.dex
 renamed.0=classes.dex

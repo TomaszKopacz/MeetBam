@@ -21,7 +21,7 @@
 
     <!-- Main Activity-->
     <dimen name="photo_height">350dp</dimen>
-    <dimen name="photo_width">400dp</dimen>
+    <dimen name="photo_width">300dp</dimen>
 
     <dimen name="footer_height">100dp</dimen>
 </resources>

@@ -34,12 +34,12 @@ class MainPhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         presenter = MainPhotoFragmentPresenter(this)
-        cameraService = CameraRouter(context!!, photo_textureview)
+        cameraService = CameraRouter(context!!, camera_textureview)
 
-        camera_button.setOnClickListener { presenter.takePhoto(cameraService)}
-        back_button.setOnClickListener {presenter.dismissPhoto()}
-        pair_button.setOnClickListener {presenter.pair()}
-        ok_button.setOnClickListener {presenter.acceptPhoto()}
+        photo_button.setOnClickListener { presenter.takePhoto(cameraService)}
+        dismiss_photo_button.setOnClickListener {presenter.dismissPhoto()}
+        pairing_button.setOnClickListener {presenter.pair()}
+        accept_photo_button.setOnClickListener {presenter.acceptPhoto()}
     }
 
     override fun onResume() {
@@ -63,25 +63,31 @@ class MainPhotoFragment : Fragment() {
     private fun setLayout(layout: Int){
         when (layout){
             MAKE_PHOTO_LAYOUT -> {
-                accept_photo_layout.visibility = View.INVISIBLE
+                accept_photo_button.visibility = View.INVISIBLE
+                dismiss_photo_button.visibility = View.INVISIBLE
+                pairing_button.visibility = View.INVISIBLE
                 photo_imageview.visibility = View.INVISIBLE
-                camera_button.visibility = View.VISIBLE
+
+                photo_button.visibility = View.VISIBLE
             }
 
             ACCEPT_PHOTO_LAYOUT -> {
-                accept_photo_layout.visibility = View.VISIBLE
+                accept_photo_button.visibility = View.VISIBLE
+                dismiss_photo_button.visibility = View.VISIBLE
+                pairing_button.visibility = View.VISIBLE
                 photo_imageview.visibility = View.VISIBLE
-                camera_button.visibility = View.INVISIBLE
+
+                photo_button.visibility = View.INVISIBLE
             }
         }
     }
 
     private fun showProgress(){
-        photo_progress_bar.visibility = View.VISIBLE
+        //photo_progress_bar.visibility = View.VISIBLE
     }
 
     private fun stopProgress(){
-        photo_progress_bar.visibility = View.GONE
+        //photo_progress_bar.visibility = View.GONE
     }
 
     fun startTakingPhoto(){
@@ -103,7 +109,7 @@ class MainPhotoFragment : Fragment() {
     }
 
     fun paired(loggedUser: String, pairedUser: String){
-        users_textview.text = getString(R.string.paired_text, loggedUser, pairedUser)
+        paired_textview.text = getString(R.string.paired_text, loggedUser, pairedUser)
         stopProgress()
     }
 

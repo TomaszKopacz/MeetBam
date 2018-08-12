@@ -48,7 +48,7 @@
     <string name="camera_button_text">TAKE A PHOTO</string>
     <string name="paired_user_text">%1$s %2$s</string>
     <string name="paired_text">%1$s &amp; %2$s</string>
-    <string name="description_hint_text">Describe a photo…</string>
+    <string name="not_paired_text">not paired…</string>
     <string name="back_text">BACK</string>
     <string name="pair_text">PAIR</string>
     <string name="ok_text">OK</string>
@@ -71,4 +71,5 @@
     <!-- ImageView content descriptions -->
     <string name="logo">Meetbam logo</string>
     <string name="avatar">Avatar</string>
+    <string name="thumbnail">Thumbnail</string>
 </resources>

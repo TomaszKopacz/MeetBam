@@ -797,7 +797,7 @@
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
     <dimen name="photo_height">350dp</dimen>
-    <dimen name="photo_width">400dp</dimen>
+    <dimen name="photo_width">300dp</dimen>
     <dimen name="progress_arc_stroke_width">2dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
@@ -914,7 +914,6 @@
     <string name="confirm_personalisation">CONFIRM</string>
     <string name="custom_user">%1$s %2$s</string>
     <string name="default_web_client_id" translatable="false">154196396758-ih611omtaji2fr8k22t5eb76mq66tm9o.apps.googleusercontent.com</string>
-    <string name="description_hint_text">Describe a photo…</string>
     <string name="failure_login_error">Login failed!</string>
     <string name="failure_register_error">Registration failed!</string>
     <string name="firebase_database_url" translatable="false">https://meetbam-18796.firebaseio.com</string>
@@ -934,6 +933,7 @@
     <string name="mail_invalid_error">Mail is invalid</string>
     <string name="mail_occupied_error">Mail is occupied!</string>
     <string name="no_such_user_error">User does not exist!</string>
+    <string name="not_paired_text">not paired…</string>
     <string name="ok_text">OK</string>
     <string name="pair_text">PAIR</string>
     <string name="paired_text">%1$s &amp; %2$s</string>
@@ -961,6 +961,7 @@
     <string name="sign_up_button">REGISTER</string>
     <string name="sign_up_view_button">Not a member yet?</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="thumbnail">Thumbnail</string>
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_map">Map</string>
     <string name="title_activity_search">Search</string>
