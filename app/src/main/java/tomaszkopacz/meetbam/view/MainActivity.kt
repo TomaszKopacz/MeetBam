@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val NUM_PAGES = 2
+
+        const val PHOTO = 10
+        const val POSTS = 20
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -103,5 +106,18 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    fun changePage(page: Int){
+        when (page){
+            PHOTO -> {
+                main_viewpager.currentItem = 0
+            }
+
+            POSTS -> {
+                main_viewpager.currentItem = 1
+            }
+        }
+
     }
 }

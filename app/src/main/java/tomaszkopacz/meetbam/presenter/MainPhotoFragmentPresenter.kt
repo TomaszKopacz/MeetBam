@@ -2,10 +2,12 @@ package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
 import tomaszkopacz.meetbam.R
+import tomaszkopacz.meetbam.dialogs.ProgressDialog
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.AuthService
 import tomaszkopacz.meetbam.interactor.DatabaseService
 import tomaszkopacz.meetbam.router.CameraRouter
+import tomaszkopacz.meetbam.view.MainActivity
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.MainPhotoFragment
 import java.io.File
@@ -17,15 +19,20 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     @Inject lateinit var authService: AuthService
     @Inject lateinit var databaseService: DatabaseService
+
     private var currentImageFile : File? = null
+
     private var loggedUser: String? = null
     private var pairedUser: String? = null
+
+    private val progressDialog: ProgressDialog = ProgressDialog(fragment.activity)
 
     init {
         (fragment.activity!!.application as MainApp).component!!.inject(this)
     }
 
     fun takePhoto(camera: CameraRouter) {
+        progressDialog.show()
         currentImageFile = createImageFile(getImageGallery())
         camera.takePicture(currentImageFile!!, fragment.context!!, photoListener)
     }
@@ -34,18 +41,20 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         /*
              REMOVE IMAGE FROM DIRECTORY
          */
-        fragment.photoDismissed()
+        clearMemory()
+        fragment.clearLayout()
     }
 
     fun pair() {
-        fragment.startPairing()
+        progressDialog.show()
         loggedUser = authService.getCurrentUser()!!.displayName
         pairedUser = "Zbyszek Wodecki"
-        fragment.paired(loggedUser!!, pairedUser!!)
+        progressDialog.dismiss()
+        fragment.notifyUsersPaired(loggedUser!!, pairedUser!!)
     }
 
     fun acceptPhoto() {
-        fragment.startPostUploading()
+        progressDialog.show()
 
         val me = authService.getCurrentUser()!!.displayName
         val friend = pairedUser
@@ -54,7 +63,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
                 .format(Date())
 
         if (me == null || friend == null || time.isEmpty() || url.isEmpty()) {
-            fragment.uploadFailed()
+            progressDialog.dismiss()
             return
 
         } else {
@@ -65,11 +74,13 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
             post.time = time
 
             databaseService.putPost(post)
+
+            clearMemory()
+            fragment.clearLayout()
+            progressDialog.dismiss()
+            (fragment.activity as MainActivity).changePage(MainActivity.POSTS)
         }
-
-        fragment.uploadDone()
     }
-
 
     private fun createImageFile(galleryFolder: File): File {
         val uniqueFileName = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
@@ -92,15 +103,21 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     private val photoListener = object : CameraRouter.PhotoStateListener {
         override fun onPhotoInProgress() {
-            fragment.startTakingPhoto()
         }
 
         override fun onPhotoTaken() {
-            fragment.photoTaken(currentImageFile!!)
+            fragment.showPhoto(currentImageFile!!)
+            progressDialog.dismiss()
         }
 
         override fun onError() {
-
+            progressDialog.dismiss()
         }
+    }
+
+    private fun clearMemory(){
+        currentImageFile = null
+        loggedUser = null
+        pairedUser = null
     }
 }

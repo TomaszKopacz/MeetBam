@@ -21,7 +21,7 @@ class MainPhotoFragment : Fragment() {
 
     companion object {
         const val MAKE_PHOTO_LAYOUT = 1
-        const val ACCEPT_PHOTO_LAYOUT = 3
+        const val ACCEPT_PHOTO_LAYOUT = 2
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -82,46 +82,18 @@ class MainPhotoFragment : Fragment() {
         }
     }
 
-    private fun showProgress(){
-        //photo_progress_bar.visibility = View.VISIBLE
+    fun clearLayout(){
+        setLayout(MainPhotoFragment.MAKE_PHOTO_LAYOUT)
+        paired_textview.text = getString(R.string.not_paired_text)
     }
 
-    private fun stopProgress(){
-        //photo_progress_bar.visibility = View.GONE
-    }
-
-    fun startTakingPhoto(){
-        showProgress()
-    }
-
-    fun photoTaken(directory: File){
+    fun showPhoto(directory: File){
         setLayout(MainPhotoFragment.ACCEPT_PHOTO_LAYOUT)
-        stopProgress()
         Glide.with(this).load(directory).into(photo_imageview)
     }
 
-    fun photoDismissed(){
-        setLayout(MainPhotoFragment.MAKE_PHOTO_LAYOUT)
-    }
-
-    fun startPairing(){
-        showProgress()
-    }
-
-    fun paired(loggedUser: String, pairedUser: String){
+    fun notifyUsersPaired(loggedUser: String, pairedUser: String){
         paired_textview.text = getString(R.string.paired_text, loggedUser, pairedUser)
-        stopProgress()
     }
 
-    fun startPostUploading(){
-        showProgress()
-    }
-
-    fun uploadFailed(){
-        stopProgress()
-    }
-
-    fun uploadDone(){
-        stopProgress()
-    }
 }
