@@ -11,8 +11,8 @@ public final class LoginActivityPresenter {
     @javax.inject.Inject()
     public tomaszkopacz.meetbam.interactor.AuthService authService;
     private final tomaszkopacz.meetbam.dialogs.ProgressDialog progressDialog = null;
-    private final tomaszkopacz.meetbam.interactor.LoginListener loginListener = null;
-    private final tomaszkopacz.meetbam.interactor.RegisterListener registerListener = null;
+    private final tomaszkopacz.meetbam.interactor.TaskListener loginListener = null;
+    private final tomaszkopacz.meetbam.interactor.TaskListener registerListener = null;
     private final tomaszkopacz.meetbam.view.LoginActivity activity = null;
     public static final int ERROR_MAIL_EMPTY = 10;
     public static final int ERROR_PASSWORD_EMPTY = 11;

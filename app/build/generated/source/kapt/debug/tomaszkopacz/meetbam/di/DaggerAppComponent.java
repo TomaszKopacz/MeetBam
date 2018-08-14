@@ -3,6 +3,7 @@ package tomaszkopacz.meetbam.di;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
 import javax.inject.Provider;
@@ -10,6 +11,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import tomaszkopacz.meetbam.interactor.AuthService;
 import tomaszkopacz.meetbam.interactor.DatabaseService;
+import tomaszkopacz.meetbam.interactor.StorageService;
 import tomaszkopacz.meetbam.interactor.WebService;
 import tomaszkopacz.meetbam.presenter.AccountFriendsFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.AccountFriendsFragmentPresenter_MembersInjector;
@@ -44,6 +46,10 @@ public final class DaggerAppComponent implements AppComponent {
   private Provider<FirebaseDatabase> provideFirebaseDatabase$app_debugProvider;
 
   private Provider<DatabaseService> provideDatabaseServiceProvider;
+
+  private Provider<FirebaseStorage> provideFirebaseStorageProvider;
+
+  private Provider<StorageService> provideStorageServiceProvider;
 
   private DaggerAppComponent(Builder builder) {
     initialize(builder);
@@ -84,6 +90,13 @@ public final class DaggerAppComponent implements AppComponent {
         DoubleCheck.provider(
             FirebaseModule_ProvideDatabaseServiceFactory.create(
                 builder.firebaseModule, provideFirebaseDatabase$app_debugProvider));
+    this.provideFirebaseStorageProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideFirebaseStorageFactory.create(builder.firebaseModule));
+    this.provideStorageServiceProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideStorageServiceFactory.create(
+                builder.firebaseModule, provideFirebaseStorageProvider));
   }
 
   @Override
@@ -170,6 +183,8 @@ public final class DaggerAppComponent implements AppComponent {
         instance, provideAuthServiceProvider.get());
     MainPhotoFragmentPresenter_MembersInjector.injectDatabaseService(
         instance, provideDatabaseServiceProvider.get());
+    MainPhotoFragmentPresenter_MembersInjector.injectStorageService(
+        instance, provideStorageServiceProvider.get());
     return instance;
   }
 

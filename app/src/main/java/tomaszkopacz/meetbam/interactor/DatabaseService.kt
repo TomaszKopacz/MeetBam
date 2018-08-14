@@ -9,7 +9,18 @@ class DatabaseService(private val database: FirebaseDatabase) {
         private const val POSTS_REFERENCE = "posts"
     }
 
-    fun putPost(post: Post){
+    fun putPost(post: Post, listener: TaskListener){
         database.getReference(POSTS_REFERENCE).push().setValue(post)
+                .addOnCompleteListener{
+            when {
+                it.isSuccessful -> {
+                    listener.onSucceed()
+                }
+
+                it.isCanceled -> {
+                    listener.onFailed()
+                }
+            }
+        }
     }
 }

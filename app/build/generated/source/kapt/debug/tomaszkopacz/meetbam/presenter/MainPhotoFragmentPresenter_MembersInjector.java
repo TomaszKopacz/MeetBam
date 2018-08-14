@@ -5,6 +5,7 @@ import dagger.MembersInjector;
 import javax.inject.Provider;
 import tomaszkopacz.meetbam.interactor.AuthService;
 import tomaszkopacz.meetbam.interactor.DatabaseService;
+import tomaszkopacz.meetbam.interactor.StorageService;
 
 public final class MainPhotoFragmentPresenter_MembersInjector
     implements MembersInjector<MainPhotoFragmentPresenter> {
@@ -12,24 +13,30 @@ public final class MainPhotoFragmentPresenter_MembersInjector
 
   private final Provider<DatabaseService> databaseServiceProvider;
 
+  private final Provider<StorageService> storageServiceProvider;
+
   public MainPhotoFragmentPresenter_MembersInjector(
       Provider<AuthService> authServiceProvider,
-      Provider<DatabaseService> databaseServiceProvider) {
+      Provider<DatabaseService> databaseServiceProvider,
+      Provider<StorageService> storageServiceProvider) {
     this.authServiceProvider = authServiceProvider;
     this.databaseServiceProvider = databaseServiceProvider;
+    this.storageServiceProvider = storageServiceProvider;
   }
 
   public static MembersInjector<MainPhotoFragmentPresenter> create(
       Provider<AuthService> authServiceProvider,
-      Provider<DatabaseService> databaseServiceProvider) {
+      Provider<DatabaseService> databaseServiceProvider,
+      Provider<StorageService> storageServiceProvider) {
     return new MainPhotoFragmentPresenter_MembersInjector(
-        authServiceProvider, databaseServiceProvider);
+        authServiceProvider, databaseServiceProvider, storageServiceProvider);
   }
 
   @Override
   public void injectMembers(MainPhotoFragmentPresenter instance) {
     injectAuthService(instance, authServiceProvider.get());
     injectDatabaseService(instance, databaseServiceProvider.get());
+    injectStorageService(instance, storageServiceProvider.get());
   }
 
   public static void injectAuthService(
@@ -40,5 +47,10 @@ public final class MainPhotoFragmentPresenter_MembersInjector
   public static void injectDatabaseService(
       MainPhotoFragmentPresenter instance, DatabaseService databaseService) {
     instance.databaseService = databaseService;
+  }
+
+  public static void injectStorageService(
+      MainPhotoFragmentPresenter instance, StorageService storageService) {
+    instance.storageService = storageService;
   }
 }

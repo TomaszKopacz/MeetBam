@@ -3,8 +3,7 @@ package tomaszkopacz.meetbam.presenter
 import android.content.Intent
 import tomaszkopacz.meetbam.dialogs.ProgressDialog
 import tomaszkopacz.meetbam.interactor.AuthService
-import tomaszkopacz.meetbam.interactor.LoginListener
-import tomaszkopacz.meetbam.interactor.RegisterListener
+import tomaszkopacz.meetbam.interactor.TaskListener
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.view.LoginActivity
 import tomaszkopacz.meetbam.view.MainActivity
@@ -65,13 +64,13 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
         authService.loginUser(mail, password, loginListener)
     }
 
-    private val loginListener = object : LoginListener{
-        override fun loginSucceed() {
+    private val loginListener = object : TaskListener{
+        override fun onSucceed() {
             progressDialog.dismiss()
             goToMainActivity()
         }
 
-        override fun loginFailed() {
+        override fun onFailed() {
             progressDialog.dismiss()
             activity.showLoginError(LOGIN_FAILED)
         }
@@ -95,18 +94,13 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
         authService.registerUser(mail, password, registerListener)
     }
 
-    private val registerListener = object : RegisterListener {
-        override fun registerSucceed() {
+    private val registerListener = object : TaskListener {
+        override fun onSucceed() {
             progressDialog.dismiss()
             goToPersonalisationActivity()
         }
 
-        override fun mailIsOccupied() {
-            progressDialog.dismiss()
-            activity.showRegisterError(ERROR_MAIL_OCCUPIED)
-        }
-
-        override fun registerFailed() {
+        override fun onFailed() {
             progressDialog.dismiss()
             activity.showRegisterError(REGISTER_FAILED)
         }

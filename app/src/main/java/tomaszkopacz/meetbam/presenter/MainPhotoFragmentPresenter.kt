@@ -1,11 +1,14 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
+import android.widget.Toast
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.dialogs.ProgressDialog
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.AuthService
 import tomaszkopacz.meetbam.interactor.DatabaseService
+import tomaszkopacz.meetbam.interactor.StorageService
+import tomaszkopacz.meetbam.interactor.TaskListener
 import tomaszkopacz.meetbam.router.CameraRouter
 import tomaszkopacz.meetbam.view.MainActivity
 import tomaszkopacz.meetbam.view.MainApp
@@ -17,10 +20,16 @@ import javax.inject.Inject
 
 class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
-    @Inject lateinit var authService: AuthService
-    @Inject lateinit var databaseService: DatabaseService
+    @Inject
+    lateinit var authService: AuthService
 
-    private var currentImageFile : File? = null
+    @Inject
+    lateinit var databaseService: DatabaseService
+
+    @Inject
+    lateinit var storageService: StorageService
+
+    private var currentImageFile: File? = null
 
     private var loggedUser: String? = null
     private var pairedUser: String? = null
@@ -29,6 +38,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     init {
         (fragment.activity!!.application as MainApp).component!!.inject(this)
+        loggedUser = authService.getCurrentUser()!!.displayName
     }
 
     fun takePhoto(camera: CameraRouter) {
@@ -56,45 +66,70 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
     fun acceptPhoto() {
         progressDialog.show()
 
-        val me = authService.getCurrentUser()!!.displayName
-        val friend = pairedUser
-        val url = "SAMPLE URL"
-        val time  = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
-                .format(Date())
+        val post: Post?
 
-        if (me == null || friend == null || time.isEmpty() || url.isEmpty()) {
-            progressDialog.dismiss()
-            return
+        if (areUsersAvailable() && isImageAvailable()){
+            post = createPost()
+            post.photo_dir = storageService.uploadFile(currentImageFile!!, uploadPhotoListener)
+            databaseService.putPost(post, uploadPostListener)
 
         } else {
-            val post = Post()
-            post.name1 = me
-            post.name2 = friend
-            post.photo_dir = url
-            post.time = time
-
-            databaseService.putPost(post)
-
-            clearMemory()
-            fragment.clearLayout()
             progressDialog.dismiss()
-            (fragment.activity as MainActivity).changePage(MainActivity.POSTS)
+            Toast.makeText(fragment.context, "ERROR", Toast.LENGTH_LONG).show()
+        }
+
+        clearMemory()
+        progressDialog.dismiss()
+        fragment.clearLayout()
+        (fragment.activity as MainActivity).changePage(MainActivity.POSTS)
+    }
+
+    private val uploadPhotoListener = object : TaskListener {
+        override fun onSucceed() {
+        }
+
+        override fun onFailed() {
         }
     }
 
-    private fun createImageFile(galleryFolder: File): File {
-        val uniqueFileName = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
-                .format(Date())
+    private val uploadPostListener = object : TaskListener {
+        override fun onSucceed() {
+        }
 
-        return File.createTempFile(uniqueFileName, ".jpg", galleryFolder)
+        override fun onFailed() {
+        }
+
     }
 
-    private fun getImageGallery() : File {
-        val storageDir
-                = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
+    private fun areUsersAvailable(): Boolean {
+        return (loggedUser != null && pairedUser != null)
+    }
+
+    private fun isImageAvailable(): Boolean {
+        return currentImageFile != null
+    }
+
+    private fun createPost(): Post {
+        val post = Post()
+        post.name1 = loggedUser
+        post.name2 = pairedUser
+        post.time = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
+                .format(Date())
+
+        return post
+    }
+
+    private fun createImageFile(galleryFolder: File): File {
+        val prefix = fragment.context!!.getString(R.string.app_name)
+        val suffix = ".png"
+        return File.createTempFile(prefix, suffix, galleryFolder)
+    }
+
+    private fun getImageGallery(): File {
+        val storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
         val galleryFolder = File(storageDir, fragment.resources.getString(R.string.app_name))
 
-        if (!galleryFolder.exists()){
+        if (!galleryFolder.exists()) {
             galleryFolder.mkdirs()
         }
 
@@ -115,7 +150,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         }
     }
 
-    private fun clearMemory(){
+    private fun clearMemory() {
         currentImageFile = null
         loggedUser = null
         pairedUser = null

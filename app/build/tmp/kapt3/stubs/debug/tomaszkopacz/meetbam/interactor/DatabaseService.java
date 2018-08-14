@@ -2,14 +2,15 @@ package tomaszkopacz.meetbam.interactor;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 1, 11}, bv = {1, 0, 2}, k = 1, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \t2\u00020\u0001:\u0001\tB\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u000e\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bR\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\n"}, d2 = {"Ltomaszkopacz/meetbam/interactor/DatabaseService;", "", "database", "Lcom/google/firebase/database/FirebaseDatabase;", "(Lcom/google/firebase/database/FirebaseDatabase;)V", "putPost", "", "post", "Ltomaszkopacz/meetbam/entity/Post;", "Companion", "app_debug"})
+@kotlin.Metadata(mv = {1, 1, 11}, bv = {1, 0, 2}, k = 1, d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u000b2\u00020\u0001:\u0001\u000bB\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0016\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nR\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\f"}, d2 = {"Ltomaszkopacz/meetbam/interactor/DatabaseService;", "", "database", "Lcom/google/firebase/database/FirebaseDatabase;", "(Lcom/google/firebase/database/FirebaseDatabase;)V", "putPost", "", "post", "Ltomaszkopacz/meetbam/entity/Post;", "listener", "Ltomaszkopacz/meetbam/interactor/TaskListener;", "Companion", "app_debug"})
 public final class DatabaseService {
     private final com.google.firebase.database.FirebaseDatabase database = null;
     private static final java.lang.String POSTS_REFERENCE = "posts";
     public static final tomaszkopacz.meetbam.interactor.DatabaseService.Companion Companion = null;
     
     public final void putPost(@org.jetbrains.annotations.NotNull()
-    tomaszkopacz.meetbam.entity.Post post) {
+    tomaszkopacz.meetbam.entity.Post post, @org.jetbrains.annotations.NotNull()
+    tomaszkopacz.meetbam.interactor.TaskListener listener) {
     }
     
     public DatabaseService(@org.jetbrains.annotations.NotNull()
