@@ -71,4 +71,5 @@
     <string name="logo">Meetbam logo</string>
     <string name="avatar">Avatar</string>
     <string name="thumbnail">Thumbnail</string>
+    <string name="photo">Photo</string>
 </resources>
