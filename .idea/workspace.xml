@@ -23,413 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d228ade-e6b5-4f2c-8571-fb0a6907584e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/bumptech/glide/GeneratedAppGlideModuleImpl.java" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/bumptech/glide/GeneratedAppGlideModuleImpl.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/bumptech/glide/GeneratedRequestManagerFactory.java" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/bumptech/glide/GeneratedRequestManagerFactory.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/di/DaggerAppComponent.java" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/di/DaggerAppComponent.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/interactor/GlideApp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/interactor/GlideOptions.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/interactor/GlideRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/interactor/GlideRequests.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.java" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.java" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bumptech/glide/GeneratedRequestManagerFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bumptech/glide/GeneratedRequestManagerFactory.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/di/DaggerAppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/di/DaggerAppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/interactor/GlideApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/interactor/GlideOptions.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/interactor/GlideRequest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/interactor/GlideRequests.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/bumptech/glide/GeneratedRequestManagerFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/bumptech/glide/GeneratedRequestManagerFactory.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/di/AppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/di/AppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/di/DaggerAppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/di/DaggerAppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/AuthService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/AuthService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/DatabaseService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/DatabaseService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/GlideApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/GlideOptions.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/GlideRequest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/GlideRequests.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/ImageService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/StorageService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/interactor/StorageService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/service/TimeAgoTextProvider.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/view/MainPostsFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/view/MainPostsFragment.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/view/PostAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/tomaszkopacz/meetbam/view/PostAdapter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_dep/debug/package_dependencies/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_dep/debug/package_dependencies/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_0/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_0/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_1/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_1/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_2/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_2/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_3/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_3/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_4/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_7/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_7/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_8/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_8/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_9/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_9/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/Nd7nKPK+Nki_kK7BMXieYnZKorw=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/Nd7nKPK+Nki_kK7BMXieYnZKorw=" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/tmp/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/tmp/debug/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/tmp/debug/zip-cache/Nd7nKPK+Nki_kK7BMXieYnZKorw=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/tmp/debug/zip-cache/Nd7nKPK+Nki_kK7BMXieYnZKorw=" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-apk/debug/app-debug.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest-checker/debug/manifest.crc" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest-checker/debug/manifest.crc" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest-checker/debug/manifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest-checker/debug/manifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_0.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_0.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_1.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_1.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_2.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_2.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_3.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_3.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_4.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_7.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_7.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_8.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_8.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_9.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_9.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/71.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/71.jar" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/AuthService.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/AuthService.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/DatabaseService.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/DatabaseService.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/GlideApp.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/GlideOptions.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/GlideRequest.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/GlideRequests.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/ImageService.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/StorageService$Companion.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/StorageService$Companion.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$1.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$2.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/StorageService.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/74/tomaszkopacz/meetbam/interactor/StorageService.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/76/tomaszkopacz/meetbam/di/AppComponent.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/76/tomaszkopacz/meetbam/di/AppComponent.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/76/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/76/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/76/tomaszkopacz/meetbam/di/DaggerAppComponent.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/76/tomaszkopacz/meetbam/di/DaggerAppComponent.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/78/tomaszkopacz/meetbam/view/MainPostsFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/78/tomaszkopacz/meetbam/view/MainPostsFragment.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/78/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/78/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/78/tomaszkopacz/meetbam/view/PostAdapter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/78/tomaszkopacz/meetbam/view/PostAdapter.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$Companion.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/82/com/bumptech/glide/GeneratedAppGlideModuleImpl.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/82/com/bumptech/glide/GeneratedAppGlideModuleImpl.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/82/com/bumptech/glide/GeneratedRequestManagerFactory.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/82/com/bumptech/glide/GeneratedRequestManagerFactory.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/82/tomaszkopacz/meetbam/service/TimeAgoTextProvider.dex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/1/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/1/classes.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/3/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/3/classes.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/8/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/8/classes.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/9/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/9/classes.dex" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/bumptech/glide/GeneratedRequestManagerFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/bumptech/glide/GeneratedRequestManagerFactory.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/di/AppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/di/AppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/di/DaggerAppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/di/DaggerAppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/AuthService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/AuthService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/GlideApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/GlideOptions.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/GlideRequest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/GlideRequests.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/ImageService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/StorageService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/interactor/StorageService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/service/TimeAgoTextProvider.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/view/MainPostsFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/view/MainPostsFragment.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/view/PostAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/tomaszkopacz/meetbam/view/PostAdapter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/AuthService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/AuthService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/DatabaseService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/GlideApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/GlideOptions.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/GlideRequest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/GlideRequests.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/ImageService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/StorageService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/0/tomaszkopacz/meetbam/interactor/StorageService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/2/tomaszkopacz/meetbam/di/AppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/2/tomaszkopacz/meetbam/di/AppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/2/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/2/tomaszkopacz/meetbam/di/DaggerAppComponent$Builder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/2/tomaszkopacz/meetbam/di/DaggerAppComponent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/2/tomaszkopacz/meetbam/di/DaggerAppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/4/tomaszkopacz/meetbam/view/MainPostsFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/4/tomaszkopacz/meetbam/view/MainPostsFragment.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/4/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/4/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/4/tomaszkopacz/meetbam/view/PostAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/4/tomaszkopacz/meetbam/view/PostAdapter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/7/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter_MembersInjector.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/8/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/8/com/bumptech/glide/GeneratedAppGlideModuleImpl.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/8/com/bumptech/glide/GeneratedRequestManagerFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/8/com/bumptech/glide/GeneratedRequestManagerFactory.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/8/tomaszkopacz/meetbam/service/TimeAgoTextProvider.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/__content__.json" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.s" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.s" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.s" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.s" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/build-history.bin" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/build-history.bin" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.s" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.s" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/counters.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/counters.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.len" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.len" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab_i" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab_i" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/last-build.bin" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/last-build.bin" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/di/AppComponent.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/di/AppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/DatabaseService.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/DatabaseService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/ImageService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/StorageService.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/interactor/StorageService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/service/TimeAgoTextProvider.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/view/PostAdapter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/tomaszkopacz/meetbam/view/PostAdapter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/di/AppComponent.java" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/di/AppComponent.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/di/AppComponent.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/di/AppComponent.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/AuthService.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/AuthService.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/DatabaseService.java" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/DatabaseService.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/ImageService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/ImageService.kapt_metadata" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/StorageService.java" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/StorageService.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/StorageService.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/interactor/StorageService.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.java" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.java" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/service/TimeAgoTextProvider.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/service/TimeAgoTextProvider.kapt_metadata" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/view/MainPostsFragment.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/view/MainPostsFragment.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/view/PostAdapter.java" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/view/PostAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/view/PostAdapter.kapt_metadata" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tomaszkopacz/meetbam/view/PostAdapter.kapt_metadata" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/di/AppComponent.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/di/AppComponent.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/AuthService$loginUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/AuthService$registerUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/AuthService.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/AuthService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/DatabaseService$putPost$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/DatabaseService.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/DatabaseService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/ImageService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/StorageService$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/StorageService$uploadFile$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/StorageService.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/interactor/StorageService.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$Companion.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter$downloadPostsList$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter$downloadPosts$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/service/TimeAgoTextProvider.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/view/MainPostsFragment.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/view/MainPostsFragment.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/view/PostAdapter$PostViewHolder.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/view/PostAdapter.class" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/tomaszkopacz/meetbam/view/PostAdapter.class" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/AppComponent.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/AppComponent.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/AuthService.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/AuthService.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/DatabaseService.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/DatabaseService.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/ImageService.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/service/ImageService.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/StorageService.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/StorageService.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/service/TimeAgoTextProvider.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/service/DateTimeCounterService.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/MainPostsFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/MainPostsFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/PostAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/PostAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/tomaszkopacz/meetbam/service/PostTimeProviderTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/tomaszkopacz/meetbam/service/PostTimeProviderTest.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -498,14 +93,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DatabaseService.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseService.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/DatabaseService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="391">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#41#187#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPostsFragmentPresenter.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/post_item.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="e#410#425#0" expanded="true" />
+                <element signature="e#636#659#0" expanded="true" />
+                <element signature="e#1579#1601#0" expanded="true" />
+                <element signature="e#1646#1668#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPostsFragment.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/MainPostsFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2932,7 +2575,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/DatabaseModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/DatabaseComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/FirebaseComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/WebServiceComponent.kt" />
@@ -2964,14 +2606,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/UploadListener.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/UploadPostListener.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/LoginActivityPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/AccountActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/ImageService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/entity/Post.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/ImageService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/di/AppComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/MainPostsFragment.kt" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/TaskListener.kt" />
@@ -2983,6 +2623,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/StorageService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/PostAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/post_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt" />
       </list>
     </option>
   </component>
@@ -3036,7 +2679,14 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="meetbam" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="interactor" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MeetBam" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="meetbam" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MeetBam" type="1abcf292:AndroidViewProjectNode" />
@@ -3047,11 +2697,13 @@
               <item name="MeetBam" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="MeetBam" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -3079,7 +2731,7 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/debug/res" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lib/circular-progress-button-master" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534354768941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534356195892" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -3682,15 +3334,16 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26226014" sideWeight="0.5170068" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29248366" sideWeight="0.50907713" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27292112" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3888889" sideWeight="0.49431387" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32730263" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21304348" sideWeight="0.49394855" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21304348" sideWeight="0.49394855" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36086956" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24943139" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26226014" sideWeight="0.4829932" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26630434" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26630434" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22163388" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3705,7 +3358,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33169934" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27292112" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
@@ -3745,20 +3397,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="55" />
-          <folding>
-            <element signature="e#1337#1359#0" expanded="false" />
-            <element signature="e#1444#1469#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_personalisation.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -3960,14 +3598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="66" column="33" lean-forward="false" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/AccountActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -3997,17 +3627,6 @@
         <state relative-caret-position="269">
           <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/post_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/AccountPhotosFragmentPresenter.kt">
@@ -4057,22 +3676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/MainPostsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPhotoFragmentPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
@@ -4115,14 +3718,14 @@
         <state relative-caret-position="340">
           <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
-            <element signature="e#1390#1415#0" expanded="true" />
-            <element signature="e#1511#1529#0" expanded="true" />
-            <element signature="e#1889#1907#0" expanded="true" />
-            <element signature="e#2004#2033#0" expanded="true" />
-            <element signature="e#2407#2437#0" expanded="true" />
-            <element signature="e#2824#2849#0" expanded="true" />
-            <element signature="e#2943#2971#0" expanded="true" />
-            <element signature="e#3346#3377#0" expanded="true" />
+            <element signature="e#1390#1415#0" expanded="false" />
+            <element signature="e#1511#1529#0" expanded="false" />
+            <element signature="e#1889#1907#0" expanded="false" />
+            <element signature="e#2004#2033#0" expanded="false" />
+            <element signature="e#2407#2437#0" expanded="false" />
+            <element signature="e#2824#2849#0" expanded="false" />
+            <element signature="e#2943#2971#0" expanded="false" />
+            <element signature="e#3346#3377#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4130,13 +3733,61 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="60" column="51" lean-forward="true" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/interactor/DatabaseService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#41#187#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/post_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#410#425#0" expanded="true" />
+            <element signature="e#636#659#0" expanded="true" />
+            <element signature="e#1579#1601#0" expanded="true" />
+            <element signature="e#1646#1668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/view/MainPostsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/tomaszkopacz/meetbam/presenter/MainPostsFragmentPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
