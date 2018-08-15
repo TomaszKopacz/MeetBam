@@ -6,7 +6,7 @@ import com.bumptech.glide.manager.Lifecycle;
 import com.bumptech.glide.manager.RequestManagerRetriever;
 import com.bumptech.glide.manager.RequestManagerTreeNode;
 import java.lang.Override;
-import tomaszkopacz.meetbam.interactor.GlideRequests;
+import tomaszkopacz.meetbam.service.GlideRequests;
 
 /**
  * Generated code, do not modify

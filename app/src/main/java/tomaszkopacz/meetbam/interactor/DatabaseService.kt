@@ -14,16 +14,16 @@ class DatabaseService(private val database: FirebaseDatabase) {
         return database.getReference(POSTS_REFERENCE)
     }
 
-    fun putPost(post: Post, listener: TaskListener){
+    fun putPost(post: Post, listener: TaskListener?){
         database.getReference(POSTS_REFERENCE).push().setValue(post)
                 .addOnCompleteListener{
             when {
                 it.isSuccessful -> {
-                    listener.onSucceed()
+                    listener?.onSucceed()
                 }
 
                 it.isCanceled -> {
-                    listener.onFailed()
+                    listener?.onFailed()
                 }
             }
         }

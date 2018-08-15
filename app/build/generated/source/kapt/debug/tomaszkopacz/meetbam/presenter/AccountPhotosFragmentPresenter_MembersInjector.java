@@ -3,28 +3,39 @@ package tomaszkopacz.meetbam.presenter;
 
 import dagger.MembersInjector;
 import javax.inject.Provider;
+import tomaszkopacz.meetbam.interactor.StorageService;
 import tomaszkopacz.meetbam.interactor.WebService;
 
 public final class AccountPhotosFragmentPresenter_MembersInjector
     implements MembersInjector<AccountPhotosFragmentPresenter> {
   private final Provider<WebService> webServiceProvider;
 
-  public AccountPhotosFragmentPresenter_MembersInjector(Provider<WebService> webServiceProvider) {
+  private final Provider<StorageService> storageProvider;
+
+  public AccountPhotosFragmentPresenter_MembersInjector(
+      Provider<WebService> webServiceProvider, Provider<StorageService> storageProvider) {
     this.webServiceProvider = webServiceProvider;
+    this.storageProvider = storageProvider;
   }
 
   public static MembersInjector<AccountPhotosFragmentPresenter> create(
-      Provider<WebService> webServiceProvider) {
-    return new AccountPhotosFragmentPresenter_MembersInjector(webServiceProvider);
+      Provider<WebService> webServiceProvider, Provider<StorageService> storageProvider) {
+    return new AccountPhotosFragmentPresenter_MembersInjector(webServiceProvider, storageProvider);
   }
 
   @Override
   public void injectMembers(AccountPhotosFragmentPresenter instance) {
     injectWebService(instance, webServiceProvider.get());
+    injectStorage(instance, storageProvider.get());
   }
 
   public static void injectWebService(
       AccountPhotosFragmentPresenter instance, WebService webService) {
     instance.webService = webService;
+  }
+
+  public static void injectStorage(
+      AccountPhotosFragmentPresenter instance, StorageService storage) {
+    instance.storage = storage;
   }
 }

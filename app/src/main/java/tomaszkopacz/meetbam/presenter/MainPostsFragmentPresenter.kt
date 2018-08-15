@@ -19,6 +19,7 @@ import net.cachapa.expandablelayout.ExpandableLayout
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.DatabaseService
+import tomaszkopacz.meetbam.interactor.StorageService
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.MainPostsFragment
@@ -29,15 +30,12 @@ import javax.inject.Inject
 class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     : RecyclerViewPresenter {
 
-    companion object {
-        private val BASE_URL = "http://meetbam.cba.pl/"
-    }
-
     //service
     val app = fragment.activity!!.application as MainApp
     @Inject lateinit var webService: WebService
     @Inject lateinit var auth: FirebaseAuth
     @Inject lateinit var database: DatabaseService
+    @Inject lateinit var storage: StorageService
 
     //posts
     private var adapter = PostAdapter(this)
@@ -48,12 +46,10 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     }
 
     fun downloadPosts() {
-
         val ref = database.getPostsReference()
         ref.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
                 fragment.refreshDone()
-
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -80,7 +76,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val post = posts[position]
         holder as PostAdapter.PostViewHolder
-        adapter.setContent(fragment.activity!!, holder, post)
+        adapter.setContent(fragment.activity!!, holder, post, storage)
     }
 
     override fun onItemClick(view: View) {
@@ -97,7 +93,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
         val position = fragment.posts_recview.getChildAdapterPosition(view)
         val post = posts[position]
         val imageView = ImageView(fragment.activity)
-        Glide.with(fragment.activity!!).load(BASE_URL + post.url).into(imageView)
+        Glide.with(fragment.activity!!).load(post.url).into(imageView)
 
         dialog.addContentView(imageView, RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,

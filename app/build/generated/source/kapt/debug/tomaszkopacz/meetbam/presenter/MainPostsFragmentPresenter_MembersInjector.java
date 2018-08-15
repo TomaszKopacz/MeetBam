@@ -5,6 +5,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import dagger.MembersInjector;
 import javax.inject.Provider;
 import tomaszkopacz.meetbam.interactor.DatabaseService;
+import tomaszkopacz.meetbam.interactor.StorageService;
 import tomaszkopacz.meetbam.interactor.WebService;
 
 public final class MainPostsFragmentPresenter_MembersInjector
@@ -15,21 +16,26 @@ public final class MainPostsFragmentPresenter_MembersInjector
 
   private final Provider<DatabaseService> databaseProvider;
 
+  private final Provider<StorageService> storageProvider;
+
   public MainPostsFragmentPresenter_MembersInjector(
       Provider<WebService> webServiceProvider,
       Provider<FirebaseAuth> authProvider,
-      Provider<DatabaseService> databaseProvider) {
+      Provider<DatabaseService> databaseProvider,
+      Provider<StorageService> storageProvider) {
     this.webServiceProvider = webServiceProvider;
     this.authProvider = authProvider;
     this.databaseProvider = databaseProvider;
+    this.storageProvider = storageProvider;
   }
 
   public static MembersInjector<MainPostsFragmentPresenter> create(
       Provider<WebService> webServiceProvider,
       Provider<FirebaseAuth> authProvider,
-      Provider<DatabaseService> databaseProvider) {
+      Provider<DatabaseService> databaseProvider,
+      Provider<StorageService> storageProvider) {
     return new MainPostsFragmentPresenter_MembersInjector(
-        webServiceProvider, authProvider, databaseProvider);
+        webServiceProvider, authProvider, databaseProvider, storageProvider);
   }
 
   @Override
@@ -37,6 +43,7 @@ public final class MainPostsFragmentPresenter_MembersInjector
     injectWebService(instance, webServiceProvider.get());
     injectAuth(instance, authProvider.get());
     injectDatabase(instance, databaseProvider.get());
+    injectStorage(instance, storageProvider.get());
   }
 
   public static void injectWebService(MainPostsFragmentPresenter instance, WebService webService) {
@@ -49,5 +56,9 @@ public final class MainPostsFragmentPresenter_MembersInjector
 
   public static void injectDatabase(MainPostsFragmentPresenter instance, DatabaseService database) {
     instance.database = database;
+  }
+
+  public static void injectStorage(MainPostsFragmentPresenter instance, StorageService storage) {
+    instance.storage = storage;
   }
 }

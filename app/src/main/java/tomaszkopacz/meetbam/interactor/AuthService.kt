@@ -5,35 +5,34 @@ import com.google.firebase.auth.FirebaseUser
 
 class AuthService(private val auth: FirebaseAuth) {
 
-    fun loginUser(mail: String, password: String, listener: TaskListener?){
+    fun loginUser(mail: String, password: String, listener: TaskListener?) {
         auth.signInWithEmailAndPassword(mail, password)
-                .addOnCompleteListener{
-                    if (listener != null)
-                        when {
-                            it.isSuccessful -> {
-                                listener.onSucceed()
-                            }
-
-                            else -> {
-                                listener.onFailed()
-                            }
+                .addOnCompleteListener {
+                    when {
+                        it.isSuccessful -> {
+                            listener?.onSucceed()
                         }
+
+                        else -> {
+                            listener?.onFailed()
+                        }
+                    }
                 }
     }
 
-    fun registerUser(mail: String, password: String, listener: TaskListener?){
+    fun registerUser(mail: String, password: String, listener: TaskListener?) {
         auth.createUserWithEmailAndPassword(mail, password)
                 .addOnCompleteListener {
-                    if (listener != null)
-                        when {
-                            it.isSuccessful -> {
-                                listener.onSucceed()
-                            }
 
-                            else -> {
-                                listener.onFailed()
-                            }
+                    when {
+                        it.isSuccessful -> {
+                            listener?.onSucceed()
                         }
+
+                        else -> {
+                            listener?.onFailed()
+                        }
+                    }
                 }
     }
 
@@ -41,7 +40,7 @@ class AuthService(private val auth: FirebaseAuth) {
         return auth.currentUser
     }
 
-    fun logout(){
+    fun logout() {
         auth.signOut()
     }
 }

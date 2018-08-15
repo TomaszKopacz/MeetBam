@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
-INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
-INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
-INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\b436b2c789779c537e2553f0a76f5310\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\b16dafbd1c10c26d22dceca8eadb4248\AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui-storage:3.3.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\firebase-ui-storage-3.3.0.aar\3015b186c7170e9d5a53054a7332cd02\AndroidManifest.xml:2:1-11:12
@@ -42,30 +42,30 @@ MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\tomas\.gradle
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c3eaf37bf5075976b7e685c22e0dec3e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\f112df84e1b1b11eee88143c3f133981\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\5cb824bb1c2552bc2c89175ce75a9bd0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\dfd2ce70dce0d6d1a5b308f60b6b860f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\fbc67108b7f783564efe2cf338111873\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\b6149520292d8bad65af0f6f76f09aa6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\dfd2ce70dce0d6d1a5b308f60b6b860f\AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4d673b04422d06f0f2dddcb7b8e3d34a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\646b4f346a1fc31b2722a8aa0d0f460f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\ffd0f8606435924c0fe5de2d800a6aa8\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\6ee9c7daacaa3231e890aac682621124\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4d673b04422d06f0f2dddcb7b8e3d34a\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8fd382c2c847aeda7e74300353d90810\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\646b4f346a1fc31b2722a8aa0d0f460f\AndroidManifest.xml:17:1-22:12
-INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
-INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
-INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
 	package
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:4:5-35
 		INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
 		INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
 		INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-89:12
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:1-90:12
 		INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:2:11-69
@@ -122,7 +122,7 @@ ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManife
 	android:name
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:16:19-63
 application
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:18:5-87:19
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:18:5-88:19
 MERGED from [com.google.firebase:firebase-auth:16.0.3] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.0.3.aar\4dad3b06929806c5fde81ec432fd72c6\AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.firebase:firebase-auth:16.0.3] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.0.3.aar\4dad3b06929806c5fde81ec432fd72c6\AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\93346d8a7b8483ca5b4611a5a715d53f\AndroidManifest.xml:7:5-20
@@ -168,10 +168,12 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Us
 	android:label
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:22:9-32
 		REJECTED from [com.github.jorgecastilloprz:fabprogresscircle:1.01] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\fabprogresscircle-1.01.aar\e6d8c4103c2db6331d67505aa75bd6c7\AndroidManifest.xml:13:9-41
+	android:fullBackupContent
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:27:9-41
 	android:roundIcon
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:23:9-54
 	android:icon
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:21:9-43
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:21:9-38
 	android:allowBackup
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:20:9-35
 	android:theme
@@ -181,87 +183,87 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Us
 	android:name
 		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:19:9-37
 meta-data#com.google.android.geo.API_KEY
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:27:9-29:55
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:28:9-30:55
 	android:value
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:29:13-52
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:30:13-52
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:28:13-58
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:29:13-58
 activity#tomaszkopacz.meetbam.view.LoginActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:31:9-40:20
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:32:9-41:20
 	android:label
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:34:13-45
 	android:launchMode
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:34:13-44
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:35:13-44
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:32:13-47
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:33:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:35:13-39:29
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:36:13-40:29
 action#android.intent.action.MAIN
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:36:17-69
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:36:25-66
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:38:17-77
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:38:27-74
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:39:27-74
 activity#tomaszkopacz.meetbam.view.MainActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:41:9-43:48
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:42:9-44:48
 	android:label
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:44:13-45
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:42:13-46
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:43:13-46
 activity#tomaszkopacz.meetbam.view.AccountActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:44:9-52:20
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:45:9-53:20
 	android:parentActivityName
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:47:13-60
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:48:13-60
 	android:label
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:46:13-56
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:47:13-56
 	tools:targetApi
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:48:13-41
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:49:13-41
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:46:13-49
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:49:13-51:74
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:50:13-52:74
 	android:value
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:51:17-71
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:52:17-71
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:50:17-63
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:51:17-63
 activity#tomaszkopacz.meetbam.view.StatsActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:53:9-61:20
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:54:9-62:20
 	android:parentActivityName
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:56:13-60
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:57:13-60
 	android:label
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:55:13-57
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:56:13-57
 	tools:targetApi
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:57:13-41
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:58:13-41
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:54:13-47
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:55:13-47
 activity#tomaszkopacz.meetbam.view.MapActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:67:9-75:20
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:68:9-76:20
 	android:parentActivityName
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:70:13-60
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:71:13-60
 	android:label
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:69:13-55
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:70:13-55
 	tools:targetApi
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:71:13-41
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:72:13-41
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:68:13-45
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:69:13-45
 activity#tomaszkopacz.meetbam.view.SearchActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:76:9-85:20
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:77:9-86:20
 	android:parentActivityName
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:80:13-60
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:81:13-60
 	android:label
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:78:13-58
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:79:13-58
 	android:launchMode
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:79:13-43
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:80:13-43
 	tools:targetApi
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:81:13-41
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:82:13-41
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:77:13-48
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:78:13-48
 activity#tomaszkopacz.meetbam.view.PersonalisationActivity
-ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:86:9-75
+ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:87:9-66
 	android:name
-		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:86:19-63
+		ADDED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml:87:19-63
 uses-sdk
 INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
@@ -342,22 +344,22 @@ MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\tomas\.grad
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\f112df84e1b1b11eee88143c3f133981\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\5cb824bb1c2552bc2c89175ce75a9bd0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\5cb824bb1c2552bc2c89175ce75a9bd0\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\dfd2ce70dce0d6d1a5b308f60b6b860f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\dfd2ce70dce0d6d1a5b308f60b6b860f\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\fbc67108b7f783564efe2cf338111873\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\fbc67108b7f783564efe2cf338111873\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\b6149520292d8bad65af0f6f76f09aa6\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\b6149520292d8bad65af0f6f76f09aa6\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\dfd2ce70dce0d6d1a5b308f60b6b860f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\dfd2ce70dce0d6d1a5b308f60b6b860f\AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4d673b04422d06f0f2dddcb7b8e3d34a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4d673b04422d06f0f2dddcb7b8e3d34a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\646b4f346a1fc31b2722a8aa0d0f460f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\646b4f346a1fc31b2722a8aa0d0f460f\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\ffd0f8606435924c0fe5de2d800a6aa8\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\ffd0f8606435924c0fe5de2d800a6aa8\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\6ee9c7daacaa3231e890aac682621124\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\6ee9c7daacaa3231e890aac682621124\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4d673b04422d06f0f2dddcb7b8e3d34a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4d673b04422d06f0f2dddcb7b8e3d34a\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8fd382c2c847aeda7e74300353d90810\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8fd382c2c847aeda7e74300353d90810\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\646b4f346a1fc31b2722a8aa0d0f460f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\tomas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\646b4f346a1fc31b2722a8aa0d0f460f\AndroidManifest.xml:20:5-44
 INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
 INJECTED from T:\Workspace\AndroidStudioProjects\MeetBam\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

@@ -100,9 +100,6 @@ public final class DaggerAppComponent implements AppComponent {
   }
 
   @Override
-  public void inject(AuthService service) {}
-
-  @Override
   public void inject(LoginActivityPresenter presenter) {
     injectLoginActivityPresenter(presenter);
   }
@@ -176,6 +173,8 @@ public final class DaggerAppComponent implements AppComponent {
         instance, provideFirebaseAuth$app_debugProvider.get());
     MainPostsFragmentPresenter_MembersInjector.injectDatabase(
         instance, provideDatabaseServiceProvider.get());
+    MainPostsFragmentPresenter_MembersInjector.injectStorage(
+        instance, provideStorageServiceProvider.get());
     return instance;
   }
 
@@ -194,6 +193,8 @@ public final class DaggerAppComponent implements AppComponent {
       AccountPhotosFragmentPresenter instance) {
     AccountPhotosFragmentPresenter_MembersInjector.injectWebService(
         instance, provideWebServiceProvider.get());
+    AccountPhotosFragmentPresenter_MembersInjector.injectStorage(
+        instance, provideStorageServiceProvider.get());
     return instance;
   }
 

@@ -8,7 +8,7 @@ import java.lang.Override;
 import java.lang.SuppressWarnings;
 import java.util.Collections;
 import java.util.Set;
-import tomaszkopacz.meetbam.interactor.ImageService;
+import tomaszkopacz.meetbam.service.ImageService;
 
 @SuppressWarnings("deprecation")
 final class GeneratedAppGlideModuleImpl extends GeneratedAppGlideModule {
@@ -17,7 +17,7 @@ final class GeneratedAppGlideModuleImpl extends GeneratedAppGlideModule {
   GeneratedAppGlideModuleImpl() {
     appGlideModule = new ImageService();
     if (Log.isLoggable("Glide", Log.DEBUG)) {
-      Log.d("Glide", "Discovered AppGlideModule from annotation: tomaszkopacz.meetbam.interactor.ImageService");
+      Log.d("Glide", "Discovered AppGlideModule from annotation: tomaszkopacz.meetbam.service.ImageService");
     }
   }
 

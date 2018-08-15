@@ -1,7 +1,6 @@
 package tomaszkopacz.meetbam.di
 
 import dagger.Component
-import tomaszkopacz.meetbam.interactor.AuthService
 import tomaszkopacz.meetbam.presenter.*
 import javax.inject.Singleton
 
@@ -9,10 +8,7 @@ import javax.inject.Singleton
 @Component(modules = [WebServiceModule::class, FirebaseModule::class])
 interface AppComponent {
 
-    fun inject(service: AuthService)
-
     fun inject(presenter: LoginActivityPresenter)
-
     fun inject(presenter: PersonalisationActivityPresenter)
 
     fun inject(presenter: MainActivityPresenter)

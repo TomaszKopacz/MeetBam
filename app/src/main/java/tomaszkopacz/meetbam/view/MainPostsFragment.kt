@@ -44,10 +44,12 @@ class MainPostsFragment : Fragment() {
     }
 
     fun putPosts(adapter: PostAdapter) {
-        posts_recview.adapter = adapter
+        if (posts_recview != null)
+            posts_recview.adapter = adapter
     }
 
-    fun refreshDone(){
-        main_refresh.isRefreshing = false
+    fun refreshDone() {
+        if (main_refresh != null)
+            main_refresh.isRefreshing = false
     }
 }

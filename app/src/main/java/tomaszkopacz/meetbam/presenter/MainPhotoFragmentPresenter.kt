@@ -72,7 +72,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         if (areUsersAvailable() && isImageAvailable()){
             post = createPost()
 
-            val photoUrl = storageService.uploadFile(currentImageFile!!, uploadPhotoListener)
+            val photoUrl = storageService.uploadPostPhoto(currentImageFile!!, uploadPhotoListener)
             post.url = photoUrl
             databaseService.putPost(post, uploadPostListener)
 
@@ -120,7 +120,7 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         val post = Post()
         post.name1 = loggedUser
         post.name2 = pairedUser
-        post.time = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
+        post.time = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
                 .format(Date())
 
         return post

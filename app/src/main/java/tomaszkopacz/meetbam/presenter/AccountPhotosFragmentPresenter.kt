@@ -6,6 +6,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import tomaszkopacz.meetbam.entity.Post
+import tomaszkopacz.meetbam.interactor.StorageService
 import tomaszkopacz.meetbam.interactor.WebService
 import tomaszkopacz.meetbam.view.AccountPhotosFragment
 import tomaszkopacz.meetbam.view.MainApp
@@ -18,6 +19,7 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
 
     //service
     @Inject lateinit var webService: WebService
+    @Inject lateinit var storage: StorageService
     val app = fragment.activity!!.application as MainApp
 
     //posts
@@ -55,7 +57,7 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val post = photos!![position]
         holder as PostAdapter.PostViewHolder
-        adapter.setContent(fragment.context!!, holder, post)
+        adapter.setContent(fragment.context!!, holder, post, storage)
     }
 
     override fun onItemClick(view: View) {
