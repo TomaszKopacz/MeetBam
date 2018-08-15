@@ -2,15 +2,16 @@ package tomaszkopacz.meetbam.view
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.post_item.view.*
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
+import tomaszkopacz.meetbam.interactor.GlideApp
 import tomaszkopacz.meetbam.presenter.RecyclerViewPresenter
-import tomaszkopacz.meetbam.service.TimeAgoTextProvider
 
 
 class PostAdapter(private val presenter: RecyclerViewPresenter)
@@ -38,21 +39,25 @@ class PostAdapter(private val presenter: RecyclerViewPresenter)
         presenter.onItemBoundAtPosition(holder, position)
     }
 
-    fun setContent(context: Context, holder: PostViewHolder, post: Post, photoUrl: String) {
-        holder.itemView.name1_textview.text = context.getString(
-                R.string.post_user, post.name1, post.surname1)
-        holder.itemView.name2_textview.text = context.getString(
-                R.string.post_user, post.name2, post.surname2)
+    fun setContent(context: Context, holder: PostViewHolder, post: Post) {
+        holder.itemView.name1_textview.text = post.name1
+        holder.itemView.name2_textview.text = post.name2
+        holder.itemView.post_time_textview.text = post.time
 
-        Glide
+        Log.d("TOMASZ", post.url)
+
+        val storageRef = FirebaseStorage.getInstance().reference
+        val imgRef = storageRef.child(post.url!!)
+
+        GlideApp
                 .with(context)
-                .load(photoUrl + post.photo_dir)
+                .load(imgRef)
                 .into(holder.itemView.post_imageview)
 
-        val timeAgo = TimeAgoTextProvider.countTimeAgoInMin(post.time!!)
-        val timeAgoText = TimeAgoTextProvider.getCustomTimeAgoText(timeAgo,
-                TimeAgoTextProvider.FORMAT_MINUTES)
-        holder.itemView.post_time_textview.text = context.getString(R.string.post_time, timeAgoText)
+//        val timeAgo = TimeAgoTextProvider.countTimeAgoInMin(post.time!!)
+//        val timeAgoText = TimeAgoTextProvider.getCustomTimeAgoText(timeAgo,
+//                TimeAgoTextProvider.FORMAT_MINUTES)
+//        holder.itemView.post_time_textview.text = context.getString(R.string.post_time, timeAgoText)
     }
 
     override fun getItemCount(): Int {

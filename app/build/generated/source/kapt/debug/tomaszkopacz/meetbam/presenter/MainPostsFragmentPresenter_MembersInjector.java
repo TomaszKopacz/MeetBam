@@ -4,6 +4,7 @@ package tomaszkopacz.meetbam.presenter;
 import com.google.firebase.auth.FirebaseAuth;
 import dagger.MembersInjector;
 import javax.inject.Provider;
+import tomaszkopacz.meetbam.interactor.DatabaseService;
 import tomaszkopacz.meetbam.interactor.WebService;
 
 public final class MainPostsFragmentPresenter_MembersInjector
@@ -12,21 +13,30 @@ public final class MainPostsFragmentPresenter_MembersInjector
 
   private final Provider<FirebaseAuth> authProvider;
 
+  private final Provider<DatabaseService> databaseProvider;
+
   public MainPostsFragmentPresenter_MembersInjector(
-      Provider<WebService> webServiceProvider, Provider<FirebaseAuth> authProvider) {
+      Provider<WebService> webServiceProvider,
+      Provider<FirebaseAuth> authProvider,
+      Provider<DatabaseService> databaseProvider) {
     this.webServiceProvider = webServiceProvider;
     this.authProvider = authProvider;
+    this.databaseProvider = databaseProvider;
   }
 
   public static MembersInjector<MainPostsFragmentPresenter> create(
-      Provider<WebService> webServiceProvider, Provider<FirebaseAuth> authProvider) {
-    return new MainPostsFragmentPresenter_MembersInjector(webServiceProvider, authProvider);
+      Provider<WebService> webServiceProvider,
+      Provider<FirebaseAuth> authProvider,
+      Provider<DatabaseService> databaseProvider) {
+    return new MainPostsFragmentPresenter_MembersInjector(
+        webServiceProvider, authProvider, databaseProvider);
   }
 
   @Override
   public void injectMembers(MainPostsFragmentPresenter instance) {
     injectWebService(instance, webServiceProvider.get());
     injectAuth(instance, authProvider.get());
+    injectDatabase(instance, databaseProvider.get());
   }
 
   public static void injectWebService(MainPostsFragmentPresenter instance, WebService webService) {
@@ -35,5 +45,9 @@ public final class MainPostsFragmentPresenter_MembersInjector
 
   public static void injectAuth(MainPostsFragmentPresenter instance, FirebaseAuth auth) {
     instance.auth = auth;
+  }
+
+  public static void injectDatabase(MainPostsFragmentPresenter instance, DatabaseService database) {
+    instance.database = database;
   }
 }

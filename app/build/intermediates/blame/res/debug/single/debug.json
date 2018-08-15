@@ -68,12 +68,12 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\fabprogresscircle-1.01.aar\\e6d8c4103c2db6331d67505aa75bd6c7\\res\\drawable-xxhdpi\\ic_done.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\b6149520292d8bad65af0f6f76f09aa6\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_design_ic_visibility.png.flat",
@@ -92,20 +92,20 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\3b9bd4f0a909df2d8b1984e0317a57cb\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b436b2c789779c537e2553f0a76f5310\\res\\drawable-xxxhdpi-v4\\design_ic_visibility.png"
-    },
-    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\color\\abc_hint_foreground_material_dark.xml"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b436b2c789779c537e2553f0a76f5310\\res\\drawable-xxxhdpi-v4\\design_ic_visibility.png"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_dark.xml.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\color\\abc_hint_foreground_material_dark.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -136,12 +136,12 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\3b9bd4f0a909df2d8b1984e0317a57cb\\res\\color\\common_google_signin_btn_text_dark.xml"
-    },
-    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\3b9bd4f0a909df2d8b1984e0317a57cb\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
@@ -204,28 +204,28 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\color\\abc_tint_btn_checkable.xml"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23_abc_control_background_material.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-v23\\abc_control_background_material.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23_abc_control_background_material.xml.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-v23\\abc_control_background_material.xml"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
@@ -260,12 +260,12 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\fbc67108b7f783564efe2cf338111873\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_stats_local.xml.flat",
         "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\fragment_stats_local.xml"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\fbc67108b7f783564efe2cf338111873\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
@@ -276,28 +276,28 @@
         "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_account_photos.xml.flat",
+        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\fragment_account_photos.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_account_photos.xml.flat",
-        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\fragment_account_photos.xml"
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\3b9bd4f0a909df2d8b1984e0317a57cb\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
-    },
-    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
+        "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\3b9bd4f0a909df2d8b1984e0317a57cb\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -360,12 +360,12 @@
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_commit_photo.xml.flat",
-        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\dialog_commit_photo.xml"
-    },
-    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b16dafbd1c10c26d22dceca8eadb4248\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_commit_photo.xml.flat",
+        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\dialog_commit_photo.xml"
     },
     {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",

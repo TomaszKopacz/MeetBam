@@ -55,7 +55,7 @@ class AccountPhotosFragmentPresenter(private val fragment: AccountPhotosFragment
     override fun onItemBoundAtPosition(holder: RecyclerView.ViewHolder, position: Int) {
         val post = photos!![position]
         holder as PostAdapter.PostViewHolder
-        adapter.setContent(fragment.context!!, holder, post, BASE_URL)
+        adapter.setContent(fragment.context!!, holder, post)
     }
 
     override fun onItemClick(view: View) {

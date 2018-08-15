@@ -18,9 +18,9 @@ class AccountActivity : AppCompatActivity() {
 
     companion object {
 
-        private val ACCOUNT_TITLE = "ACCOUNT"
-        private val PHOTOS_TITLE = "PHOTOS"
-        private val FRIENDS_TITLE = "FRIENDS"
+        private const val ACCOUNT_TITLE = "ACCOUNT"
+        private const val PHOTOS_TITLE = "PHOTOS"
+        private const val FRIENDS_TITLE = "FRIENDS"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,6 @@ class AccountActivity : AppCompatActivity() {
 
         app = application as MainApp
 
-        setTitle()
         setUpViewPager(account_viewpager)
         account_tabs.setupWithViewPager(account_viewpager)
     }
@@ -47,11 +46,6 @@ class AccountActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun setTitle() {
-        val loggedUser = app!!.getLoggedUser()
-        title = getString(R.string.paired_user_text, loggedUser.name, loggedUser.surname)
     }
 
     private fun setUpViewPager(viewPager: ViewPager?) {

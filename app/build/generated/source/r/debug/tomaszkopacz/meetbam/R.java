@@ -2225,7 +2225,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -4370,39 +4370,38 @@ public final class R {
     public static final int ok_text=0x7f0d0054;
     public static final int pair_text=0x7f0d0055;
     public static final int paired_text=0x7f0d0056;
-    public static final int paired_user_text=0x7f0d0057;
-    public static final int password_empty_error=0x7f0d0058;
-    public static final int password_toggle_content_description=0x7f0d0059;
-    public static final int password_too_short_error=0x7f0d005a;
-    public static final int path_password_eye=0x7f0d005b;
-    public static final int path_password_eye_mask_strike_through=0x7f0d005c;
-    public static final int path_password_eye_mask_visible=0x7f0d005d;
-    public static final int path_password_strike_through=0x7f0d005e;
-    public static final int person_mail_hint=0x7f0d005f;
-    public static final int person_name_hint=0x7f0d0060;
-    public static final int person_password_hint=0x7f0d0061;
-    public static final int person_surname_hint=0x7f0d0062;
-    public static final int post_time=0x7f0d0063;
-    public static final int post_user=0x7f0d0064;
-    public static final int posts_number=0x7f0d0065;
-    public static final int project_id=0x7f0d0066;
-    public static final int register_fb=0x7f0d0067;
-    public static final int search_menu_title=0x7f0d0068;
-    public static final int search_users=0x7f0d0069;
-    public static final int sign_in_button=0x7f0d006a;
-    public static final int sign_in_view_button=0x7f0d006b;
-    public static final int sign_up_button=0x7f0d006c;
-    public static final int sign_up_view_button=0x7f0d006d;
-    public static final int status_bar_notification_info_overflow=0x7f0d006e;
-    public static final int thumbnail=0x7f0d006f;
-    public static final int title_activity_login=0x7f0d0070;
-    public static final int title_activity_map=0x7f0d0071;
-    public static final int title_activity_search=0x7f0d0072;
-    public static final int title_activity_settings=0x7f0d0073;
-    public static final int title_activity_stats=0x7f0d0074;
-    public static final int title_activity_user=0x7f0d0075;
-    public static final int user_at_position=0x7f0d0076;
-    public static final int wrong_password_error=0x7f0d0077;
+    public static final int password_empty_error=0x7f0d0057;
+    public static final int password_toggle_content_description=0x7f0d0058;
+    public static final int password_too_short_error=0x7f0d0059;
+    public static final int path_password_eye=0x7f0d005a;
+    public static final int path_password_eye_mask_strike_through=0x7f0d005b;
+    public static final int path_password_eye_mask_visible=0x7f0d005c;
+    public static final int path_password_strike_through=0x7f0d005d;
+    public static final int person_mail_hint=0x7f0d005e;
+    public static final int person_name_hint=0x7f0d005f;
+    public static final int person_password_hint=0x7f0d0060;
+    public static final int person_surname_hint=0x7f0d0061;
+    public static final int post_time=0x7f0d0062;
+    public static final int post_user=0x7f0d0063;
+    public static final int posts_number=0x7f0d0064;
+    public static final int project_id=0x7f0d0065;
+    public static final int register_fb=0x7f0d0066;
+    public static final int search_menu_title=0x7f0d0067;
+    public static final int search_users=0x7f0d0068;
+    public static final int sign_in_button=0x7f0d0069;
+    public static final int sign_in_view_button=0x7f0d006a;
+    public static final int sign_up_button=0x7f0d006b;
+    public static final int sign_up_view_button=0x7f0d006c;
+    public static final int status_bar_notification_info_overflow=0x7f0d006d;
+    public static final int thumbnail=0x7f0d006e;
+    public static final int title_activity_login=0x7f0d006f;
+    public static final int title_activity_map=0x7f0d0070;
+    public static final int title_activity_search=0x7f0d0071;
+    public static final int title_activity_settings=0x7f0d0072;
+    public static final int title_activity_stats=0x7f0d0073;
+    public static final int title_activity_user=0x7f0d0074;
+    public static final int user_at_position=0x7f0d0075;
+    public static final int wrong_password_error=0x7f0d0076;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;
@@ -9711,7 +9710,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

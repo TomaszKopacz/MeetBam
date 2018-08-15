@@ -1,6 +1,7 @@
 package tomaszkopacz.meetbam.presenter
 
 import android.os.Environment
+import android.util.Log
 import android.widget.Toast
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.dialogs.ProgressDialog
@@ -70,7 +71,9 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
         if (areUsersAvailable() && isImageAvailable()){
             post = createPost()
-            post.photo_dir = storageService.uploadFile(currentImageFile!!, uploadPhotoListener)
+
+            val photoUrl = storageService.uploadFile(currentImageFile!!, uploadPhotoListener)
+            post.url = photoUrl
             databaseService.putPost(post, uploadPostListener)
 
         } else {
@@ -86,17 +89,21 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     private val uploadPhotoListener = object : TaskListener {
         override fun onSucceed() {
+            Log.d("TOMASZ", "PHOTO SUCCESS")
         }
 
         override fun onFailed() {
+            Log.d("TOMASZ", "PHOTO FAIL")
         }
     }
 
     private val uploadPostListener = object : TaskListener {
         override fun onSucceed() {
+            Log.d("TOMASZ", "POST SUCCESS")
         }
 
         override fun onFailed() {
+            Log.d("TOMASZ", "POST FAIL")
         }
 
     }

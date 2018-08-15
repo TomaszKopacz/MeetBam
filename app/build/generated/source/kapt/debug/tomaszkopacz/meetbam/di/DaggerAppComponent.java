@@ -174,6 +174,8 @@ public final class DaggerAppComponent implements AppComponent {
         instance, provideWebServiceProvider.get());
     MainPostsFragmentPresenter_MembersInjector.injectAuth(
         instance, provideFirebaseAuth$app_debugProvider.get());
+    MainPostsFragmentPresenter_MembersInjector.injectDatabase(
+        instance, provideDatabaseServiceProvider.get());
     return instance;
   }
 
