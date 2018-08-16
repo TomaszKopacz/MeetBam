@@ -12,34 +12,5 @@ import javax.inject.Inject
 
 class PersonalisationActivityPresenter (val activity: PersonalisationActivity) {
 
-    @Inject lateinit var auth: FirebaseAuth
 
-    private val progressDialog: ProgressDialog = ProgressDialog(activity)
-
-    init {
-        (activity.application as MainApp).component!!.inject(this)
-    }
-
-    fun getRegisteredUser() : FirebaseUser {
-        return auth.currentUser!!
-    }
-
-    fun confirmUser(user: String) {
-        progressDialog.show()
-
-        val firebaseUser = getRegisteredUser()
-        val profileUpdaterBuilder = UserProfileChangeRequest.Builder()
-                .setDisplayName(user)
-                .build()
-        firebaseUser.updateProfile(profileUpdaterBuilder)
-
-        progressDialog.dismiss()
-        goToMainActivity()
-    }
-
-    private fun goToMainActivity() {
-        val intent = Intent(activity, MainActivity::class.java)
-        activity.startActivity(intent)
-        activity.finish()
-    }
 }

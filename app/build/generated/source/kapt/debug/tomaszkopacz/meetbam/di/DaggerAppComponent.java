@@ -25,8 +25,9 @@ import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.MainPhotoFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter_MembersInjector;
+import tomaszkopacz.meetbam.presenter.PersonDataFragmentPresenter;
+import tomaszkopacz.meetbam.presenter.PersonDataFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.PersonalisationActivityPresenter;
-import tomaszkopacz.meetbam.presenter.PersonalisationActivityPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.StatsLocalFragmentPresenter;
@@ -105,8 +106,11 @@ public final class DaggerAppComponent implements AppComponent {
   }
 
   @Override
-  public void inject(PersonalisationActivityPresenter presenter) {
-    injectPersonalisationActivityPresenter(presenter);
+  public void inject(PersonalisationActivityPresenter presenter) {}
+
+  @Override
+  public void inject(PersonDataFragmentPresenter presenter) {
+    injectPersonDataFragmentPresenter(presenter);
   }
 
   @Override
@@ -152,9 +156,9 @@ public final class DaggerAppComponent implements AppComponent {
     return instance;
   }
 
-  private PersonalisationActivityPresenter injectPersonalisationActivityPresenter(
-      PersonalisationActivityPresenter instance) {
-    PersonalisationActivityPresenter_MembersInjector.injectAuth(
+  private PersonDataFragmentPresenter injectPersonDataFragmentPresenter(
+      PersonDataFragmentPresenter instance) {
+    PersonDataFragmentPresenter_MembersInjector.injectAuth(
         instance, provideFirebaseAuth$app_debugProvider.get());
     return instance;
   }

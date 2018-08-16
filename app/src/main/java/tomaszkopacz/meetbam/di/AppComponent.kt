@@ -9,7 +9,9 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun inject(presenter: LoginActivityPresenter)
+
     fun inject(presenter: PersonalisationActivityPresenter)
+    fun inject(presenter:PersonDataFragmentPresenter)
 
     fun inject(presenter: MainActivityPresenter)
     fun inject(presenter: MainPostsFragmentPresenter)
