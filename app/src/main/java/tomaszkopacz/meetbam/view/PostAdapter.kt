@@ -10,7 +10,7 @@ import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.entity.Post
 import tomaszkopacz.meetbam.interactor.StorageService
 import tomaszkopacz.meetbam.presenter.RecyclerViewPresenter
-import tomaszkopacz.meetbam.service.DateTimeCounterService
+import tomaszkopacz.meetbam.service.DateTimeCounter
 import tomaszkopacz.meetbam.service.GlideApp
 
 
@@ -49,10 +49,10 @@ class PostAdapter(private val presenter: RecyclerViewPresenter)
                 .load(service.getReference(post.url!!))
                 .into(holder.itemView.post_imageview)
 
-        val timeAgo = DateTimeCounterService.countTimeAgo(post.time!!,
-                DateTimeCounterService.FORMAT_MINUTES)
-        val timeAgoText = DateTimeCounterService.getTimeAgoText(timeAgo,
-                DateTimeCounterService.FORMAT_MINUTES)
+        val timeAgo = DateTimeCounter.countTimeAgo(post.time!!,
+                DateTimeCounter.FORMAT_MINUTES)
+        val timeAgoText = DateTimeCounter.getTimeAgoText(timeAgo,
+                DateTimeCounter.FORMAT_MINUTES)
         holder.itemView.post_time_textview.text = context.getString(R.string.post_time, timeAgoText)
     }
 

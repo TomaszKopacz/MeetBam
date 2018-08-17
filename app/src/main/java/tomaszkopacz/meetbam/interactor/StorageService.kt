@@ -8,19 +8,30 @@ import java.io.File
 class StorageService (private val firebaseStorage: FirebaseStorage) {
 
     companion object {
-        private const val POSTS = "posts"
-        private const val AVATARS = "avatars"
+        private const val POSTS_PHOTOS = "posts"
+        private const val PROFILE_PHOTOS = "profile"
     }
 
     fun uploadPostPhoto(file: File, listener: TaskListener?): String {
         val generalRef = firebaseStorage.reference
-        val avatarsRef = generalRef.child("$POSTS/${file.name}")
+        val photoRef = generalRef.child("$POSTS_PHOTOS/${file.name}")
 
-        avatarsRef.putFile(Uri.fromFile(file))
+        photoRef.putFile(Uri.fromFile(file))
                 .addOnFailureListener { listener?.onFailed() }
                 .addOnSuccessListener { listener?.onSucceed() }
 
-        return avatarsRef.path
+        return photoRef.path
+    }
+
+    fun uploadProfilePhoto(file: File, listener: TaskListener?): String{
+        val generalRef = firebaseStorage.reference
+        val photoRef = generalRef.child("$PROFILE_PHOTOS/${file.name}")
+
+        photoRef.putFile(Uri.fromFile(file))
+                .addOnFailureListener { listener?.onFailed() }
+                .addOnSuccessListener { listener?.onSucceed() }
+
+        return photoRef.path
     }
 
     fun getReference(url: String): StorageReference {

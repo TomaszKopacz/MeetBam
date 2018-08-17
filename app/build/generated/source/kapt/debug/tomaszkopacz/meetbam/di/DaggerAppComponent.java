@@ -11,6 +11,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import tomaszkopacz.meetbam.interactor.AuthService;
 import tomaszkopacz.meetbam.interactor.DatabaseService;
+import tomaszkopacz.meetbam.interactor.ImageFilesService;
 import tomaszkopacz.meetbam.interactor.StorageService;
 import tomaszkopacz.meetbam.interactor.WebService;
 import tomaszkopacz.meetbam.presenter.AccountFriendsFragmentPresenter;
@@ -27,6 +28,8 @@ import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.MainPostsFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.PersonDataFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.PersonDataFragmentPresenter_MembersInjector;
+import tomaszkopacz.meetbam.presenter.PersonPhotoFragmentPresenter;
+import tomaszkopacz.meetbam.presenter.PersonPhotoFragmentPresenter_MembersInjector;
 import tomaszkopacz.meetbam.presenter.PersonalisationActivityPresenter;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter;
 import tomaszkopacz.meetbam.presenter.StatsGlobalFragmentPresenter_MembersInjector;
@@ -44,13 +47,15 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<AuthService> provideAuthServiceProvider;
 
-  private Provider<FirebaseDatabase> provideFirebaseDatabase$app_debugProvider;
-
-  private Provider<DatabaseService> provideDatabaseServiceProvider;
+  private Provider<ImageFilesService> provideImageFilesServiceProvider;
 
   private Provider<FirebaseStorage> provideFirebaseStorageProvider;
 
   private Provider<StorageService> provideStorageServiceProvider;
+
+  private Provider<FirebaseDatabase> provideFirebaseDatabase$app_debugProvider;
+
+  private Provider<DatabaseService> provideDatabaseServiceProvider;
 
   private DaggerAppComponent(Builder builder) {
     initialize(builder);
@@ -84,13 +89,9 @@ public final class DaggerAppComponent implements AppComponent {
         DoubleCheck.provider(
             FirebaseModule_ProvideAuthServiceFactory.create(
                 builder.firebaseModule, provideFirebaseAuth$app_debugProvider));
-    this.provideFirebaseDatabase$app_debugProvider =
+    this.provideImageFilesServiceProvider =
         DoubleCheck.provider(
-            FirebaseModule_ProvideFirebaseDatabase$app_debugFactory.create(builder.firebaseModule));
-    this.provideDatabaseServiceProvider =
-        DoubleCheck.provider(
-            FirebaseModule_ProvideDatabaseServiceFactory.create(
-                builder.firebaseModule, provideFirebaseDatabase$app_debugProvider));
+            ImageFilesModule_ProvideImageFilesServiceFactory.create(builder.imageFilesModule));
     this.provideFirebaseStorageProvider =
         DoubleCheck.provider(
             FirebaseModule_ProvideFirebaseStorageFactory.create(builder.firebaseModule));
@@ -98,6 +99,13 @@ public final class DaggerAppComponent implements AppComponent {
         DoubleCheck.provider(
             FirebaseModule_ProvideStorageServiceFactory.create(
                 builder.firebaseModule, provideFirebaseStorageProvider));
+    this.provideFirebaseDatabase$app_debugProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideFirebaseDatabase$app_debugFactory.create(builder.firebaseModule));
+    this.provideDatabaseServiceProvider =
+        DoubleCheck.provider(
+            FirebaseModule_ProvideDatabaseServiceFactory.create(
+                builder.firebaseModule, provideFirebaseDatabase$app_debugProvider));
   }
 
   @Override
@@ -111,6 +119,11 @@ public final class DaggerAppComponent implements AppComponent {
   @Override
   public void inject(PersonDataFragmentPresenter presenter) {
     injectPersonDataFragmentPresenter(presenter);
+  }
+
+  @Override
+  public void inject(PersonPhotoFragmentPresenter presenter) {
+    injectPersonPhotoFragmentPresenter(presenter);
   }
 
   @Override
@@ -159,7 +172,18 @@ public final class DaggerAppComponent implements AppComponent {
   private PersonDataFragmentPresenter injectPersonDataFragmentPresenter(
       PersonDataFragmentPresenter instance) {
     PersonDataFragmentPresenter_MembersInjector.injectAuth(
-        instance, provideFirebaseAuth$app_debugProvider.get());
+        instance, provideAuthServiceProvider.get());
+    return instance;
+  }
+
+  private PersonPhotoFragmentPresenter injectPersonPhotoFragmentPresenter(
+      PersonPhotoFragmentPresenter instance) {
+    PersonPhotoFragmentPresenter_MembersInjector.injectImageFilesService(
+        instance, provideImageFilesServiceProvider.get());
+    PersonPhotoFragmentPresenter_MembersInjector.injectStorage(
+        instance, provideStorageServiceProvider.get());
+    PersonPhotoFragmentPresenter_MembersInjector.injectAuth(
+        instance, provideAuthServiceProvider.get());
     return instance;
   }
 
@@ -190,6 +214,8 @@ public final class DaggerAppComponent implements AppComponent {
         instance, provideDatabaseServiceProvider.get());
     MainPhotoFragmentPresenter_MembersInjector.injectStorageService(
         instance, provideStorageServiceProvider.get());
+    MainPhotoFragmentPresenter_MembersInjector.injectImageFilesService(
+        instance, provideImageFilesServiceProvider.get());
     return instance;
   }
 
@@ -228,6 +254,8 @@ public final class DaggerAppComponent implements AppComponent {
 
     private FirebaseModule firebaseModule;
 
+    private ImageFilesModule imageFilesModule;
+
     private Builder() {}
 
     public AppComponent build() {
@@ -236,6 +264,9 @@ public final class DaggerAppComponent implements AppComponent {
       }
       if (firebaseModule == null) {
         this.firebaseModule = new FirebaseModule();
+      }
+      if (imageFilesModule == null) {
+        this.imageFilesModule = new ImageFilesModule();
       }
       return new DaggerAppComponent(this);
     }
@@ -247,6 +278,11 @@ public final class DaggerAppComponent implements AppComponent {
 
     public Builder firebaseModule(FirebaseModule firebaseModule) {
       this.firebaseModule = Preconditions.checkNotNull(firebaseModule);
+      return this;
+    }
+
+    public Builder imageFilesModule(ImageFilesModule imageFilesModule) {
+      this.imageFilesModule = Preconditions.checkNotNull(imageFilesModule);
       return this;
     }
   }

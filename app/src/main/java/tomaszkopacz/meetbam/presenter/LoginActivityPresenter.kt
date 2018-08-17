@@ -47,16 +47,19 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
 
     fun submitLoginInput(mail: String, password: String) {
 
-        if (mail.isEmpty())
+        val mMail = mail.trim()
+        val mPassword = password.trim()
+
+        if (mMail.isEmpty())
             activity.showLoginError(ERROR_MAIL_EMPTY)
-        else if (password.isEmpty())
+        else if (mPassword.isEmpty())
             activity.showLoginError(ERROR_PASSWORD_EMPTY)
-        else if (!mail.contains("@"))
+        else if (!mMail.contains("@"))
             activity.showLoginError(ERROR_MAIL_INVALID)
-        else if (password.length < 6)
+        else if (mPassword.length < 6)
             activity.showLoginError(ERROR_PASSWORD_TOO_SHORT)
         else
-            attemptLogin(mail, password)
+            attemptLogin(mMail, mPassword)
     }
 
     private fun attemptLogin(mail: String, password: String) {
@@ -77,16 +80,20 @@ class LoginActivityPresenter(private val activity: LoginActivity) {
     }
 
     fun submitRegisterInput(mail: String, password: String) {
-        if (mail.isEmpty())
+
+        val mMail = mail.trim()
+        val mPassword = password.trim()
+
+        if (mMail.isEmpty())
             activity.showRegisterError(ERROR_MAIL_EMPTY)
-        else if (password.isEmpty())
+        else if (mPassword.isEmpty())
             activity.showRegisterError(ERROR_PASSWORD_EMPTY)
-        else if (!mail.contains("@"))
+        else if (!mMail.contains("@"))
             activity.showRegisterError(ERROR_MAIL_INVALID)
-        else if (password.length < 6)
+        else if (mPassword.length < 6)
             activity.showRegisterError(ERROR_PASSWORD_TOO_SHORT)
         else
-            attemptRegister(mail, password)
+            attemptRegister(mMail, mPassword)
     }
 
     private fun attemptRegister(mail: String, password: String) {

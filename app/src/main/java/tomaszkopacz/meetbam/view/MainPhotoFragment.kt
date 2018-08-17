@@ -17,7 +17,7 @@ import java.io.File
 class MainPhotoFragment : Fragment() {
 
     private lateinit var presenter: MainPhotoFragmentPresenter
-    private lateinit var cameraService: CameraRouter
+    private lateinit var camera: CameraRouter
 
     companion object {
         const val MAKE_PHOTO_LAYOUT = 1
@@ -34,9 +34,9 @@ class MainPhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         presenter = MainPhotoFragmentPresenter(this)
-        cameraService = CameraRouter(context!!, camera_textureview)
+        camera = CameraRouter(context!!, camera_textureview)
 
-        photo_button.setOnClickListener { presenter.takePhoto(cameraService)}
+        photo_button.setOnClickListener { presenter.takePhoto(camera)}
         dismiss_photo_button.setOnClickListener {presenter.dismissPhoto()}
         pairing_button.setOnClickListener {presenter.pair()}
         accept_photo_button.setOnClickListener {presenter.acceptPhoto()}
@@ -44,12 +44,12 @@ class MainPhotoFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        cameraService.start()
+        camera.start()
     }
 
     override fun onPause() {
         super.onPause()
-        cameraService.stop()
+        camera.stop()
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
@@ -95,5 +95,4 @@ class MainPhotoFragment : Fragment() {
     fun notifyUsersPaired(loggedUser: String, pairedUser: String){
         paired_textview.text = getString(R.string.paired_text, loggedUser, pairedUser)
     }
-
 }

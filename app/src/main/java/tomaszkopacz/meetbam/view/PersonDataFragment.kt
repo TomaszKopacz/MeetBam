@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_person_data.*
-
 import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.presenter.PersonDataFragmentPresenter
 
@@ -25,19 +24,14 @@ class PersonDataFragment : Fragment() {
 
         presenter = PersonDataFragmentPresenter(this)
 
-        confirm_personalisation_button.setOnClickListener { confirmUser() }
-
-        initLayout()
-
+        skip_person_data_button.setOnClickListener{ presenter.skip() }
+        confirm_personalisation_button.setOnClickListener {
+            val user = "${person_name_edittext.text} ${person_surname_edittext.text}"
+            presenter.confirmUser(user)
+        }
     }
 
-    private fun initLayout() {
-        val user = presenter.getRegisteredUser()
-        person_mail_textview.text = user.email
-    }
-
-    private fun confirmUser() {
-        val user = "${person_name_edittext.text} ${person_surname_edittext.text}"
-        presenter.confirmUser(user)
+    fun setMail(mail: String){
+        person_mail_textview.text = mail
     }
 }

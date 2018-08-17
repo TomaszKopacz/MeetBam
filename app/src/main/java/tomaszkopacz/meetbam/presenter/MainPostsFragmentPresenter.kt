@@ -47,7 +47,7 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
 
     fun downloadPosts() {
         val ref = database.getPostsReference()
-        ref.addValueEventListener(object : ValueEventListener{
+        ref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
                 fragment.refreshDone()
             }
@@ -107,6 +107,6 @@ class MainPostsFragmentPresenter(private val fragment: MainPostsFragment)
     }
 
     fun refresh() {
-        //downloadPosts()
+        downloadPosts()
     }
 }

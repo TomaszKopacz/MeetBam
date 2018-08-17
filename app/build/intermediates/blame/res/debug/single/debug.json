@@ -772,6 +772,10 @@
         "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\fragment_account_info.xml"
     },
     {
+        "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_person_photo.xml.flat",
+        "source": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\src\\main\\res\\layout\\fragment_person_photo.xml"
+    },
+    {
         "merged": "T:\\Workspace\\AndroidStudioProjects\\MeetBam\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
         "source": "C:\\Users\\tomas\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\b6149520292d8bad65af0f6f76f09aa6\\res\\drawable\\notification_icon_background.xml"
     },

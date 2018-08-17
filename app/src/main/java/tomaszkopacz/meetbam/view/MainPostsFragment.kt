@@ -20,6 +20,7 @@ class MainPostsFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_main_posts, container, false)
         presenter = MainPostsFragmentPresenter(this)
+        presenter.downloadPosts()
 
         return view
     }
@@ -33,7 +34,6 @@ class MainPostsFragment : Fragment() {
         }
 
         prepareRecyclerView()
-        presenter.downloadPosts()
     }
 
     private fun prepareRecyclerView() {

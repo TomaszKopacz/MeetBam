@@ -45,13 +45,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/pair_text"
-        android:theme="@style/FlatButtonMeetBam"
         android:textColor="@android:color/white"
+        android:theme="@style/FlatButtonMeetBam"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/accept_photo_button"
         app:layout_constraintStart_toEndOf="@+id/dismiss_photo_button"
-        app:layout_constraintTop_toBottomOf="@+id/divider_view"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider_view" />
 
     <Button
         android:id="@+id/photo_button"
@@ -77,12 +77,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/back_text"
-        android:theme="@style/FlatButtonMeetBam"
         android:textColor="@android:color/white"
+        android:theme="@style/FlatButtonMeetBam"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider_view"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider_view" />
 
     <Button
         android:id="@+id/accept_photo_button"

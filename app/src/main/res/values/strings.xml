@@ -38,11 +38,13 @@
     <string name="register_fb">Sign up with Facebook</string>
 
     <!-- Personalisation Activity -->
-    <string name="person_password_hint">Password</string>
+    <string name="welcome_text">Welcome to MeetBam! Please, fill your data.</string>
     <string name="person_surname_hint">Surname</string>
     <string name="person_name_hint">Name</string>
     <string name="person_mail_hint">Mail</string>
+    <string name="person_description_hint">Describe yourself…</string>
     <string name="confirm_personalisation">CONFIRM</string>
+    <string name="skip_personalisation">SKIP</string>
 
     <!-- Main Activity -->
     <string name="camera_button_text">TAKE A PHOTO</string>

@@ -36,10 +36,10 @@ public final class R {
         public static final int oval_complete = 0x7f070089;
     }
     public static final class id {
-        public static final int completeFabIcon = 0x7f08003c;
-        public static final int completeFabRoot = 0x7f08003d;
-        public static final int mini = 0x7f080083;
-        public static final int normal = 0x7f08008a;
+        public static final int completeFabIcon = 0x7f08003d;
+        public static final int completeFabRoot = 0x7f08003e;
+        public static final int mini = 0x7f080085;
+        public static final int normal = 0x7f08008c;
     }
     public static final class integer {
         public static final int default_cycle_duration = 0x7f090006;

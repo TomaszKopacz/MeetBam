@@ -1,15 +1,10 @@
 package tomaszkopacz.meetbam.presenter
 
-import android.os.Environment
 import android.util.Log
 import android.widget.Toast
-import tomaszkopacz.meetbam.R
 import tomaszkopacz.meetbam.dialogs.ProgressDialog
 import tomaszkopacz.meetbam.entity.Post
-import tomaszkopacz.meetbam.interactor.AuthService
-import tomaszkopacz.meetbam.interactor.DatabaseService
-import tomaszkopacz.meetbam.interactor.StorageService
-import tomaszkopacz.meetbam.interactor.TaskListener
+import tomaszkopacz.meetbam.interactor.*
 import tomaszkopacz.meetbam.router.CameraRouter
 import tomaszkopacz.meetbam.view.MainActivity
 import tomaszkopacz.meetbam.view.MainApp
@@ -30,21 +25,27 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
     @Inject
     lateinit var storageService: StorageService
 
+    @Inject
+    lateinit var imageFilesService: ImageFilesService
+
     private var currentImageFile: File? = null
 
     private var loggedUser: String? = null
     private var pairedUser: String? = null
 
-    private val progressDialog: ProgressDialog = ProgressDialog(fragment.activity)
+    private val progressDialog: ProgressDialog = ProgressDialog(fragment.activity!!)
 
     init {
         (fragment.activity!!.application as MainApp).component!!.inject(this)
-        loggedUser = authService.getCurrentUser()!!.displayName
+
+        val logged = authService.getCurrentUser()
+        loggedUser = if (logged!!.displayName == null || logged.displayName!!.isEmpty())
+            logged.email else logged.displayName
     }
 
     fun takePhoto(camera: CameraRouter) {
         progressDialog.show()
-        currentImageFile = createImageFile(getImageGallery())
+        currentImageFile = imageFilesService.createPostImageFile()
         camera.takePicture(currentImageFile!!, fragment.context!!, photoListener)
     }
 
@@ -58,7 +59,6 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
 
     fun pair() {
         progressDialog.show()
-        loggedUser = authService.getCurrentUser()!!.displayName
         pairedUser = "Zbyszek Wodecki"
         progressDialog.dismiss()
         fragment.notifyUsersPaired(loggedUser!!, pairedUser!!)
@@ -76,15 +76,17 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
             post.url = photoUrl
             databaseService.putPost(post, uploadPostListener)
 
-        } else {
+            clearMemory()
             progressDialog.dismiss()
+            fragment.clearLayout()
+            (fragment.activity as MainActivity).changePage(MainActivity.POSTS)
+
+        } else {
+            clearMemory()
+            progressDialog.dismiss()
+            fragment.clearLayout()
             Toast.makeText(fragment.context, "ERROR", Toast.LENGTH_LONG).show()
         }
-
-        clearMemory()
-        progressDialog.dismiss()
-        fragment.clearLayout()
-        (fragment.activity as MainActivity).changePage(MainActivity.POSTS)
     }
 
     private val uploadPhotoListener = object : TaskListener {
@@ -105,7 +107,6 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
         override fun onFailed() {
             Log.d("TOMASZ", "POST FAIL")
         }
-
     }
 
     private fun areUsersAvailable(): Boolean {
@@ -124,23 +125,6 @@ class MainPhotoFragmentPresenter(private val fragment: MainPhotoFragment) {
                 .format(Date())
 
         return post
-    }
-
-    private fun createImageFile(galleryFolder: File): File {
-        val prefix = fragment.context!!.getString(R.string.app_name)
-        val suffix = ".png"
-        return File.createTempFile(prefix, suffix, galleryFolder)
-    }
-
-    private fun getImageGallery(): File {
-        val storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
-        val galleryFolder = File(storageDir, fragment.resources.getString(R.string.app_name))
-
-        if (!galleryFolder.exists()) {
-            galleryFolder.mkdirs()
-        }
-
-        return galleryFolder
     }
 
     private val photoListener = object : CameraRouter.PhotoStateListener {

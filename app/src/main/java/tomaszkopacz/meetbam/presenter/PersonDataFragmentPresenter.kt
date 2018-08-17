@@ -1,46 +1,40 @@
 package tomaszkopacz.meetbam.presenter
 
-import android.content.Intent
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import tomaszkopacz.meetbam.dialogs.ProgressDialog
-import tomaszkopacz.meetbam.view.MainActivity
+import tomaszkopacz.meetbam.interactor.AuthService
 import tomaszkopacz.meetbam.view.MainApp
 import tomaszkopacz.meetbam.view.PersonDataFragment
+import tomaszkopacz.meetbam.view.PersonalisationActivity
 import javax.inject.Inject
 
 class PersonDataFragmentPresenter(private val fragment: PersonDataFragment) {
 
     @Inject
-    lateinit var auth: FirebaseAuth
+    lateinit var auth: AuthService
 
     private val progressDialog: ProgressDialog = ProgressDialog(fragment.activity)
 
     init {
         (fragment.activity!!.application as MainApp).component!!.inject(this)
+
+        fragment.setMail(auth.getCurrentUser()!!.email!!)
     }
 
-    fun getRegisteredUser() : FirebaseUser {
-        return auth.currentUser!!
+    fun skip(){
+        (fragment.activity as PersonalisationActivity).changeLayout(PersonalisationActivity.PHOTO)
     }
 
-    fun confirmUser(user: String) {
+    fun confirmUser(userFullName: String) {
         progressDialog.show()
 
-        val firebaseUser = getRegisteredUser()
+        val firebaseUser = auth.getCurrentUser()
         val profileUpdaterBuilder = UserProfileChangeRequest.Builder()
-                .setDisplayName(user)
+                .setDisplayName(userFullName)
                 .build()
-        firebaseUser.updateProfile(profileUpdaterBuilder)
+        firebaseUser!!.updateProfile(profileUpdaterBuilder)
 
         progressDialog.dismiss()
-        goToMainActivity()
-    }
-
-    private fun goToMainActivity() {
-        val intent = Intent(fragment.activity, MainActivity::class.java)
-        fragment.activity!!.startActivity(intent)
-        fragment.activity!!.finish()
+        (fragment.activity as PersonalisationActivity).changeLayout(PersonalisationActivity.PHOTO)
     }
 }
